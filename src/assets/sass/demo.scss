@@ -4,10 +4,10 @@
 * Now UI Kit Pro Angular - v1.2.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-pro-angular
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.josh-levy.com/product/now-ui-kit-pro-angular
+* Copyright 2019 Josh Levy (https://www.josh-levy.com)
 
-* Coded by Creative Tim
+* Coded by Josh Levy
 
 =========================================================
 
@@ -577,12 +577,12 @@
             font-weight: 700;
             font-family: 'Open Sans Condensed', sans-serif;
             z-index: 1;
-            letter-spacing: -10px;
+            letter-spacing: -5px;
             text-align: center;
             background: #ffedea;
-            background: -moz-linear-gradient(top, #FFFFFF 35%, #c38775 100%);
-            background: -webkit-linear-gradient(top, #FFFFFF 35%, #c38775 100%);
-            background: linear-gradient(to bottom, #FFFFFF 35%, #c38775 100%);
+            background: -moz-linear-gradient(top, #FFFFFF 40%, #c38775 100%);
+            background: -webkit-linear-gradient(top, #FFFFFF 40%, #c38775 100%);
+            background: linear-gradient(to bottom, #FFFFFF 40%, #c38775 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -614,6 +614,9 @@
         z-index: 3;
         top: 50%;
         position: absolute;
+        font-weight: 500 !important;
+        font-size: 3em !important;
+        margin-top: 50px !important;
         width: 100%;
         text-align: center;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.71);
@@ -1383,7 +1386,7 @@ and ( orientation : portrait){
     top: -2px;
     position: relative;
 }
-.creative-tim-logo{
+.josh-levy-logo{
     max-width: 140px;
     top: -2px;
     position: relative;

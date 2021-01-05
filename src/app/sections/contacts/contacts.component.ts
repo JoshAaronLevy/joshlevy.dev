@@ -46,7 +46,7 @@ export class ContactsComponent implements OnInit {
       //
     //   var marker = new google.maps.Marker({
     //       position: myLatlng,
-    //       title:"Creative Tim Office"
+    //       title:"Josh Levy Office"
     //   });
       //
     //   // To add the marker to the map, call setMap();

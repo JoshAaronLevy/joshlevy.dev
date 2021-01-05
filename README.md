@@ -3,7 +3,7 @@
 ![alt text](https://s3.amazonaws.com/creativetim_bucket/products/74/original/opt_nukp_angular_thumbnail.jpg? "Now UI Kit Pro Angular")
 
 
-**[Now UI Kit Pro Angular](https://creativetimofficial.github.io/now-ui-kit-pro-angular/components)** is a premium responsive Bootstrap 4 kit provided by Invision and Creative Tim. It is a beautiful cross-platform UI kit featuring over 1000+ elements and 11 templates.
+**[Now UI Kit Pro Angular](https://creativetimofficial.github.io/now-ui-kit-pro-angular/components)** is a premium responsive Bootstrap 4 kit provided by Invision and Josh Levy. It is a beautiful cross-platform UI kit featuring over 1000+ elements and 11 templates.
 
 Now UI Kit Pro Angular is one of the most popular UI Kits online, provided in PSD and Sketch formats by Invision. We wanted to find a way for developers worldwide to benefit from using it. So, in collaboration with Invision, we are launching the HTML version for it!
 
@@ -279,11 +279,11 @@ Now Ui Kit Pro Angular
 
 ## Useful Links
 
-More products from Creative Tim: <http://www.creative-tim.com/bootstrap-themes>
+More products from Josh Levy: <http://www.josh-levy.com/bootstrap-themes>
 
 Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
 
-Freebies: <http://www.creative-tim.com/products>
+Freebies: <http://www.josh-levy.com/products>
 
 Social Media:
 
