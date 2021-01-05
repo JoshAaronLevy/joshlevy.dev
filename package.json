@@ -2,9 +2,8 @@
   "name": "now-ui-kit-pro-angular",
   "version": "1.2.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve -o --port=4100",
-    "build": "ng build",
+    "build": "rm -rf dist && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

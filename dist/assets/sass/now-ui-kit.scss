@@ -4,10 +4,10 @@
 * Now UI Kit Pro Angular - v1.2.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-pro-angular
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.josh-levy.com/product/now-ui-kit-pro-angular
+* Copyright 2019 Josh Levy (https://www.josh-levy.com)
 
-* Coded by Creative Tim
+* Coded by Josh Levy
 
 =========================================================
 
