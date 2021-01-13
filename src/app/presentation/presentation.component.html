@@ -18,141 +18,34 @@
     <div class="container">
       <div class="col-md-8 ml-auto mr-auto">
         <div class="section-description text-center">
-          <h2 class="title">Sections you will love</h2>
-          <h5 class="description"> Build pages in no time using pre-made sections! From headers to footers, you will be
-            able to choose the best combination for your project. We have created multiple sections for you to put
-            together and customise into pixel perfect example pages.</h5>
-          <a [routerLink]="['/sections']" class="btn btn-primary btn-round">View All Sections</a>
+          <h2 class="title">Skills</h2>
         </div>
       </div>
     </div>
     <div class="container-fluid">
       <div class="section-cols">
         <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/header1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/header2.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/header3.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/header4.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features2.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features3.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features4.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features5.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features6.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features7.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/features8.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/blogpost1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/blogpost2.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/blogpost3.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/blogpost4.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/blogpost5.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/team1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/team2.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/team3.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/team4.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/team5.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/projects1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/projects2.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/projects4.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/projects5.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/pricing1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/pricing2.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/pricing3.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/pricing4.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/pricing5.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/testimonials1.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/testimonials2.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/testimonials3.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/contact1.jpg" alt="">
-          </div>
-          <div class="col-md-3">
-            <img src="assets/img/presentation-page/contact2.jpg" alt="">
-          </div>
+          <ul class="skills-list">
+            <li *ngFor="let skill of skills" class="col-md-3 skill">
+              <div class="card card-profile card-plain">
+                <div class="card-image skill-image">
+                  <div class="img img-raised rounded">
+                    <img src="{{ skill.img }}" />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">{{ skill.name }}</h4>
+                  <h6 class="category">{{ skill.experience }}</h6>
+                  <h6 class="category">{{ skill.type }}</h6>
+                  <!-- <div class="card-footer">
+                    <a href="#" class="btn btn-icon btn-twitter btn-round"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="btn btn-icon btn-facebook btn-round"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#" class="btn btn-icon btn-dribbble btn-round"><i class="fa fa-dribbble"></i></a>
+                  </div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -161,14 +54,11 @@
     <div class="container">
       <div class="col-md-8 ml-auto mr-auto text-center">
         <div class="section-description">
-          <h2 class="title">Example Pages</h2>
-          <h5 class="description">Forget about building everything from scratch. From landing pages to e-commerce or
-            blog pages, you will be able jump start your development. Show your clients a quick prototype and get
-            inspired for your next project!</h5>
+          <h2 class="title">Projects</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <h5 class="title">About Us</h5>
           <div class="card">
             <a [routerLink]="['/examples/aboutus']" target="_blank">
@@ -239,7 +129,7 @@
               <img src="assets/img/presentation-page/pages/contact.jpg" alt="">
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

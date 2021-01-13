@@ -13,6 +13,7 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { PresentationModule } from './presentation/presentation.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { PresentationModule } from './presentation/presentation.module';
         PresentationModule,
         SectionsModule,
         ComponentsModule,
-        ExamplesModule
+        ExamplesModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

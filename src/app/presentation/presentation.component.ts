@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { SkillService } from 'app/services/skill.service';
 
 @Component({
   selector: 'app-presentation',
@@ -6,20 +7,27 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit, OnDestroy {
-  // model = {
-  //   left: true,
-  //   middle: false,
-  //   right: false
-  // };
   date: Date = new Date();
+  skills: any;
+  skill: any;
 
-  constructor() {}
+  constructor(
+    public skillService: SkillService
+  ) {}
 
   ngOnInit() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('presentation-page');
     const navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
+    this.getSkills();
+  }
+
+  getSkills() {
+    return this.skillService.getSkills().subscribe(data => {
+      this.skills = data.skills;
+      console.log(this.skills);
+    });
   }
 
   ngOnDestroy() {
