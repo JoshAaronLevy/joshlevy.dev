@@ -44,8 +44,9 @@ export class AppComponent implements OnInit {
               navbar.classList.remove('navbar-transparent');
             }
           } else if (_location !== 'addproduct' && _location !== 'login' && _location !== 'register' && this.location.path() !== '/nucleoicons') {
+            return;
             // remove logic
-            navbar.classList.add('navbar-transparent');
+            // navbar.classList.add('navbar-transparent');
           }
         }
       });

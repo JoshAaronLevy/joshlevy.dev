@@ -12,6 +12,9 @@ export class PresentationComponent implements OnInit, OnDestroy {
   skill: any;
   filter: any;
   filteredSkills: any;
+  allSelected: boolean = true;
+  frontEndSelected: boolean = false;
+  backEndSelected: boolean = false;
 
   constructor(
     public skillService: SkillService
@@ -21,8 +24,8 @@ export class PresentationComponent implements OnInit, OnDestroy {
     this.filter = 'All';
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('presentation-page');
-    const navbar = document.getElementsByTagName('nav')[0];
-    navbar.classList.add('navbar-transparent');
+    // const navbar = document.getElementsByTagName('nav')[0];
+    // navbar.classList.add('navbar-transparent');
     this.getSkills();
   }
 
@@ -37,22 +40,33 @@ export class PresentationComponent implements OnInit, OnDestroy {
     this.filter = filter;
     this.filteredSkills = [];
     for (let i = 0; i < this.skills.length; i++) {
-      if (this.filter !== 'All') {
-        if (this.skills[i].type === this.filter) {
+      if (this.filter === 'Front-End') {
+        this.allSelected = false;
+        this.frontEndSelected = true;
+        this.backEndSelected = false;
+        if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
           this.filteredSkills.push(this.skills[i]);
         }
-      }
-      else {
+      } else if (this.filter === 'Back-End') {
+        this.allSelected = false;
+        this.frontEndSelected = false;
+        this.backEndSelected = true;
+        if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
+          this.filteredSkills.push(this.skills[i]);
+        }
+      } else {
+        this.allSelected = true;
+        this.frontEndSelected = false;
+        this.backEndSelected = false;
         this.filteredSkills.push(this.skills[i]);
       }
     }
-    console.log(this.filteredSkills);
   }
 
   ngOnDestroy() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove('presentation-page');
-    const navbar = document.getElementsByTagName('nav')[0];
-    navbar.classList.remove('navbar-transparent');
+    // const navbar = document.getElementsByTagName('nav')[0];
+    // navbar.classList.remove('navbar-transparent');
   }
 }

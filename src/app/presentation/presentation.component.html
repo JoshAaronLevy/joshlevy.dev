@@ -20,10 +20,9 @@
         <div class="section-description text-center">
           <h2 class="title">Skills</h2>
           <div class="filter-buttons">
-            <button [disabled]="filter === 'All'" (click)="filterSkills('All')" class="btn btn-primary category-button">All</button>
-            <button (click)="filterSkills('Front-End')" class="btn btn-primary category-button">Front-End</button>
-            <button (click)="filterSkills('Back-End')" class="btn btn-primary category-button">Back-End</button>
-            <!-- <button (click)="filterSkills('Workflow')" class="btn btn-primary category-button">Workflow</button> -->
+            <button [disabled]="allSelected" (click)="filterSkills('All')" class="btn btn-primary category-button">All</button>
+            <button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')" class="btn btn-primary category-button">Front-End</button>
+            <button [disabled]="backEndSelected" (click)="filterSkills('Back-End')" class="btn btn-primary category-button">Back-End</button>
           </div>
         </div>
       </div>
@@ -42,7 +41,7 @@
                 <div class="card-body">
                   <h4 class="card-title">{{ skill.name }}</h4>
                   <h6 class="category">{{ skill.experience }}</h6>
-                  <button type="button" class="btn btn-primary btn-round category-button">{{ skill.type }}</button>
+                  <button type="button" (click)="filterSkills(skill.type)" class="btn btn-primary btn-round category-button">{{ skill.type }}</button>
                 </div>
               </div>
             </li>
