@@ -1,5 +1,307 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn-bd": "./node_modules/moment/locale/bn-bd.js",
+	"./bn-bd.js": "./node_modules/moment/locale/bn-bd.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-in": "./node_modules/moment/locale/en-in.js",
+	"./en-in.js": "./node_modules/moment/locale/en-in.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./en-sg": "./node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "./node_modules/moment/locale/en-sg.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-mx": "./node_modules/moment/locale/es-mx.js",
+	"./es-mx.js": "./node_modules/moment/locale/es-mx.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fil": "./node_modules/moment/locale/fil.js",
+	"./fil.js": "./node_modules/moment/locale/fil.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tk": "./node_modules/moment/locale/tk.js",
+	"./tk.js": "./node_modules/moment/locale/tk.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -334,7 +636,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <img src=\"assets/img/presentation-page/header1.jpg\" alt=\"\">\n          </div>\n          <div class=\"col-md-3\">\n            <img src=\"assets/img/presentation-page/header2.jpg\" alt=\"\">\n          </div>\n          <div class=\"col-md-3\">\n            <img src=\"assets/img/presentation-page/header3.jpg\" alt=\"\">\n          </div>\n          <div class=\"col-md-3\">\n            <img src=\"assets/img/presentation-page/header4.jpg\" alt=\"\">\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Example Pages</h2>\n          <h5 class=\"description\">Forget about building everything from scratch. From landing pages to e-commerce or\n            blog pages, you will be able jump start your development. Show your clients a quick prototype and get\n            inspired for your next project!</h5>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h5 class=\"title\">About Us</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/aboutus']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/about-us.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Landing Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/landing']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/landing.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Login Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/login']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/login.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Signup Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/register']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/signup.jpg\" alt=\"\">\n            </a>\n          </div>\n        </div>\n        <div class=\"col-md-4\">\n          <h5 class=\"title\">Blog Post</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/blogpost']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/blog-post.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Product Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/productpage']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/product.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Profile Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/profile']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/profile.jpg\" alt=\"\">\n            </a>\n          </div>\n        </div>\n        <div class=\"col-md-4\">\n          <h5 class=\"title\">Pricing Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/pricing']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/pricing.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Ecommerce</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/ecommerce']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/ecommerce.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Blog Posts</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/blogposts']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/blog-posts.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Contact Us</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/contactus']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/contact.jpg\" alt=\"\">\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <footer class=\"footer \" data-background-color=\"black\">\n    <div class=\"container\">\n      <nav>\n        <ul>\n          <li>\n            <a href=\"https://www.creative-tim.com\">\n              Creative Tim\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/about-us\">\n              About Us\n            </a>\n          </li>\n          <li>\n            <a href=\"http://blog.creative-tim.com\">\n              Blog\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/license\">\n              License\n            </a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"copyright\">\n        &copy;\n        {{date | date: 'yyyy'}}, Designed by\n        <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n        <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n      </div>\n    </div>\n  </footer>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n          <div class=\"filter-buttons\">\n            <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\" class=\"btn btn-primary category-button\">All</button>\n            <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\" class=\"btn btn-primary category-button\">Front-End</button>\n            <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\" class=\"btn btn-primary category-button\">Back-End</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <ul class=\"skills-list\">\n            <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n              <div class=\"card card-profile card-plain\">\n                <div class=\"card-image skill-image\">\n                  <div class=\"img img-raised rounded\">\n                    <img src=\"{{ skill.img }}\" />\n                  </div>\n                </div>\n                <div class=\"card-body\">\n                  <h4 class=\"card-title\">{{ skill.name }}</h4>\n                  <h6 class=\"category\">{{ skill.experience }}</h6>\n                  <button type=\"button\" (click)=\"filterSkills(skill.type)\" class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n                </div>\n              </div>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Projects</h2>\n        </div>\n      </div>\n      <div class=\"row\">\n        <!-- <div class=\"col-md-4\">\n          <h5 class=\"title\">About Us</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/aboutus']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/about-us.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Landing Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/landing']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/landing.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Login Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/login']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/login.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Signup Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/register']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/signup.jpg\" alt=\"\">\n            </a>\n          </div>\n        </div>\n        <div class=\"col-md-4\">\n          <h5 class=\"title\">Blog Post</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/blogpost']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/blog-post.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Product Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/productpage']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/product.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Profile Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/profile']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/profile.jpg\" alt=\"\">\n            </a>\n          </div>\n        </div>\n        <div class=\"col-md-4\">\n          <h5 class=\"title\">Pricing Page</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/pricing']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/pricing.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Ecommerce</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/ecommerce']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/ecommerce.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Blog Posts</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/blogposts']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/blog-posts.jpg\" alt=\"\">\n            </a>\n          </div>\n          <h5 class=\"title\">Contact Us</h5>\n          <div class=\"card\">\n            <a [routerLink]=\"['/examples/contactus']\" target=\"_blank\">\n              <img src=\"assets/img/presentation-page/pages/contact.jpg\" alt=\"\">\n            </a>\n          </div>\n        </div> -->\n      </div>\n    </div>\n  </div>\n  <footer class=\"footer \" data-background-color=\"black\">\n    <div class=\"container\">\n      <nav>\n        <ul>\n          <li>\n            <a href=\"https://www.creative-tim.com\">\n              Creative Tim\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/about-us\">\n              About Us\n            </a>\n          </li>\n          <li>\n            <a href=\"http://blog.creative-tim.com\">\n              Blog\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/license\">\n              License\n            </a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"copyright\">\n        &copy;\n        {{date | date: 'yyyy'}}, Designed by\n        <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n        <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n      </div>\n    </div>\n  </footer>\n</div>");
 
 /***/ }),
 
@@ -477,7 +779,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg bg-white fixed-top navbar-transparent\" color-on-scroll=\"500\">\n  <div class=\"container\">\n    <div class=\"navbar-translate\">\n      <a class=\"navbar-brand\" [routerLink]=\"['/presentation']\">\n        Josh Levy\n      </a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\"\n        aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\n        (click)=\"sidebarToggle()\">\n        <span class=\"navbar-toggler-bar bar1\"></span>\n        <span class=\"navbar-toggler-bar bar2\"></span>\n        <span class=\"navbar-toggler-bar bar3\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse\" data-nav-image=\"assets/img/blurred-image-1.jpg\" data-color=\"orange\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/components']\">\n            <p>Components</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/sections']\">\n            <p>Sections</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Examples</p>\n          </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg bg-white fixed-top\" color-on-scroll=\"500\">\n  <div class=\"container\">\n    <div class=\"navbar-translate\">\n      <a class=\"navbar-brand\" [routerLink]=\"['/presentation']\">\n        <img src=\"./assets/img/Josh-Levy-Logo.png\" />\n      </a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\"\n        aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\n        (click)=\"sidebarToggle()\">\n        <span class=\"navbar-toggler-bar bar1\"></span>\n        <span class=\"navbar-toggler-bar bar2\"></span>\n        <span class=\"navbar-toggler-bar bar3\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse\" data-nav-image=\"assets/img/blurred-image-1.jpg\" data-color=\"orange\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/components']\">\n            <p>Skills</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/sections']\">\n            <p>Projects</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Experience</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Resume</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Contact</p>\n          </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>");
 
 /***/ }),
 
@@ -586,8 +888,9 @@ var AppComponent = /** @class */ (function () {
                         }
                     }
                     else if (_location !== 'addproduct' && _location !== 'login' && _location !== 'register' && _this.location.path() !== '/nucleoicons') {
+                        return;
                         // remove logic
-                        navbar.classList.add('navbar-transparent');
+                        // navbar.classList.add('navbar-transparent');
                     }
                 }
             });
@@ -661,6 +964,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/navbar/navbar.component */ "./src/app/shared/navbar/navbar.component.ts");
 /* harmony import */ var _presentation_presentation_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./presentation/presentation.module */ "./src/app/presentation/presentation.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -670,7 +974,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
- // this is needed!
+
+
 
 
 
@@ -700,7 +1005,11 @@ var AppModule = /** @class */ (function () {
                 _presentation_presentation_module__WEBPACK_IMPORTED_MODULE_11__["PresentationModule"],
                 _sections_sections_module__WEBPACK_IMPORTED_MODULE_6__["SectionsModule"],
                 _components_components_module__WEBPACK_IMPORTED_MODULE_7__["ComponentsModule"],
-                _examples_examples_module__WEBPACK_IMPORTED_MODULE_8__["ExamplesModule"]
+                _examples_examples_module__WEBPACK_IMPORTED_MODULE_8__["ExamplesModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"]
+            ],
+            schemas: [
+                _angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
@@ -1156,18 +1465,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kolkov_ngx_gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @kolkov/ngx-gallery */ "./node_modules/@kolkov/ngx-gallery/__ivy_ngcc__/fesm5/kolkov-ngx-gallery.js");
 /* harmony import */ var _shared_image_upload_image_upload_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/image-upload/image-upload.module */ "./src/app/shared/image-upload/image-upload.module.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var _basicelements_basicelements_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./basicelements/basicelements.component */ "./src/app/components/basicelements/basicelements.component.ts");
-/* harmony import */ var _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./navigation/navigation.component */ "./src/app/components/navigation/navigation.component.ts");
-/* harmony import */ var _typography_typography_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./typography/typography.component */ "./src/app/components/typography/typography.component.ts");
-/* harmony import */ var _nucleoicons_nucleoicons_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./nucleoicons/nucleoicons.component */ "./src/app/components/nucleoicons/nucleoicons.component.ts");
-/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components.component */ "./src/app/components/components.component.ts");
-/* harmony import */ var _notification_notification_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./notification/notification.component */ "./src/app/components/notification/notification.component.ts");
-/* harmony import */ var _modal_modal_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modal/modal.component */ "./src/app/components/modal/modal.component.ts");
-/* harmony import */ var _prefooter_areas_prefooter_areas_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./prefooter-areas/prefooter-areas.component */ "./src/app/components/prefooter-areas/prefooter-areas.component.ts");
-/* harmony import */ var _footers_areas_footers_areas_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./footers-areas/footers-areas.component */ "./src/app/components/footers-areas/footers-areas.component.ts");
-/* harmony import */ var _tables_areas_tables_areas_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./tables-areas/tables-areas.component */ "./src/app/components/tables-areas/tables-areas.component.ts");
-/* harmony import */ var _comments_areas_comments_areas_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./comments-areas/comments-areas.component */ "./src/app/components/comments-areas/comments-areas.component.ts");
-/* harmony import */ var _cards_areas_cards_areas_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./cards-areas/cards-areas.component */ "./src/app/components/cards-areas/cards-areas.component.ts");
+/* harmony import */ var _primeng_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../primeng.module */ "./src/app/primeng.module.ts");
+/* harmony import */ var _basicelements_basicelements_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./basicelements/basicelements.component */ "./src/app/components/basicelements/basicelements.component.ts");
+/* harmony import */ var _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./navigation/navigation.component */ "./src/app/components/navigation/navigation.component.ts");
+/* harmony import */ var _typography_typography_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./typography/typography.component */ "./src/app/components/typography/typography.component.ts");
+/* harmony import */ var _nucleoicons_nucleoicons_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./nucleoicons/nucleoicons.component */ "./src/app/components/nucleoicons/nucleoicons.component.ts");
+/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components.component */ "./src/app/components/components.component.ts");
+/* harmony import */ var _notification_notification_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./notification/notification.component */ "./src/app/components/notification/notification.component.ts");
+/* harmony import */ var _modal_modal_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modal/modal.component */ "./src/app/components/modal/modal.component.ts");
+/* harmony import */ var _prefooter_areas_prefooter_areas_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./prefooter-areas/prefooter-areas.component */ "./src/app/components/prefooter-areas/prefooter-areas.component.ts");
+/* harmony import */ var _footers_areas_footers_areas_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./footers-areas/footers-areas.component */ "./src/app/components/footers-areas/footers-areas.component.ts");
+/* harmony import */ var _tables_areas_tables_areas_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./tables-areas/tables-areas.component */ "./src/app/components/tables-areas/tables-areas.component.ts");
+/* harmony import */ var _comments_areas_comments_areas_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./comments-areas/comments-areas.component */ "./src/app/components/comments-areas/comments-areas.component.ts");
+/* harmony import */ var _cards_areas_cards_areas_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./cards-areas/cards-areas.component */ "./src/app/components/cards-areas/cards-areas.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1177,6 +1487,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -1215,23 +1526,24 @@ var ComponentsModule = /** @class */ (function () {
                 angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__["AngularMultiSelectModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _kolkov_ngx_gallery__WEBPACK_IMPORTED_MODULE_8__["NgxGalleryModule"],
-                _shared_image_upload_image_upload_module__WEBPACK_IMPORTED_MODULE_9__["ImageUploadModule"]
+                _shared_image_upload_image_upload_module__WEBPACK_IMPORTED_MODULE_9__["ImageUploadModule"],
+                _primeng_module__WEBPACK_IMPORTED_MODULE_11__["PrimeNGBundleModule"]
             ],
             declarations: [
-                _components_component__WEBPACK_IMPORTED_MODULE_15__["ComponentsComponent"],
-                _basicelements_basicelements_component__WEBPACK_IMPORTED_MODULE_11__["BasicelementsComponent"],
-                _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_12__["NavigationComponent"],
-                _typography_typography_component__WEBPACK_IMPORTED_MODULE_13__["TypographyComponent"],
-                _nucleoicons_nucleoicons_component__WEBPACK_IMPORTED_MODULE_14__["NucleoiconsComponent"],
-                _notification_notification_component__WEBPACK_IMPORTED_MODULE_16__["NotificationComponent"],
-                _modal_modal_component__WEBPACK_IMPORTED_MODULE_17__["NgbdModalBasic"],
-                _prefooter_areas_prefooter_areas_component__WEBPACK_IMPORTED_MODULE_18__["PrefooterAreasComponent"],
-                _footers_areas_footers_areas_component__WEBPACK_IMPORTED_MODULE_19__["FootersAreasComponent"],
-                _tables_areas_tables_areas_component__WEBPACK_IMPORTED_MODULE_20__["TablesAreasComponent"],
-                _comments_areas_comments_areas_component__WEBPACK_IMPORTED_MODULE_21__["CommentsAreasComponent"],
-                _cards_areas_cards_areas_component__WEBPACK_IMPORTED_MODULE_22__["CardsAreasComponent"]
+                _components_component__WEBPACK_IMPORTED_MODULE_16__["ComponentsComponent"],
+                _basicelements_basicelements_component__WEBPACK_IMPORTED_MODULE_12__["BasicelementsComponent"],
+                _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_13__["NavigationComponent"],
+                _typography_typography_component__WEBPACK_IMPORTED_MODULE_14__["TypographyComponent"],
+                _nucleoicons_nucleoicons_component__WEBPACK_IMPORTED_MODULE_15__["NucleoiconsComponent"],
+                _notification_notification_component__WEBPACK_IMPORTED_MODULE_17__["NotificationComponent"],
+                _modal_modal_component__WEBPACK_IMPORTED_MODULE_18__["NgbdModalBasic"],
+                _prefooter_areas_prefooter_areas_component__WEBPACK_IMPORTED_MODULE_19__["PrefooterAreasComponent"],
+                _footers_areas_footers_areas_component__WEBPACK_IMPORTED_MODULE_20__["FootersAreasComponent"],
+                _tables_areas_tables_areas_component__WEBPACK_IMPORTED_MODULE_21__["TablesAreasComponent"],
+                _comments_areas_comments_areas_component__WEBPACK_IMPORTED_MODULE_22__["CommentsAreasComponent"],
+                _cards_areas_cards_areas_component__WEBPACK_IMPORTED_MODULE_23__["CardsAreasComponent"]
             ],
-            exports: [_components_component__WEBPACK_IMPORTED_MODULE_15__["ComponentsComponent"]]
+            exports: [_components_component__WEBPACK_IMPORTED_MODULE_16__["ComponentsComponent"]]
         })
     ], ComponentsModule);
     return ComponentsModule;
@@ -2970,7 +3282,7 @@ var RegisterComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhdGlvbi9wcmVzZW50YXRpb24uY29tcG9uZW50LnNjc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".skills-list {\n  list-style-type: none !important;\n  padding: 0 !important;\n  display: -webkit-box !important;\n  display: flex !important;\n  flex-wrap: wrap;\n  margin-bottom: 100px !important;\n}\n\n.skill-image {\n  height: 300px !important;\n  display: -webkit-box !important;\n  display: flex !important;\n  -webkit-box-pack: center !important;\n          justify-content: center !important;\n  -webkit-box-align: center !important;\n          align-items: center !important;\n  background-color: #fff !important;\n  -webkit-transition: all 0.4s ease 0s !important;\n  transition: all 0.4s ease 0s !important;\n}\n\n.skill-image:hover {\n  -webkit-transition: all 0.4s ease 0s !important;\n  transition: all 0.4s ease 0s !important;\n  -webkit-transform: scale(1.02);\n          transform: scale(1.02);\n}\n\n.skill-image .img {\n  height: 300px !important;\n  display: -webkit-box !important;\n  display: flex !important;\n  -webkit-box-pack: center !important;\n          justify-content: center !important;\n  -webkit-box-align: center !important;\n          align-items: center !important;\n  width: 100% !important;\n  background-color: #fff !important;\n  -webkit-transition: none !important;\n  transition: none !important;\n}\n\n.skill-image .img:hover {\n  -webkit-transition: none !important;\n  transition: none !important;\n  -webkit-transform: none !important;\n          transform: none !important;\n}\n\n.skill-image .img img {\n  height: 100% !important;\n  width: auto !important;\n  display: -webkit-box !important;\n  display: flex !important;\n  -webkit-box-pack: center !important;\n          justify-content: center !important;\n  -webkit-box-align: center !important;\n          align-items: center !important;\n  padding: 30px !important;\n  background-color: #fff !important;\n  -webkit-transition: none !important;\n  transition: none !important;\n  box-shadow: none;\n}\n\n.skill-image .img img:hover {\n  -webkit-transition: none !important;\n  transition: none !important;\n  -webkit-transform: none !important;\n          transform: none !important;\n  box-shadow: none;\n}\n\n.card-title {\n  font-size: 1.75em !important;\n  font-weight: 700 !important;\n}\n\n.category {\n  font-size: 1.1em !important;\n  font-weight: 700 !important;\n  color: #666 !important;\n}\n\n.category-button {\n  font-size: 1em !important;\n  font-weight: 700 !important;\n  margin-top: 0px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qb3NobGV2eS9EZXNrdG9wL2pvc2hsZXZ5LnRlY2gvc3JjL2FwcC9wcmVzZW50YXRpb24vcHJlc2VudGF0aW9uLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wcmVzZW50YXRpb24vcHJlc2VudGF0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0NBQUE7RUFDQSxxQkFBQTtFQUNBLCtCQUFBO0VBQUEsd0JBQUE7RUFDQSxlQUFBO0VBQ0EsK0JBQUE7QUNDRjs7QURFQTtFQUNFLHdCQUFBO0VBQ0EsK0JBQUE7RUFBQSx3QkFBQTtFQUNBLG1DQUFBO1VBQUEsa0NBQUE7RUFDQSxvQ0FBQTtVQUFBLDhCQUFBO0VBQ0EsaUNBQUE7RUFDQSwrQ0FBQTtFQUFBLHVDQUFBO0FDQ0Y7O0FERUE7RUFDRSwrQ0FBQTtFQUFBLHVDQUFBO0VBQ0EsOEJBQUE7VUFBQSxzQkFBQTtBQ0NGOztBREVBO0VBQ0Usd0JBQUE7RUFDQSwrQkFBQTtFQUFBLHdCQUFBO0VBQ0EsbUNBQUE7VUFBQSxrQ0FBQTtFQUNBLG9DQUFBO1VBQUEsOEJBQUE7RUFDQSxzQkFBQTtFQUNBLGlDQUFBO0VBQ0EsbUNBQUE7RUFBQSwyQkFBQTtBQ0NGOztBREVBO0VBQ0UsbUNBQUE7RUFBQSwyQkFBQTtFQUNBLGtDQUFBO1VBQUEsMEJBQUE7QUNDRjs7QURFQTtFQUNFLHVCQUFBO0VBQ0Esc0JBQUE7RUFDQSwrQkFBQTtFQUFBLHdCQUFBO0VBQ0EsbUNBQUE7VUFBQSxrQ0FBQTtFQUNBLG9DQUFBO1VBQUEsOEJBQUE7RUFDQSx3QkFBQTtFQUNBLGlDQUFBO0VBQ0EsbUNBQUE7RUFBQSwyQkFBQTtFQUNBLGdCQUFBO0FDQ0Y7O0FERUE7RUFDRSxtQ0FBQTtFQUFBLDJCQUFBO0VBQ0Esa0NBQUE7VUFBQSwwQkFBQTtFQUNBLGdCQUFBO0FDQ0Y7O0FERUE7RUFDRSw0QkFBQTtFQUNBLDJCQUFBO0FDQ0Y7O0FERUE7RUFDRSwyQkFBQTtFQUNBLDJCQUFBO0VBQ0Esc0JBQUE7QUNDRjs7QURFQTtFQUNFLHlCQUFBO0VBQ0EsMkJBQUE7RUFDQSwwQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvcHJlc2VudGF0aW9uL3ByZXNlbnRhdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5za2lsbHMtbGlzdCB7XG4gIGxpc3Qtc3R5bGUtdHlwZTogbm9uZSAhaW1wb3J0YW50O1xuICBwYWRkaW5nOiAwICFpbXBvcnRhbnQ7XG4gIGRpc3BsYXk6IGZsZXggIWltcG9ydGFudDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tYm90dG9tOiAxMDBweCAhaW1wb3J0YW50O1xufVxuXG4uc2tpbGwtaW1hZ2Uge1xuICBoZWlnaHQ6IDMwMHB4ICFpbXBvcnRhbnQ7XG4gIGRpc3BsYXk6IGZsZXggIWltcG9ydGFudDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXIgIWltcG9ydGFudDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlciAhaW1wb3J0YW50O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gIHRyYW5zaXRpb246IGFsbCAwLjRzIGVhc2UgMHMgIWltcG9ydGFudDtcbn1cblxuLnNraWxsLWltYWdlOmhvdmVyIHtcbiAgdHJhbnNpdGlvbjogYWxsIDAuNHMgZWFzZSAwcyAhaW1wb3J0YW50O1xuICB0cmFuc2Zvcm06IHNjYWxlKDEuMDIpO1xufVxuXG4uc2tpbGwtaW1hZ2UgLmltZyB7XG4gIGhlaWdodDogMzAwcHggIWltcG9ydGFudDtcbiAgZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlciAhaW1wb3J0YW50O1xuICBhbGlnbi1pdGVtczogY2VudGVyICFpbXBvcnRhbnQ7XG4gIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgdHJhbnNpdGlvbjogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4uc2tpbGwtaW1hZ2UgLmltZzpob3ZlciB7XG4gIHRyYW5zaXRpb246IG5vbmUgIWltcG9ydGFudDtcbiAgdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XG59XG5cbi5za2lsbC1pbWFnZSAuaW1nIGltZyB7XG4gIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xuICB3aWR0aDogYXV0byAhaW1wb3J0YW50O1xuICBkaXNwbGF5OiBmbGV4ICFpbXBvcnRhbnQ7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyICFpbXBvcnRhbnQ7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXIgIWltcG9ydGFudDtcbiAgcGFkZGluZzogMzBweCAhaW1wb3J0YW50O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gIHRyYW5zaXRpb246IG5vbmUgIWltcG9ydGFudDtcbiAgYm94LXNoYWRvdzogbm9uZTtcbn1cblxuLnNraWxsLWltYWdlIC5pbWcgaW1nOmhvdmVyIHtcbiAgdHJhbnNpdGlvbjogbm9uZSAhaW1wb3J0YW50O1xuICB0cmFuc2Zvcm06IG5vbmUgIWltcG9ydGFudDtcbiAgYm94LXNoYWRvdzogbm9uZTtcbn1cblxuLmNhcmQtdGl0bGUge1xuICBmb250LXNpemU6IDEuNzVlbSAhaW1wb3J0YW50O1xuICBmb250LXdlaWdodDogNzAwICFpbXBvcnRhbnQ7XG59XG5cbi5jYXRlZ29yeSB7XG4gIGZvbnQtc2l6ZTogMS4xZW0gIWltcG9ydGFudDtcbiAgZm9udC13ZWlnaHQ6IDcwMCAhaW1wb3J0YW50O1xuICBjb2xvcjogIzY2NiAhaW1wb3J0YW50O1xufVxuXG4uY2F0ZWdvcnktYnV0dG9uIHtcbiAgZm9udC1zaXplOiAxZW0gIWltcG9ydGFudDtcbiAgZm9udC13ZWlnaHQ6IDcwMCAhaW1wb3J0YW50O1xuICBtYXJnaW4tdG9wOiAwcHggIWltcG9ydGFudDtcbn0iLCIuc2tpbGxzLWxpc3Qge1xuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmUgIWltcG9ydGFudDtcbiAgcGFkZGluZzogMCAhaW1wb3J0YW50O1xuICBkaXNwbGF5OiBmbGV4ICFpbXBvcnRhbnQ7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgbWFyZ2luLWJvdHRvbTogMTAwcHggIWltcG9ydGFudDtcbn1cblxuLnNraWxsLWltYWdlIHtcbiAgaGVpZ2h0OiAzMDBweCAhaW1wb3J0YW50O1xuICBkaXNwbGF5OiBmbGV4ICFpbXBvcnRhbnQ7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyICFpbXBvcnRhbnQ7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXIgIWltcG9ydGFudDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICB0cmFuc2l0aW9uOiBhbGwgMC40cyBlYXNlIDBzICFpbXBvcnRhbnQ7XG59XG5cbi5za2lsbC1pbWFnZTpob3ZlciB7XG4gIHRyYW5zaXRpb246IGFsbCAwLjRzIGVhc2UgMHMgIWltcG9ydGFudDtcbiAgdHJhbnNmb3JtOiBzY2FsZSgxLjAyKTtcbn1cblxuLnNraWxsLWltYWdlIC5pbWcge1xuICBoZWlnaHQ6IDMwMHB4ICFpbXBvcnRhbnQ7XG4gIGRpc3BsYXk6IGZsZXggIWltcG9ydGFudDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXIgIWltcG9ydGFudDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlciAhaW1wb3J0YW50O1xuICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gIHRyYW5zaXRpb246IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLnNraWxsLWltYWdlIC5pbWc6aG92ZXIge1xuICB0cmFuc2l0aW9uOiBub25lICFpbXBvcnRhbnQ7XG4gIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4uc2tpbGwtaW1hZ2UgLmltZyBpbWcge1xuICBoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDtcbiAgd2lkdGg6IGF1dG8gIWltcG9ydGFudDtcbiAgZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlciAhaW1wb3J0YW50O1xuICBhbGlnbi1pdGVtczogY2VudGVyICFpbXBvcnRhbnQ7XG4gIHBhZGRpbmc6IDMwcHggIWltcG9ydGFudDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICB0cmFuc2l0aW9uOiBub25lICFpbXBvcnRhbnQ7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG59XG5cbi5za2lsbC1pbWFnZSAuaW1nIGltZzpob3ZlciB7XG4gIHRyYW5zaXRpb246IG5vbmUgIWltcG9ydGFudDtcbiAgdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG59XG5cbi5jYXJkLXRpdGxlIHtcbiAgZm9udC1zaXplOiAxLjc1ZW0gIWltcG9ydGFudDtcbiAgZm9udC13ZWlnaHQ6IDcwMCAhaW1wb3J0YW50O1xufVxuXG4uY2F0ZWdvcnkge1xuICBmb250LXNpemU6IDEuMWVtICFpbXBvcnRhbnQ7XG4gIGZvbnQtd2VpZ2h0OiA3MDAgIWltcG9ydGFudDtcbiAgY29sb3I6ICM2NjYgIWltcG9ydGFudDtcbn1cblxuLmNhdGVnb3J5LWJ1dHRvbiB7XG4gIGZvbnQtc2l6ZTogMWVtICFpbXBvcnRhbnQ7XG4gIGZvbnQtd2VpZ2h0OiA3MDAgIWltcG9ydGFudDtcbiAgbWFyZ2luLXRvcDogMHB4ICFpbXBvcnRhbnQ7XG59Il19 */");
 
 /***/ }),
 
@@ -2985,6 +3297,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PresentationComponent", function() { return PresentationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/services/skill.service */ "./src/app/services/skill.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2998,34 +3311,74 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
 var PresentationComponent = /** @class */ (function () {
-    function PresentationComponent() {
-        // model = {
-        //   left: true,
-        //   middle: false,
-        //   right: false
-        // };
+    function PresentationComponent(skillService) {
+        this.skillService = skillService;
         this.date = new Date();
+        this.allSelected = true;
+        this.frontEndSelected = false;
+        this.backEndSelected = false;
     }
     PresentationComponent.prototype.ngOnInit = function () {
+        this.filter = 'All';
         var body = document.getElementsByTagName('body')[0];
         body.classList.add('presentation-page');
-        var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.add('navbar-transparent');
+        // const navbar = document.getElementsByTagName('nav')[0];
+        // navbar.classList.add('navbar-transparent');
+        this.getSkills();
+    };
+    PresentationComponent.prototype.getSkills = function () {
+        var _this = this;
+        return this.skillService.getSkills().subscribe(function (data) {
+            _this.skills = data.skills;
+            _this.filterSkills(_this.filter);
+        });
+    };
+    PresentationComponent.prototype.filterSkills = function (filter) {
+        this.filter = filter;
+        this.filteredSkills = [];
+        for (var i = 0; i < this.skills.length; i++) {
+            if (this.filter === 'Front-End') {
+                this.allSelected = false;
+                this.frontEndSelected = true;
+                this.backEndSelected = false;
+                if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
+                    this.filteredSkills.push(this.skills[i]);
+                }
+            }
+            else if (this.filter === 'Back-End') {
+                this.allSelected = false;
+                this.frontEndSelected = false;
+                this.backEndSelected = true;
+                if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
+                    this.filteredSkills.push(this.skills[i]);
+                }
+            }
+            else {
+                this.allSelected = true;
+                this.frontEndSelected = false;
+                this.backEndSelected = false;
+                this.filteredSkills.push(this.skills[i]);
+            }
+        }
     };
     PresentationComponent.prototype.ngOnDestroy = function () {
         var body = document.getElementsByTagName('body')[0];
         body.classList.remove('presentation-page');
-        var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.remove('navbar-transparent');
+        // const navbar = document.getElementsByTagName('nav')[0];
+        // navbar.classList.remove('navbar-transparent');
     };
+    PresentationComponent.ctorParameters = function () { return [
+        { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_1__["SkillService"] }
+    ]; };
     PresentationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-presentation',
             template: __importDefault(__webpack_require__(/*! raw-loader!./presentation.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/presentation/presentation.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./presentation.component.scss */ "./src/app/presentation/presentation.component.scss")).default]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_1__["SkillService"]])
     ], PresentationComponent);
     return PresentationComponent;
 }());
@@ -3085,6 +3438,310 @@ var PresentationModule = /** @class */ (function () {
         })
     ], PresentationModule);
     return PresentationModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/primeng.module.ts":
+/*!***********************************!*\
+  !*** ./src/app/primeng.module.ts ***!
+  \***********************************/
+/*! exports provided: PrimeNGBundleModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrimeNGBundleModule", function() { return PrimeNGBundleModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var primeng_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/calendar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-calendar.js");
+/* harmony import */ var primeng_chips__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/chips */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-chips.js");
+/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/dropdown */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dropdown.js");
+/* harmony import */ var primeng_keyfilter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/keyfilter */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-keyfilter.js");
+/* harmony import */ var primeng_inputtext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! primeng/inputtext */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-inputtext.js");
+/* harmony import */ var primeng_listbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primeng/listbox */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-listbox.js");
+/* harmony import */ var primeng_multiselect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/multiselect */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-multiselect.js");
+/* harmony import */ var primeng_radiobutton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/radiobutton */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-radiobutton.js");
+/* harmony import */ var primeng_slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/slider */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-slider.js");
+/* harmony import */ var primeng_selectbutton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/selectbutton */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-selectbutton.js");
+/* harmony import */ var primeng_tristatecheckbox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! primeng/tristatecheckbox */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tristatecheckbox.js");
+/* harmony import */ var primeng_autocomplete__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! primeng/autocomplete */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-autocomplete.js");
+/* harmony import */ var primeng_checkbox__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! primeng/checkbox */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-checkbox.js");
+/* harmony import */ var primeng_colorpicker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! primeng/colorpicker */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-colorpicker.js");
+/* harmony import */ var primeng_editor__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! primeng/editor */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-editor.js");
+/* harmony import */ var primeng_inputswitch__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! primeng/inputswitch */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-inputswitch.js");
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! primeng/inputtextarea */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-inputtextarea.js");
+/* harmony import */ var primeng_inputmask__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! primeng/inputmask */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-inputmask.js");
+/* harmony import */ var primeng_password__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! primeng/password */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-password.js");
+/* harmony import */ var primeng_rating__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! primeng/rating */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-rating.js");
+/* harmony import */ var primeng_spinner__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! primeng/spinner */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-spinner.js");
+/* harmony import */ var primeng_togglebutton__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! primeng/togglebutton */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-togglebutton.js");
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-button.js");
+/* harmony import */ var primeng_splitbutton__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! primeng/splitbutton */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-splitbutton.js");
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-carousel.js");
+/* harmony import */ var primeng_fullcalendar__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! primeng/fullcalendar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-fullcalendar.js");
+/* harmony import */ var primeng_orderlist__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! primeng/orderlist */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-orderlist.js");
+/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! primeng/paginator */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-paginator.js");
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! primeng/table */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-table.js");
+/* harmony import */ var primeng_treetable__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! primeng/treetable */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-treetable.js");
+/* harmony import */ var primeng_dataview__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! primeng/dataview */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dataview.js");
+/* harmony import */ var primeng_organizationchart__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! primeng/organizationchart */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-organizationchart.js");
+/* harmony import */ var primeng_gmap__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! primeng/gmap */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-gmap.js");
+/* harmony import */ var primeng_picklist__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! primeng/picklist */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-picklist.js");
+/* harmony import */ var primeng_tree__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! primeng/tree */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tree.js");
+/* harmony import */ var primeng_virtualscroller__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! primeng/virtualscroller */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-virtualscroller.js");
+/* harmony import */ var primeng_accordion__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! primeng/accordion */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-accordion.js");
+/* harmony import */ var primeng_fieldset__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! primeng/fieldset */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-fieldset.js");
+/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! primeng/scrollpanel */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-scrollpanel.js");
+/* harmony import */ var primeng_toolbar__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! primeng/toolbar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-toolbar.js");
+/* harmony import */ var primeng_card__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! primeng/card */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-card.js");
+/* harmony import */ var primeng_panel__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! primeng/panel */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-panel.js");
+/* harmony import */ var primeng_tabview__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! primeng/tabview */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tabview.js");
+/* harmony import */ var primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! primeng/confirmdialog */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-confirmdialog.js");
+/* harmony import */ var primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! primeng/dynamicdialog */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dynamicdialog.js");
+/* harmony import */ var primeng_sidebar__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! primeng/sidebar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-sidebar.js");
+/* harmony import */ var primeng_tooltip__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! primeng/tooltip */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tooltip.js");
+/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! primeng/dialog */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dialog.js");
+/* harmony import */ var primeng_lightbox__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! primeng/lightbox */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-lightbox.js");
+/* harmony import */ var primeng_overlaypanel__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! primeng/overlaypanel */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-overlaypanel.js");
+/* harmony import */ var primeng_fileupload__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! primeng/fileupload */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-fileupload.js");
+/* harmony import */ var primeng_menu__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! primeng/menu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-menu.js");
+/* harmony import */ var primeng_contextmenu__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! primeng/contextmenu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-contextmenu.js");
+/* harmony import */ var primeng_panelmenu__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! primeng/panelmenu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-panelmenu.js");
+/* harmony import */ var primeng_steps__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! primeng/steps */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-steps.js");
+/* harmony import */ var primeng_tieredmenu__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! primeng/tieredmenu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tieredmenu.js");
+/* harmony import */ var primeng_breadcrumb__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! primeng/breadcrumb */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-breadcrumb.js");
+/* harmony import */ var primeng_megamenu__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! primeng/megamenu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-megamenu.js");
+/* harmony import */ var primeng_menubar__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! primeng/menubar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-menubar.js");
+/* harmony import */ var primeng_slidemenu__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! primeng/slidemenu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-slidemenu.js");
+/* harmony import */ var primeng_tabmenu__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! primeng/tabmenu */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tabmenu.js");
+/* harmony import */ var primeng_chart__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! primeng/chart */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-chart.js");
+/* harmony import */ var primeng_messages__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! primeng/messages */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-messages.js");
+/* harmony import */ var primeng_message__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! primeng/message */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-message.js");
+/* harmony import */ var primeng_toast__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! primeng/toast */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-toast.js");
+/* harmony import */ var primeng_galleria__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! primeng/galleria */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-galleria.js");
+/* harmony import */ var primeng_dragdrop__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! primeng/dragdrop */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dragdrop.js");
+/* harmony import */ var primeng_defer__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! primeng/defer */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-defer.js");
+/* harmony import */ var primeng_blockui__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! primeng/blockui */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-blockui.js");
+/* harmony import */ var primeng_inplace__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! primeng/inplace */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-inplace.js");
+/* harmony import */ var primeng_progressbar__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! primeng/progressbar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-progressbar.js");
+/* harmony import */ var primeng_codehighlighter__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! primeng/codehighlighter */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-codehighlighter.js");
+/* harmony import */ var primeng_focustrap__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! primeng/focustrap */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-focustrap.js");
+/* harmony import */ var primeng_captcha__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! primeng/captcha */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-captcha.js");
+/* harmony import */ var primeng_progressspinner__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! primeng/progressspinner */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-progressspinner.js");
+/* harmony import */ var primeng_terminal__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! primeng/terminal */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-terminal.js");
+/* harmony import */ var primeng_scrolltop__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! primeng/scrolltop */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-scrolltop.js");
+/* harmony import */ var primeng_avatar__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! primeng/avatar */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-avatar.js");
+/* harmony import */ var primeng_avatargroup__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! primeng/avatargroup */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-avatargroup.js");
+/* harmony import */ var primeng_badge__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! primeng/badge */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-badge.js");
+/* harmony import */ var primeng_chip__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! primeng/chip */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-chip.js");
+/* harmony import */ var primeng_skeleton__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! primeng/skeleton */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-skeleton.js");
+/* harmony import */ var primeng_tag__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! primeng/tag */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-tag.js");
+/* harmony import */ var primeng_confirmpopup__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! primeng/confirmpopup */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-confirmpopup.js");
+/* harmony import */ var primeng_splitter__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! primeng/splitter */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-splitter.js");
+/* harmony import */ var primeng_divider__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! primeng/divider */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-divider.js");
+/* harmony import */ var primeng_timeline__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! primeng/timeline */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-timeline.js");
+/* harmony import */ var primeng_knob__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! primeng/knob */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-knob.js");
+/* harmony import */ var primeng_cascadeselect__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! primeng/cascadeselect */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-cascadeselect.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var PrimeNGBundleModule = /** @class */ (function () {
+    function PrimeNGBundleModule() {
+    }
+    PrimeNGBundleModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            exports: [
+                primeng_calendar__WEBPACK_IMPORTED_MODULE_1__["CalendarModule"],
+                primeng_chips__WEBPACK_IMPORTED_MODULE_2__["ChipsModule"],
+                primeng_dropdown__WEBPACK_IMPORTED_MODULE_3__["DropdownModule"],
+                primeng_keyfilter__WEBPACK_IMPORTED_MODULE_4__["KeyFilterModule"],
+                primeng_inputtext__WEBPACK_IMPORTED_MODULE_5__["InputTextModule"],
+                primeng_listbox__WEBPACK_IMPORTED_MODULE_6__["ListboxModule"],
+                primeng_multiselect__WEBPACK_IMPORTED_MODULE_7__["MultiSelectModule"],
+                primeng_radiobutton__WEBPACK_IMPORTED_MODULE_8__["RadioButtonModule"],
+                primeng_slider__WEBPACK_IMPORTED_MODULE_9__["SliderModule"],
+                primeng_selectbutton__WEBPACK_IMPORTED_MODULE_10__["SelectButtonModule"],
+                primeng_tristatecheckbox__WEBPACK_IMPORTED_MODULE_11__["TriStateCheckboxModule"],
+                primeng_autocomplete__WEBPACK_IMPORTED_MODULE_12__["AutoCompleteModule"],
+                primeng_checkbox__WEBPACK_IMPORTED_MODULE_13__["CheckboxModule"],
+                primeng_colorpicker__WEBPACK_IMPORTED_MODULE_14__["ColorPickerModule"],
+                primeng_editor__WEBPACK_IMPORTED_MODULE_15__["EditorModule"],
+                primeng_inputswitch__WEBPACK_IMPORTED_MODULE_16__["InputSwitchModule"],
+                primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_17__["InputTextareaModule"],
+                primeng_inputmask__WEBPACK_IMPORTED_MODULE_18__["InputMaskModule"],
+                primeng_password__WEBPACK_IMPORTED_MODULE_19__["PasswordModule"],
+                primeng_rating__WEBPACK_IMPORTED_MODULE_20__["RatingModule"],
+                primeng_spinner__WEBPACK_IMPORTED_MODULE_21__["SpinnerModule"],
+                primeng_togglebutton__WEBPACK_IMPORTED_MODULE_22__["ToggleButtonModule"],
+                primeng_button__WEBPACK_IMPORTED_MODULE_23__["ButtonModule"],
+                primeng_splitbutton__WEBPACK_IMPORTED_MODULE_24__["SplitButtonModule"],
+                primeng_carousel__WEBPACK_IMPORTED_MODULE_25__["CarouselModule"],
+                primeng_fullcalendar__WEBPACK_IMPORTED_MODULE_26__["FullCalendarModule"],
+                primeng_orderlist__WEBPACK_IMPORTED_MODULE_27__["OrderListModule"],
+                primeng_paginator__WEBPACK_IMPORTED_MODULE_28__["PaginatorModule"],
+                primeng_table__WEBPACK_IMPORTED_MODULE_29__["TableModule"],
+                primeng_treetable__WEBPACK_IMPORTED_MODULE_30__["TreeTableModule"],
+                primeng_dataview__WEBPACK_IMPORTED_MODULE_31__["DataViewModule"],
+                primeng_organizationchart__WEBPACK_IMPORTED_MODULE_32__["OrganizationChartModule"],
+                primeng_gmap__WEBPACK_IMPORTED_MODULE_33__["GMapModule"],
+                primeng_picklist__WEBPACK_IMPORTED_MODULE_34__["PickListModule"],
+                primeng_tree__WEBPACK_IMPORTED_MODULE_35__["TreeModule"],
+                primeng_virtualscroller__WEBPACK_IMPORTED_MODULE_36__["VirtualScrollerModule"],
+                primeng_accordion__WEBPACK_IMPORTED_MODULE_37__["AccordionModule"],
+                primeng_fieldset__WEBPACK_IMPORTED_MODULE_38__["FieldsetModule"],
+                primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_39__["ScrollPanelModule"],
+                primeng_toolbar__WEBPACK_IMPORTED_MODULE_40__["ToolbarModule"],
+                primeng_card__WEBPACK_IMPORTED_MODULE_41__["CardModule"],
+                primeng_panel__WEBPACK_IMPORTED_MODULE_42__["PanelModule"],
+                primeng_tabview__WEBPACK_IMPORTED_MODULE_43__["TabViewModule"],
+                primeng_confirmdialog__WEBPACK_IMPORTED_MODULE_44__["ConfirmDialogModule"],
+                primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_45__["DynamicDialogModule"],
+                primeng_sidebar__WEBPACK_IMPORTED_MODULE_46__["SidebarModule"],
+                primeng_tooltip__WEBPACK_IMPORTED_MODULE_47__["TooltipModule"],
+                primeng_dialog__WEBPACK_IMPORTED_MODULE_48__["DialogModule"],
+                primeng_lightbox__WEBPACK_IMPORTED_MODULE_49__["LightboxModule"],
+                primeng_overlaypanel__WEBPACK_IMPORTED_MODULE_50__["OverlayPanelModule"],
+                primeng_fileupload__WEBPACK_IMPORTED_MODULE_51__["FileUploadModule"],
+                primeng_menu__WEBPACK_IMPORTED_MODULE_52__["MenuModule"],
+                primeng_contextmenu__WEBPACK_IMPORTED_MODULE_53__["ContextMenuModule"],
+                primeng_panelmenu__WEBPACK_IMPORTED_MODULE_54__["PanelMenuModule"],
+                primeng_steps__WEBPACK_IMPORTED_MODULE_55__["StepsModule"],
+                primeng_tieredmenu__WEBPACK_IMPORTED_MODULE_56__["TieredMenuModule"],
+                primeng_breadcrumb__WEBPACK_IMPORTED_MODULE_57__["BreadcrumbModule"],
+                primeng_megamenu__WEBPACK_IMPORTED_MODULE_58__["MegaMenuModule"],
+                primeng_menubar__WEBPACK_IMPORTED_MODULE_59__["MenubarModule"],
+                primeng_slidemenu__WEBPACK_IMPORTED_MODULE_60__["SlideMenuModule"],
+                primeng_tabmenu__WEBPACK_IMPORTED_MODULE_61__["TabMenuModule"],
+                primeng_chart__WEBPACK_IMPORTED_MODULE_62__["ChartModule"],
+                primeng_messages__WEBPACK_IMPORTED_MODULE_63__["MessagesModule"],
+                primeng_message__WEBPACK_IMPORTED_MODULE_64__["MessageModule"],
+                primeng_toast__WEBPACK_IMPORTED_MODULE_65__["ToastModule"],
+                primeng_galleria__WEBPACK_IMPORTED_MODULE_66__["GalleriaModule"],
+                primeng_dragdrop__WEBPACK_IMPORTED_MODULE_67__["DragDropModule"],
+                primeng_defer__WEBPACK_IMPORTED_MODULE_68__["DeferModule"],
+                primeng_blockui__WEBPACK_IMPORTED_MODULE_69__["BlockUIModule"],
+                primeng_inplace__WEBPACK_IMPORTED_MODULE_70__["InplaceModule"],
+                primeng_progressbar__WEBPACK_IMPORTED_MODULE_71__["ProgressBarModule"],
+                primeng_codehighlighter__WEBPACK_IMPORTED_MODULE_72__["CodeHighlighterModule"],
+                primeng_focustrap__WEBPACK_IMPORTED_MODULE_73__["FocusTrapModule"],
+                primeng_captcha__WEBPACK_IMPORTED_MODULE_74__["CaptchaModule"],
+                primeng_progressspinner__WEBPACK_IMPORTED_MODULE_75__["ProgressSpinnerModule"],
+                primeng_terminal__WEBPACK_IMPORTED_MODULE_76__["TerminalModule"],
+                primeng_scrolltop__WEBPACK_IMPORTED_MODULE_77__["ScrollTopModule"],
+                primeng_avatar__WEBPACK_IMPORTED_MODULE_78__["AvatarModule"],
+                primeng_avatargroup__WEBPACK_IMPORTED_MODULE_79__["AvatarGroupModule"],
+                primeng_badge__WEBPACK_IMPORTED_MODULE_80__["BadgeModule"],
+                primeng_chip__WEBPACK_IMPORTED_MODULE_81__["ChipModule"],
+                primeng_skeleton__WEBPACK_IMPORTED_MODULE_82__["SkeletonModule"],
+                primeng_tag__WEBPACK_IMPORTED_MODULE_83__["TagModule"],
+                primeng_confirmpopup__WEBPACK_IMPORTED_MODULE_84__["ConfirmPopupModule"],
+                primeng_splitter__WEBPACK_IMPORTED_MODULE_85__["SplitterModule"],
+                primeng_divider__WEBPACK_IMPORTED_MODULE_86__["DividerModule"],
+                primeng_timeline__WEBPACK_IMPORTED_MODULE_87__["TimelineModule"],
+                primeng_knob__WEBPACK_IMPORTED_MODULE_88__["KnobModule"],
+                primeng_cascadeselect__WEBPACK_IMPORTED_MODULE_89__["CascadeSelectModule"]
+            ]
+        })
+    ], PrimeNGBundleModule);
+    return PrimeNGBundleModule;
 }());
 
 
@@ -3777,6 +4434,80 @@ var TestimonialsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/skill.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/skill.service.ts ***!
+  \*******************************************/
+/*! exports provided: SkillService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillService", function() { return SkillService; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../environments/environment */ "./src/environments/environment.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+// const httpOptions = {
+//   headers: new HttpHeaders({
+//     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
+//     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
+//     'Content-Type':  'application/json'
+//   })
+// };
+var apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
+var SkillService = /** @class */ (function () {
+    function SkillService(http) {
+        this.http = http;
+    }
+    SkillService.prototype.getSkills = function () {
+        var url = apiUrl + "/skills";
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
+            return res;
+        }));
+    };
+    SkillService.prototype.addSkill = function (params) {
+        if (params === void 0) { params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpParams"](); }
+        var url = apiUrl + "/skills";
+        return this.http.post(url, params)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
+            console.log(res);
+            return res;
+        }));
+    };
+    SkillService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }
+    ]; };
+    SkillService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]])
+    ], SkillService);
+    return SkillService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/image-upload/image-upload.component.scss":
 /*!*****************************************************************!*\
   !*** ./src/app/shared/image-upload/image-upload.component.scss ***!
@@ -3990,15 +4721,12 @@ var NavbarComponent = /** @class */ (function () {
     ;
     NavbarComponent.prototype.sidebarClose = function () {
         var html = document.getElementsByTagName('html')[0];
-        // console.log(html);
         this.toggleButton.classList.remove('toggled');
         this.sidebarVisible = false;
         html.classList.remove('nav-open');
     };
     ;
     NavbarComponent.prototype.sidebarToggle = function () {
-        // const toggleButton = this.toggleButton;
-        // const body = document.getElementsByTagName('body')[0];
         if (this.sidebarVisible === false) {
             this.sidebarOpen();
         }
@@ -4059,7 +4787,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 };
 var environment = {
     production: false,
-    apiUrl: "https://joshlevyportfolio.herokuapp.com"
+    apiUrl: "https://joshlevy.herokuapp.com"
 };
 
 

@@ -215,3 +215,33 @@
 .bg-white{
     background-color: $white-color !important;
 }
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  align-items: center !important;
+  height: 74px !important;
+}
+
+ul.navbar-nav.ml-auto {
+  display: flex !important;
+  align-items: center !important;
+  height: 100%;
+}
+
+ul.navbar-nav.ml-auto li {
+  display: flex !important;
+  align-items: center !important;
+  height: 100%;
+}
+
+ul.navbar-nav.ml-auto li a {
+  display: flex !important;
+  align-items: center !important;
+  height: 100%;
+}
+
+.navbar p {
+  font-size: 1.25em !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+}

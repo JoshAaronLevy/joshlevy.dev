@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
+import { PrimeNGBundleModule } from '../primeng.module';
+
 import { PresentationComponent } from './presentation.component';
 
 @NgModule({
@@ -13,10 +15,11 @@ import { PresentationComponent } from './presentation.component';
         BrowserModule,
         FormsModule,
         RouterModule,
-        NgbModule
+        NgbModule,
+        PrimeNGBundleModule
     ],
     declarations: [ PresentationComponent ],
-    exports:[ PresentationComponent ],
+    exports: [ PresentationComponent ],
     providers: []
 })
 export class PresentationModule { }

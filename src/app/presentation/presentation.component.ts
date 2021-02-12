@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SkillService } from 'app/services/skill.service';
+import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-presentation',
@@ -7,14 +8,15 @@ import { SkillService } from 'app/services/skill.service';
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit, OnDestroy {
+  events: any;
   date: Date = new Date();
   skills: any;
   skill: any;
   filter: any;
   filteredSkills: any;
-  allSelected: boolean = true;
-  frontEndSelected: boolean = false;
-  backEndSelected: boolean = false;
+  allSelected = true;
+  frontEndSelected = false;
+  backEndSelected = false;
 
   constructor(
     public skillService: SkillService
@@ -27,6 +29,12 @@ export class PresentationComponent implements OnInit, OnDestroy {
     // const navbar = document.getElementsByTagName('nav')[0];
     // navbar.classList.add('navbar-transparent');
     this.getSkills();
+    this.events = [
+      {status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg'},
+      {status: 'Processing', date: '15/10/2020 14:00', icon: PrimeIcons.COG, color: '#673AB7'},
+      {status: 'Shipped', date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800'},
+      {status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B'}
+    ];
   }
 
   getSkills() {

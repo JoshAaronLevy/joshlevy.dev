@@ -20,9 +20,12 @@
         <div class="section-description text-center">
           <h2 class="title">Skills</h2>
           <div class="filter-buttons">
-            <button [disabled]="allSelected" (click)="filterSkills('All')" class="btn btn-primary category-button">All</button>
-            <button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')" class="btn btn-primary category-button">Front-End</button>
-            <button [disabled]="backEndSelected" (click)="filterSkills('Back-End')" class="btn btn-primary category-button">Back-End</button>
+            <button [disabled]="allSelected" (click)="filterSkills('All')"
+              class="btn btn-primary category-button">All</button>
+            <button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')"
+              class="btn btn-primary category-button">Front-End</button>
+            <button [disabled]="backEndSelected" (click)="filterSkills('Back-End')"
+              class="btn btn-primary category-button">Back-End</button>
           </div>
         </div>
       </div>
@@ -41,7 +44,8 @@
                 <div class="card-body">
                   <h4 class="card-title">{{ skill.name }}</h4>
                   <h6 class="category">{{ skill.experience }}</h6>
-                  <button type="button" (click)="filterSkills(skill.type)" class="btn btn-primary btn-round category-button">{{ skill.type }}</button>
+                  <button type="button" (click)="filterSkills(skill.type)"
+                    class="btn btn-primary btn-round category-button">{{ skill.type }}</button>
                 </div>
               </div>
             </li>
@@ -58,78 +62,24 @@
         </div>
       </div>
       <div class="row">
-        <!-- <div class="col-md-4">
-          <h5 class="title">About Us</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/aboutus']" target="_blank">
-              <img src="assets/img/presentation-page/pages/about-us.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Landing Page</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/landing']" target="_blank">
-              <img src="assets/img/presentation-page/pages/landing.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Login Page</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/login']" target="_blank">
-              <img src="assets/img/presentation-page/pages/login.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Signup Page</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/register']" target="_blank">
-              <img src="assets/img/presentation-page/pages/signup.jpg" alt="">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h5 class="title">Blog Post</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/blogpost']" target="_blank">
-              <img src="assets/img/presentation-page/pages/blog-post.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Product Page</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/productpage']" target="_blank">
-              <img src="assets/img/presentation-page/pages/product.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Profile Page</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/profile']" target="_blank">
-              <img src="assets/img/presentation-page/pages/profile.jpg" alt="">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h5 class="title">Pricing Page</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/pricing']" target="_blank">
-              <img src="assets/img/presentation-page/pages/pricing.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Ecommerce</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/ecommerce']" target="_blank">
-              <img src="assets/img/presentation-page/pages/ecommerce.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Blog Posts</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/blogposts']" target="_blank">
-              <img src="assets/img/presentation-page/pages/blog-posts.jpg" alt="">
-            </a>
-          </div>
-          <h5 class="title">Contact Us</h5>
-          <div class="card">
-            <a [routerLink]="['/examples/contactus']" target="_blank">
-              <img src="assets/img/presentation-page/pages/contact.jpg" alt="">
-            </a>
-          </div>
-        </div> -->
+        <p-timeline [value]="events1" align="alternate">
+          <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+              <i [ngClass]="event.icon"></i>
+            </span>
+          </ng-template>
+          <ng-template pTemplate="content" let-event>
+            <p-card [header]="event.status" [subheader]="event.date">
+              <img *ngIf="event.image" [src]="'assets/showcase/images/demo/product/' + event.image" [alt]="event.name"
+                width="200" class="p-shadow-2" />
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
+                numquam deserunt
+                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                neque quas!</p>
+              <button pButton label="Read more" class="p-button-text"></button>
+            </p-card>
+          </ng-template>
+        </p-timeline>
       </div>
     </div>
   </div>

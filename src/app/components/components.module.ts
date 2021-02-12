@@ -10,6 +10,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { ImageUploadModule } from '../shared/image-upload/image-upload.module';
 import { RouterModule } from '@angular/router';
 
+import { PrimeNGBundleModule } from '../primeng.module';
+
 import { BasicelementsComponent } from './basicelements/basicelements.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TypographyComponent } from './typography/typography.component';
@@ -50,6 +52,6 @@ import { CardsAreasComponent } from './cards-areas/cards-areas.component';
         CommentsAreasComponent,
         CardsAreasComponent
     ],
-    exports:[ ComponentsComponent ]
+    exports: [ ComponentsComponent ]
 })
 export class ComponentsModule { }
