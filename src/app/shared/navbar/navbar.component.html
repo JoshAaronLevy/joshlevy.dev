@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top" color-on-scroll="500">
   <div class="container">
     <div class="navbar-translate">
-      <a class="navbar-brand" [routerLink]="['/presentation']">
+      <a class="navbar-brand" [routerLink]="['/']">
         <img src="./assets/img/Josh-Levy-Logo.png" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
@@ -15,28 +15,28 @@
     <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/components']">
-            <p>Skills</p>
+          <a class="nav-link" href="#skills">
+            Skills
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/sections']">
-            <p>Projects</p>
+          <a class="nav-link" href="#projects">
+            Projects
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/examples']">
-            <p>Experience</p>
+          <a class="nav-link" href="#experience">
+            Experience
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/examples']">
-            <p>Resume</p>
+          <a class="nav-link" href="#resume">
+            Resume
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/examples']">
-            <p>Contact</p>
+          <a class="nav-link" (click)="openContactModal()">
+            Contact
           </a>
         </li>
       </ul>

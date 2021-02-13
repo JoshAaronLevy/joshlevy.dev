@@ -1,9 +1,10 @@
 {
-  "name": "now-ui-kit-pro-angular",
+  "name": "josh-levy",
   "version": "1.2.0",
   "scripts": {
     "start": "ng serve -o --port=4100",
     "build": "rm -rf dist && ng build",
+    "deploy": "rm -rf dist && ng build && firebase deploy && gitquick 'Deployed to Firebase'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

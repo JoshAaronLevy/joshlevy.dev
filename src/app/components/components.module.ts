@@ -25,6 +25,7 @@ import { TablesAreasComponent } from './tables-areas/tables-areas.component';
 import { CommentsAreasComponent } from './comments-areas/comments-areas.component';
 import { CardsAreasComponent } from './cards-areas/cards-areas.component';
 import { WorkHistoryComponent } from './work-history/work-history.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
     imports: [

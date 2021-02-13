@@ -1,13 +1,19 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ContactComponent } from 'app/components/contact/contact.component';
 import { JobService } from 'app/services/job.service';
 import { ProjectService } from 'app/services/project.service';
 import { SkillService } from 'app/services/skill.service';
 import { PrimeIcons } from 'primeng/api';
+import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-presentation',
   templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.scss']
+  styleUrls: ['./presentation.component.scss'],
+  providers: [
+    DialogService,
+    DynamicDialogConfig
+  ]
 })
 export class PresentationComponent implements OnInit, OnDestroy {
   events1: any;
@@ -22,11 +28,15 @@ export class PresentationComponent implements OnInit, OnDestroy {
   frontEndSelected = false;
   backEndSelected = false;
   responsibilities: any;
+  displayModal: boolean;
+  ref: DynamicDialogRef;
 
   constructor(
     public skillService: SkillService,
     public projectService: ProjectService,
-    public jobService: JobService
+    public jobService: JobService,
+    public dialogService: DialogService,
+    public config: DynamicDialogConfig
   ) { }
 
   ngOnInit() {
@@ -94,10 +104,17 @@ export class PresentationComponent implements OnInit, OnDestroy {
     });
   }
 
+  showContactModal() {
+    this.ref = this.dialogService.open(ContactComponent, {
+      header: 'Contact Me',
+      width: '50%'
+    });
+  }
+
   ngOnDestroy() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove('presentation-page');
     // const navbar = document.getElementsByTagName('nav')[0];
     // navbar.classList.remove('navbar-transparent');
   }
-} 
+}

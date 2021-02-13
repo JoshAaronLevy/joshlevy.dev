@@ -7,3 +7,136 @@ th.dark-table-header {
   border: 1px solid #333 !important;
   color: #fff !important;
 }
+
+.resume {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+iframe {
+  width: 840px;
+  height: 1070px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.p-dialog .p-dialog-header {
+  padding: 0.5rem !important;
+}
+
+:host ::ng-deep .p-button {
+  margin: 0 .5rem 0 0;
+  min-width: 10rem;
+}
+
+.confirmation-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+  min-width: 6rem;
+}
+
+.inline {
+  display: inline;
+}
+
+.name {
+  font-weight: 700;
+  margin-top: 0px;
+}
+
+.social-button {
+  font-weight: 700 !important;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.fa-linkedin:hover {
+  color: #ae0001;
+}
+
+.fa-github {
+  color: #222;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.fa-github:hover {
+  color: #ae0001;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.contact h4 {
+  margin-top: -5px !important;
+  margin-bottom: 0px !important;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+}
+
+.contact a:hover {
+  color: #ae0001;
+  text-decoration: none;
+}
+
+.contact i {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #ae0001;
+}
+
+.contact sup {
+  color: #ae0001;
+}
+
+.footnote {
+  text-align: left;
+  margin-top: 50px;
+}
+
+.footnote sup {
+  color: #ae0001;
+}
+
+.fas.fa-link {
+  color: #222 !important;
+  font-size: 30px !important;
+}
+
+.fas.fa-link:hover {
+  color: #ae0001 !important;
+  font-size: 30px !important;
+}
+
+.no-display {
+  display: none !important;
+}

@@ -9,6 +9,7 @@ import { PrimeNGBundleModule } from '../primeng.module';
 
 import { PresentationComponent } from './presentation.component';
 import { WorkHistoryComponent } from 'app/components/work-history/work-history.component';
+import { ContactComponent } from 'app/components/contact/contact.component';
 
 @NgModule({
     imports: [
@@ -21,11 +22,13 @@ import { WorkHistoryComponent } from 'app/components/work-history/work-history.c
     ],
     declarations: [
       PresentationComponent,
-      WorkHistoryComponent
+      WorkHistoryComponent,
+      ContactComponent
     ],
     exports: [
       PresentationComponent,
-      WorkHistoryComponent
+      WorkHistoryComponent,
+      ContactComponent
     ],
     providers: []
 })
