@@ -88,7 +88,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n          <div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n            <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n              class=\"btn btn-primary category-button\">All</button>\n            <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n              class=\"btn btn-primary category-button\">Front-End</button>\n            <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n              class=\"btn btn-primary category-button\">Back-End</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n            <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n          </div>\n          <ul *ngIf=\"!loadingSkills\" class=\"skills-list\">\n            <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n              <div class=\"card card-profile card-plain\">\n                <div class=\"card-image skill-image\">\n                  <div class=\"img img-raised rounded\">\n                    <img src=\"{{ skill.img }}\" />\n                  </div>\n                </div>\n                <div class=\"card-body\">\n                  <h4 class=\"card-title\">{{ skill.name }}</h4>\n                  <h6 class=\"category\">{{ skill.experience }}</h6>\n                  <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                    class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n                </div>\n              </div>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"projects\" class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Projects</h2>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div *ngIf=\"loadingProjects\" class=\"progress-spinner\">\n          <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n        </div>\n        <p-timeline *ngIf=\"!loadingProjects\" [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n          <ng-template pTemplate=\"marker\" let-project>\n            <span class=\"custom-marker p-shadow-2\" [style.backgroundColor]=\"markerColor\">\n              <i class=\"fas fa-code\"></i>\n            </span>\n            <!-- <small class=\"p-text-secondary\">{{ project.date }}</small> -->\n          </ng-template>\n          <ng-template pTemplate=\"opposite\" let-project>\n            <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n              <p class=\"card-description\">{{ project.description }}</p>\n              <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n              <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n            </p-card>\n          </ng-template>\n        </p-timeline>\n      </div>\n    </div>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Work History</h2>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid padded-container\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <div *ngIf=\"loadingJobs\" class=\"progress-spinner\">\n            <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n          </div>\n          <app-work-history *ngIf=\"!loadingJobs\"></app-work-history>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Resume</h2>\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid flex-container\">\n      <div class=\"section-cols\">\n        <div class=\"row \">\n          <div class=\"d-none d-lg-block\">\n            <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n<footer class=\"footer \" data-background-color=\"black\">\n  <div class=\"container\">\n    <nav>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{date | date: 'yyyy'}}, Designed by\n      <a href=\"https://joshlevy.dev\" target=\"_blank\">Josh Levy</a>.\n    </div>\n  </div>\n</footer>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <app-hero></app-hero>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <app-skills></app-skills>\n  </div>\n  <div id=\"projects\" class=\"section section-examples\" data-background-color=\"black\">\n    <app-projects></app-projects>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <app-work-history></app-work-history>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <app-resume></app-resume>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -304,6 +304,70 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "6bE9":
+/*!***********************************************************!*\
+  !*** ./src/app/components/projects/projects.component.ts ***!
+  \***********************************************************/
+/*! exports provided: ProjectsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
+/* harmony import */ var _raw_loader_projects_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./projects.component.html */ "aggk");
+/* harmony import */ var _projects_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects.component.scss */ "Ai5d");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var app_services_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/project.service */ "c3AT");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+let ProjectsComponent = class ProjectsComponent {
+    constructor(projectService) {
+        this.projectService = projectService;
+    }
+    ngOnInit() {
+        this.loadingProjects = true;
+        this.markerColor = '#ae0001';
+        this.getProjects();
+    }
+    getProjects() {
+        return this.projectService.getProjects().subscribe(data => {
+            if (data) {
+                this.loadingProjects = false;
+                this.projects = data.projects;
+                this.projects.sort(function (a, b) {
+                    return a.id - b.id;
+                });
+            }
+        });
+    }
+};
+ProjectsComponent.ctorParameters = () => [
+    { type: app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] }
+];
+ProjectsComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-projects',
+        template: _raw_loader_projects_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        styles: [_projects_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"]])
+], ProjectsComponent);
+
+
+
+/***/ }),
+
 /***/ "6cdP":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/examples/register/register.component.html ***!
@@ -339,7 +403,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".skills-list {\n  list-style-type: none !important;\n  padding: 0 !important;\n  display: flex !important;\n  flex-wrap: wrap;\n  margin-bottom: 100px !important;\n}\n\n.skill-image {\n  height: 300px !important;\n  display: flex !important;\n  justify-content: center !important;\n  align-items: center !important;\n  background-color: #fff !important;\n  transition: all 0.4s ease 0s !important;\n}\n\n.skill-image:hover {\n  transition: all 0.4s ease 0s !important;\n  transform: scale(1.02);\n}\n\n.skill-image .img {\n  height: 300px !important;\n  display: flex !important;\n  justify-content: center !important;\n  align-items: center !important;\n  width: 100% !important;\n  background-color: #fff !important;\n  transition: none !important;\n}\n\n.skill-image .img:hover {\n  transition: none !important;\n  transform: none !important;\n}\n\n.skill-image .img img {\n  height: 100% !important;\n  width: auto !important;\n  display: flex !important;\n  justify-content: center !important;\n  align-items: center !important;\n  padding: 30px !important;\n  background-color: #fff !important;\n  transition: none !important;\n  box-shadow: none;\n}\n\n.skill-image .img img:hover {\n  transition: none !important;\n  transform: none !important;\n  box-shadow: none;\n}\n\n.card-title {\n  font-size: 1.75em !important;\n  font-weight: 700 !important;\n}\n\n.category {\n  font-size: 1.1em !important;\n  font-weight: 700 !important;\n  color: #666 !important;\n}\n\n.category-button {\n  font-size: 1em !important;\n  font-weight: 700 !important;\n  margin-top: 0px !important;\n  background-color: #ae0001 !important;\n}\n\n.card-description {\n  color: #222 !important;\n}\n\n.p-text-secondary {\n  color: #fff !important;\n  font-size: 16px !important;\n  font-weight: 700 !important;\n}\n\n.p-timeline-event {\n  min-height: 300px !important;\n  height: 300px !important;\n}\n\n.timeline-card {\n  margin-bottom: 30px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3ByZXNlbnRhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdDQUFBO0VBQ0EscUJBQUE7RUFDQSx3QkFBQTtFQUNBLGVBQUE7RUFDQSwrQkFBQTtBQUNGOztBQUVBO0VBQ0Usd0JBQUE7RUFDQSx3QkFBQTtFQUNBLGtDQUFBO0VBQ0EsOEJBQUE7RUFDQSxpQ0FBQTtFQUNBLHVDQUFBO0FBQ0Y7O0FBRUE7RUFDRSx1Q0FBQTtFQUNBLHNCQUFBO0FBQ0Y7O0FBRUE7RUFDRSx3QkFBQTtFQUNBLHdCQUFBO0VBQ0Esa0NBQUE7RUFDQSw4QkFBQTtFQUNBLHNCQUFBO0VBQ0EsaUNBQUE7RUFDQSwyQkFBQTtBQUNGOztBQUVBO0VBQ0UsMkJBQUE7RUFDQSwwQkFBQTtBQUNGOztBQUVBO0VBQ0UsdUJBQUE7RUFDQSxzQkFBQTtFQUNBLHdCQUFBO0VBQ0Esa0NBQUE7RUFDQSw4QkFBQTtFQUNBLHdCQUFBO0VBQ0EsaUNBQUE7RUFDQSwyQkFBQTtFQUNBLGdCQUFBO0FBQ0Y7O0FBRUE7RUFDRSwyQkFBQTtFQUNBLDBCQUFBO0VBQ0EsZ0JBQUE7QUFDRjs7QUFFQTtFQUNFLDRCQUFBO0VBQ0EsMkJBQUE7QUFDRjs7QUFFQTtFQUNFLDJCQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtBQUNGOztBQUVBO0VBQ0UseUJBQUE7RUFDQSwyQkFBQTtFQUNBLDBCQUFBO0VBQ0Esb0NBQUE7QUFDRjs7QUFFQTtFQUNFLHNCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxzQkFBQTtFQUNBLDBCQUFBO0VBQ0EsMkJBQUE7QUFDRjs7QUFFQTtFQUNFLDRCQUFBO0VBQ0Esd0JBQUE7QUFDRjs7QUFFQTtFQUNFLDhCQUFBO0FBQ0YiLCJmaWxlIjoicHJlc2VudGF0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNraWxscy1saXN0IHtcbiAgbGlzdC1zdHlsZS10eXBlOiBub25lICFpbXBvcnRhbnQ7XG4gIHBhZGRpbmc6IDAgIWltcG9ydGFudDtcbiAgZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIG1hcmdpbi1ib3R0b206IDEwMHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5za2lsbC1pbWFnZSB7XG4gIGhlaWdodDogMzAwcHggIWltcG9ydGFudDtcbiAgZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlciAhaW1wb3J0YW50O1xuICBhbGlnbi1pdGVtczogY2VudGVyICFpbXBvcnRhbnQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgdHJhbnNpdGlvbjogYWxsIDAuNHMgZWFzZSAwcyAhaW1wb3J0YW50O1xufVxuXG4uc2tpbGwtaW1hZ2U6aG92ZXIge1xuICB0cmFuc2l0aW9uOiBhbGwgMC40cyBlYXNlIDBzICFpbXBvcnRhbnQ7XG4gIHRyYW5zZm9ybTogc2NhbGUoMS4wMik7XG59XG5cbi5za2lsbC1pbWFnZSAuaW1nIHtcbiAgaGVpZ2h0OiAzMDBweCAhaW1wb3J0YW50O1xuICBkaXNwbGF5OiBmbGV4ICFpbXBvcnRhbnQ7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyICFpbXBvcnRhbnQ7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXIgIWltcG9ydGFudDtcbiAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICB0cmFuc2l0aW9uOiBub25lICFpbXBvcnRhbnQ7XG59XG5cbi5za2lsbC1pbWFnZSAuaW1nOmhvdmVyIHtcbiAgdHJhbnNpdGlvbjogbm9uZSAhaW1wb3J0YW50O1xuICB0cmFuc2Zvcm06IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLnNraWxsLWltYWdlIC5pbWcgaW1nIHtcbiAgaGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7XG4gIHdpZHRoOiBhdXRvICFpbXBvcnRhbnQ7XG4gIGRpc3BsYXk6IGZsZXggIWltcG9ydGFudDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXIgIWltcG9ydGFudDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlciAhaW1wb3J0YW50O1xuICBwYWRkaW5nOiAzMHB4ICFpbXBvcnRhbnQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgdHJhbnNpdGlvbjogbm9uZSAhaW1wb3J0YW50O1xuICBib3gtc2hhZG93OiBub25lO1xufVxuXG4uc2tpbGwtaW1hZ2UgLmltZyBpbWc6aG92ZXIge1xuICB0cmFuc2l0aW9uOiBub25lICFpbXBvcnRhbnQ7XG4gIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xuICBib3gtc2hhZG93OiBub25lO1xufVxuXG4uY2FyZC10aXRsZSB7XG4gIGZvbnQtc2l6ZTogMS43NWVtICFpbXBvcnRhbnQ7XG4gIGZvbnQtd2VpZ2h0OiA3MDAgIWltcG9ydGFudDtcbn1cblxuLmNhdGVnb3J5IHtcbiAgZm9udC1zaXplOiAxLjFlbSAhaW1wb3J0YW50O1xuICBmb250LXdlaWdodDogNzAwICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiAjNjY2ICFpbXBvcnRhbnQ7XG59XG5cbi5jYXRlZ29yeS1idXR0b24ge1xuICBmb250LXNpemU6IDFlbSAhaW1wb3J0YW50O1xuICBmb250LXdlaWdodDogNzAwICFpbXBvcnRhbnQ7XG4gIG1hcmdpbi10b3A6IDBweCAhaW1wb3J0YW50O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYWUwMDAxICFpbXBvcnRhbnQ7XG59XG5cbi5jYXJkLWRlc2NyaXB0aW9uIHtcbiAgY29sb3I6ICMyMjIgIWltcG9ydGFudDtcbn1cblxuLnAtdGV4dC1zZWNvbmRhcnkge1xuICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICBmb250LXNpemU6IDE2cHggIWltcG9ydGFudDtcbiAgZm9udC13ZWlnaHQ6IDcwMCAhaW1wb3J0YW50O1xufVxuXG4ucC10aW1lbGluZS1ldmVudCB7XG4gIG1pbi1oZWlnaHQ6IDMwMHB4ICFpbXBvcnRhbnQ7XG4gIGhlaWdodDogMzAwcHggIWltcG9ydGFudDtcbn1cblxuLnRpbWVsaW5lLWNhcmQge1xuICBtYXJnaW4tYm90dG9tOiAzMHB4ICFpbXBvcnRhbnQ7XG59XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwcmVzZW50YXRpb24uY29tcG9uZW50LnNjc3MifQ== */");
 
 /***/ }),
 
@@ -505,6 +569,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"section section-navbars\">\n    <div class=\"container\" id=\"menu-dropdown\">\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <h4>Menu</h4>\n                <nav class=\"navbar navbar-expand-lg bg-primary\">\n                    <div class=\"container\">\n                        <a class=\"navbar-brand\" href=\"#\">Menu</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                        <div class=\"collapse navbar-collapse\" id=\"example-navbar\" data-nav-image=\"assets/img/blurred-image-1.jpg\">\n                            <ul class=\"navbar-nav\">\n                                <li class=\"nav-item active\">\n                                    <a class=\"nav-link\" href=\"#\">\n                                        <p>Link</p>\n                                    </a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link\" href=\"#\">\n                                        <p>Link</p>\n                                    </a>\n                                </li>\n                                <li class=\"nav-item\">\n                                  <div ngbDropdown class=\"dropdown\">\n                                      <a class=\"nav-link dropdown-toggle\" ngbDropdownToggle>\n                                        <p>\n                                            Dropdown\n                                        </p>\n                                      </a>\n                                      <div ngbDropdownMenu class=\"dropdown-menu\">\n                                        <a class=\"dropdown-item\" href=\"#\">Action</a>\n                                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n                                      </div>\n                                  </div>\n                                </li>\n                            </ul>\n                        </div>\n                    </div>\n                </nav>\n            </div>\n            <div class=\"col-md-6\">\n                <h4>Menu with Icons</h4>\n                <nav class=\"navbar navbar-expand-lg bg-info\">\n                    <div class=\"container\">\n                        <a class=\"navbar-brand\" href=\"#\">Icons</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-icons\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                        <div class=\"collapse navbar-collapse\" id=\"example-navbar-icons\">\n                            <ul class=\"navbar-nav ml-auto\">\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link\" href=\"#\"><i class=\"now-ui-icons ui-1_send\" aria-hidden=\"true\"></i></a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <a class=\"nav-link\" href=\"#\"><i class=\"now-ui-icons users_single-02\" aria-hidden=\"true\"></i></a>\n                                </li>\n                                <li class=\"nav-item\">\n                                    <div ngbDropdown class=\"dropdown\">\n                                        <a class=\"nav-link dropdown-toggle\" ngbDropdownToggle>\n                                            <i class=\"now-ui-icons ui-1_settings-gear-63\"></i>\n                                        </a>\n                                        <div ngbDropdownMenu class=\"dropdown-menu dropdown-menu-right\">\n                                            <div class=\"dropdown-header\">Dropdown header</div>\n                                            <a class=\"dropdown-item\">Action</a>\n                                            <a class=\"dropdown-item\">Another action</a>\n                                            <a class=\"dropdown-item\">Something else here</a>\n                                            <div class=\"dropdown-divider\"></div>\n                                            <a class=\"dropdown-item\">Separated link</a>\n                                            <div class=\"dropdown-divider\"></div>\n                                            <a class=\"dropdown-item\">Another separated link</a>\n                                        </div>\n                                    </div>\n                                </li>\n                            </ul>\n                        </div>\n                    </div>\n                </nav>\n            </div>\n        </div>\n        <h4>Navigation</h4>\n    </div>\n    <div id=\"navbar\">\n        <div class=\"navigation-example\" style=\"background-image:url('assets/img/bg7.jpg')\">\n            <!-- Navbar Primary  -->\n            <nav class=\"navbar navbar-expand-lg bg-primary\">\n                <div class=\"container\">\n                    <div class=\"navbar-translate\">\n                        <a class=\"navbar-brand\" href=\"#\">Primary color</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-primary\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                    </div>\n                    <div class=\"collapse navbar-collapse\" id=\"example-navbar-primary\">\n                        <ul class=\"navbar-nav ml-auto\">\n                            <li class=\"nav-item active\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"now-ui-icons objects_globe\"></i>\n                                    <p>Discover</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"now-ui-icons users_circle-08\"></i>\n                                    <p>Profile</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"now-ui-icons ui-1_settings-gear-63\"></i>\n                                    <p>Settings</p>\n                                </a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </nav>\n            <!-- End Navbar Primary -->\n            <!-- Navbar Info -->\n            <nav class=\"navbar navbar-expand-lg bg-info\">\n                <div class=\"container\">\n                    <div class=\"navbar-translate\">\n                        <a class=\"navbar-brand\" href=\"#\">Info Color</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-info\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                    </div>\n                    <div class=\"collapse navbar-collapse\" id=\"example-navbar-info\">\n                        <ul class=\"navbar-nav ml-auto\">\n                            <li class=\"nav-item active\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <p>Discover</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <p>Profile</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <p>Settings</p>\n                                </a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </nav>\n            <!-- End Navbar Info -->\n            <!-- Navbar Success -->\n            <nav class=\"navbar navbar-expand-lg bg-success\">\n                <div class=\"container\">\n                    <div class=\"navbar-translate\">\n                        <a class=\"navbar-brand\" href=\"#\">Success Color</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-success\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                    </div>\n                    <div class=\"collapse navbar-collapse\" id=\"example-navbar-success\">\n                        <ul class=\"navbar-nav ml-auto\">\n                            <li class=\"nav-item active\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"now-ui-icons objects_globe\"></i>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"now-ui-icons users_circle-08\"></i>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"now-ui-icons ui-1_settings-gear-63\"></i>\n                                </a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </nav>\n            <!-- End Navbar Success -->\n            <!-- Navbar Warning -->\n            <nav class=\"navbar navbar-expand-lg bg-warning\">\n                <div class=\"container\">\n                    <div class=\"navbar-translate\">\n                        <a class=\"navbar-brand\" href=\"#\">Warning Color</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-warning\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                    </div>\n                    <div class=\"collapse navbar-collapse\" id=\"example-navbar-warning\">\n                        <ul class=\"navbar-nav ml-auto\">\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-facebook-square\"></i>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-twitter\"></i>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-google-plus\"></i>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-instagram\"></i>\n                                </a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </nav>\n            <!-- End Navbar Warning -->\n            <!-- Navbar Danger -->\n            <nav class=\"navbar navbar-expand-lg bg-danger\">\n                <div class=\"container\">\n                    <div class=\"navbar-translate\">\n                        <a class=\"navbar-brand\" href=\"#\">Danger Color</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-danger\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                    </div>\n                    <div class=\"collapse navbar-collapse\" id=\"example-navbar-danger\">\n                        <ul class=\"navbar-nav ml-auto\">\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-facebook-square\"></i>\n                                    <p>Share</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-twitter\"></i>\n                                    <p>Tweet</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-pinterest\"></i>\n                                    <p>Pin</p>\n                                </a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </nav>\n            <!-- End Navbar Danger -->\n            <!-- Navbar Transparent -->\n            <nav class=\"navbar navbar-expand-lg navbar-transparent\">\n                <div class=\"container\">\n                    <div class=\"navbar-translate\">\n                        <a class=\"navbar-brand\" href=\"#\">Transparent</a>\n                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#example-navbar-transparent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                            <span class=\"navbar-toggler-bar bar1\"></span>\n                            <span class=\"navbar-toggler-bar bar2\"></span>\n                            <span class=\"navbar-toggler-bar bar3\"></span>\n                        </button>\n                    </div>\n                    <div class=\"collapse navbar-collapse\" id=\"example-navbar-transparent\">\n                        <ul class=\"navbar-nav ml-auto\">\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-facebook-square\"></i>\n                                    <p>Facebook</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-twitter\"></i>\n                                    <p>Twitter</p>\n                                </a>\n                            </li>\n                            <li class=\"nav-item\">\n                                <a class=\"nav-link\" href=\"#\">\n                                    <i class=\"fa fa-instagram\"></i>\n                                    <p>Instagram</p>\n                                </a>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n            </nav>\n            <!-- End Navbar Transparent-->\n        </div>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "8ceZ":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/resume/resume.component.html ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid flex-container\">\n  <div class=\"section-cols\">\n    <div class=\"row centered-section\">\n      <div class=\"container\">\n        <div class=\"col-md-8 ml-auto mr-auto\">\n          <div class=\"section-description text-center\">\n            <h2 class=\"title\">Resume</h2>\n          </div>\n        </div>\n      </div>\n      <div class=\"resume-section\">\n        <div class=\"download-resume-button\">\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n        <div class=\"embedded-resume\">\n          <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -799,6 +876,98 @@ PrefooterAreasComponent = __decorate([
 
 /***/ }),
 
+/***/ "A9VX":
+/*!*******************************************************!*\
+  !*** ./src/app/components/skills/skills.component.ts ***!
+  \*******************************************************/
+/*! exports provided: SkillsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsComponent", function() { return SkillsComponent; });
+/* harmony import */ var _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./skills.component.html */ "WtuU");
+/* harmony import */ var _skills_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skills.component.scss */ "XUpm");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+let SkillsComponent = class SkillsComponent {
+    constructor(skillService) {
+        this.skillService = skillService;
+        this.allSelected = true;
+        this.frontEndSelected = false;
+        this.backEndSelected = false;
+    }
+    ngOnInit() {
+        this.loadingSkills = true;
+        this.getSkills();
+    }
+    getSkills() {
+        return this.skillService.getSkills().subscribe(data => {
+            if (data) {
+                this.loadingSkills = false;
+                this.skills = data.skills;
+                this.filterSkills(this.filter);
+            }
+        });
+    }
+    filterSkills(filter) {
+        this.filter = filter;
+        this.filteredSkills = [];
+        for (let i = 0; i < this.skills.length; i++) {
+            if (this.filter === 'Front-End') {
+                this.allSelected = false;
+                this.frontEndSelected = true;
+                this.backEndSelected = false;
+                if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
+                    this.filteredSkills.push(this.skills[i]);
+                }
+            }
+            else if (this.filter === 'Back-End') {
+                this.allSelected = false;
+                this.frontEndSelected = false;
+                this.backEndSelected = true;
+                if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
+                    this.filteredSkills.push(this.skills[i]);
+                }
+            }
+            else {
+                this.allSelected = true;
+                this.frontEndSelected = false;
+                this.backEndSelected = false;
+                this.filteredSkills.push(this.skills[i]);
+            }
+        }
+    }
+};
+SkillsComponent.ctorParameters = () => [
+    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"] }
+];
+SkillsComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-skills',
+        template: _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        styles: [_skills_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"]])
+], SkillsComponent);
+
+
+
+/***/ }),
+
 /***/ "AMS6":
 /*!***********************************************************!*\
   !*** ./src/app/sections/contacts/contacts.component.scss ***!
@@ -882,6 +1051,19 @@ LandingComponent = __decorate([
 ], LandingComponent);
 
 
+
+/***/ }),
+
+/***/ "Ai5d":
+/*!*************************************************************!*\
+  !*** ./src/app/components/projects/projects.component.scss ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwcm9qZWN0cy5jb21wb25lbnQuc2NzcyJ9 */");
 
 /***/ }),
 
@@ -1359,134 +1541,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "Gdn9":
-/*!*********************************************!*\
-  !*** ./src/app/services/product.service.ts ***!
-  \*********************************************/
-/*! exports provided: ProductService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-let ProductService = class ProductService {
-    constructor(http) {
-        this.http = http;
-        this.status = ['OUTOFSTOCK', 'INSTOCK', 'LOWSTOCK'];
-        this.productNames = [
-            'Bamboo Watch',
-            'Black Watch',
-            'Blue Band',
-            'Blue T-Shirt',
-            'Bracelet',
-            'Brown Purse',
-            'Chakra Bracelet',
-            'Galaxy Earrings',
-            'Game Controller',
-            'Gaming Set',
-            'Gold Phone Case',
-            'Green Earbuds',
-            'Green T-Shirt',
-            'Grey T-Shirt',
-            'Headphones',
-            'Light Green T-Shirt',
-            'Lime Band',
-            'Mini Speakers',
-            'Painted Phone Case',
-            'Pink Band',
-            'Pink Purse',
-            'Purple Band',
-            'Purple Gemstone Necklace',
-            'Purple T-Shirt',
-            'Shoes',
-            'Sneakers',
-            'Teal T-Shirt',
-            'Yellow Earbuds',
-            'Yoga Mat',
-            'Yoga Set',
-        ];
-    }
-    getProductsSmall() {
-        return this.http.get('assets/data/products-small.json')
-            .toPromise()
-            .then(res => res.data)
-            .then(data => { return data; });
-    }
-    getProducts() {
-        return this.http.get('assets/data/products.json')
-            .toPromise()
-            .then(res => res.data)
-            .then(data => { return data; });
-    }
-    getProductsWithOrdersSmall() {
-        return this.http.get('assets/data/products-orders-small.json')
-            .toPromise()
-            .then(res => res.data)
-            .then(data => { return data; });
-    }
-    generatePrduct() {
-        const product = {
-            id: this.generateId(),
-            name: this.generateName(),
-            description: 'Product Description',
-            price: this.generatePrice(),
-            quantity: this.generateQuantity(),
-            category: 'Product Category',
-            inventoryStatus: this.generateStatus(),
-            rating: this.generateRating()
-        };
-        product.image = product.name.toLocaleLowerCase().split(/[ ,]+/).join('-') + '.jpg';
-        return product;
-    }
-    generateId() {
-        let text = '';
-        const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        for (let i = 0; i < 5; i++) {
-            text += possible.charAt(Math.floor(Math.random() * possible.length));
-        }
-        return text;
-    }
-    generateName() {
-        return this.productNames[Math.floor(Math.random() * Math.floor(30))];
-    }
-    generatePrice() {
-        return Math.floor(Math.random() * Math.floor(299) + 1);
-    }
-    generateQuantity() {
-        return Math.floor(Math.random() * Math.floor(75) + 1);
-    }
-    generateStatus() {
-        return this.status[Math.floor(Math.random() * Math.floor(3))];
-    }
-    generateRating() {
-        return Math.floor(Math.random() * Math.floor(5) + 1);
-    }
-};
-ProductService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }
-];
-ProductService = __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]])
-], ProductService);
-
-
-
-/***/ }),
-
 /***/ "I4vR":
 /*!*******************************************************************!*\
   !*** ./src/app/components/work-history/work-history.component.ts ***!
@@ -1501,7 +1555,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _work_history_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./work-history.component.scss */ "5v2N");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var app_services_job_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/job.service */ "qLOZ");
-/* harmony import */ var app_services_product_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/services/product.service */ "Gdn9");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1515,58 +1568,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 let WorkHistoryComponent = class WorkHistoryComponent {
-    constructor(jobService, productService) {
+    constructor(jobService) {
         this.jobService = jobService;
-        this.productService = productService;
         this.jobs = [];
-        // expandedJobs: number[] = [];
         this.expandedJobs = {};
     }
     ngOnInit() {
+        this.loadingJobs = true;
         this.getJobs();
-        this.getProducts();
     }
     getJobs() {
         return this.jobService.getJobs().subscribe(data => {
-            this.jobs = data.jobs;
-            this.jobs.sort(function (a, b) {
-                return a.id - b.id;
-            });
+            if (data) {
+                this.loadingJobs = false;
+                this.jobs = data.jobs;
+                this.jobs.sort(function (a, b) {
+                    return a.id - b.id;
+                });
+            }
         });
     }
-    getProducts() {
-        this.productService.getProductsWithOrdersSmall().then(data => {
-            this.products = data;
-            console.log(this.products);
-        });
-    }
-    // displayDetails(selectedJob) {
-    //   let superJenkyJoshArray = [];
-    //   this.jobDetails = selectedJob.id;
-    //   if (!this.isExpanded(this.jobDetails)) {
-    //     this.expandedJobs.push(selectedJob.id);
-    //   } else {
-    //     for (let i = 0; i < this.expandedJobs.length; i++) {
-    //       if (this.expandedJobs[i] !== this.jobDetails) {
-    //         superJenkyJoshArray.push(this.expandedJobs[i]);
-    //       }
-    //     }
-    //     this.expandedJobs = superJenkyJoshArray;
-    //   }
-    //   console.log(this.expandedJobs);
-    // }
-    // Checking which job details are being displayed from the expandedJobs array
-    // displayDetails(selectedJob) {
-    //   this.jobDetails = selectedJob.id;
-    //   if (!this.isExpanded(this.jobDetails)) {
-    //     this.expandedJobs.push(selectedJob.id);
-    //   } else {
-    //     this.expandedJobs.splice(this.expandedJobs.indexOf(selectedJob.id), 1);
-    //   }
-    //   console.log(this.expandedJobs);
-    // }
     // Object key based tracking
     displayDetails(selectedJob) {
         this.jobDetails = selectedJob.id;
@@ -1582,21 +1604,18 @@ let WorkHistoryComponent = class WorkHistoryComponent {
     }
 };
 WorkHistoryComponent.ctorParameters = () => [
-    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"] },
-    { type: app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"] }
+    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"] }
 ];
 WorkHistoryComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-work-history',
         template: _raw_loader_work_history_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         providers: [
-            app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"],
-            app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"]
+            app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"]
         ],
         styles: [_work_history_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"],
-        app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"]])
+    __metadata("design:paramtypes", [app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"]])
 ], WorkHistoryComponent);
 
 
@@ -1626,6 +1645,50 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"section section-nude-gray\">\n    <div class=\"container container-tim\">\n      <div id=\"comments\">\n          <div class=\"title\">\n              <h3>\n                  <small>Comments</small>\n              </h3>\n          </div>\n          <div class=\"row\">\n              <div class=\"col-md-8 ml-auto mr-auto\">\n                  <div class=\"media-area\">\n                      <h3 class=\"title text-center\">\n                          <small>10 Comments</small>\n                      </h3>\n                      <div class=\"media\">\n                          <a class=\"pull-left\" href=\"#\">\n                              <div class=\"avatar\">\n                                  <img class=\"media-object img-raised\" src=\"assets/img/marie.jpg\" alt=\"...\" />\n                              </div>\n                          </a>\n                          <div class=\"media-body\">\n                              <h5 class=\"media-heading\">Tina Andrew\n                                  <small class=\"text-muted\">&middot; 7 minutes ago</small>\n                              </h5>\n                              <p>Chance too good. God level bars. I'm so proud of @LifeOfDesiigner #1 song in the country. Panda! Don't be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>\n                              <p>All praises and blessings to the families of people who never gave up on dreams. Don't forget, You're Awesome!</p>\n                              <div class=\"media-footer\">\n                                  <a href=\"#\" class=\"btn btn-primary btn-neutral pull-right\" placement=\"top\" ngbTooltip=\"Reply to Comment\">\n                                      <i class=\"now-ui-icons ui-1_send\"></i> Reply\n                                  </a>\n                                  <a href=\"#\" class=\"btn btn-danger btn-neutral pull-right\">\n                                      <i class=\"now-ui-icons ui-2_favourite-28\"></i> 243\n                                  </a>\n                              </div>\n                              <div class=\"media media-post\">\n                                  <a class=\"pull-left author\" href=\"#\">\n                                      <div class=\"avatar\">\n                                          <img class=\"media-object img-raised\" alt=\"64x64\" src=\"assets/img/michael.jpg\">\n                                      </div>\n                                  </a>\n                                  <div class=\"media-body\">\n                                      <textarea class=\"form-control\" placeholder=\"Write a nice reply or go home...\" rows=\"4\"></textarea>\n                                      <div class=\"media-footer\">\n                                          <a href=\"#\" class=\"btn btn-primary pull-right\">\n                                              <i class=\"now-ui-icons ui-1_send\"></i> Reply\n                                          </a>\n                                      </div>\n                                  </div>\n                              </div>\n                          </div>\n                      </div>\n                      <div class=\"media\">\n                          <a class=\"pull-left\" href=\"#\">\n                              <div class=\"avatar\">\n                                  <img class=\"media-object img-raised\" alt=\"Tim Picture\" src=\"assets/img/olivia.jpg\">\n                              </div>\n                          </a>\n                          <div class=\"media-body\">\n                              <h5 class=\"media-heading\">John Camber\n                                  <small class=\"text-muted\">&middot; Yesterday</small>\n                              </h5>\n                              <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>\n                              <p> Don't forget, You're Awesome!</p>\n                              <div class=\"media-footer\">\n                                  <a href=\"#\" class=\"btn btn-primary btn-neutral pull-right\" placement=\"top\" ngbTooltip=\"Reply to Comment\">\n                                      <i class=\"now-ui-icons ui-1_send\"></i> Reply\n                                  </a>\n                                  <a href=\"#\" class=\"btn btn-default btn-neutral pull-right\">\n                                      <i class=\"now-ui-icons ui-2_favourite-28\"></i> 25\n                                  </a>\n                              </div>\n                              <div class=\"media\">\n                                  <a class=\"pull-left\" href=\"#\">\n                                      <div class=\"avatar\">\n                                          <img class=\"media-object img-raised\" alt=\"64x64\" src=\"assets/img/emily.jpg\">\n                                      </div>\n                                  </a>\n                                  <div class=\"media-body\">\n                                      <h5 class=\"media-heading\">Tina Andrew\n                                          <small class=\"text-muted\">&middot; 2 Days Ago</small>\n                                      </h5>\n                                      <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>\n                                      <p> Don't forget, You're Awesome!</p>\n                                      <div class=\"media-footer\">\n                                          <a href=\"#\" class=\"btn btn-primary btn-neutral pull-right\" placement=\"top\" ngbTooltip=\"Reply to Comment\">\n                                              <i class=\"now-ui-icons ui-1_send\"></i> Reply\n                                          </a>\n                                          <a href=\"#\" class=\"btn btn-danger btn-neutral pull-right\">\n                                              <i class=\"now-ui-icons ui-2_favourite-28\"></i> 243\n                                          </a>\n                                      </div>\n                                  </div>\n                              </div>\n                          </div>\n                      </div>\n                      <div class=\"media\">\n                          <a class=\"pull-left\" href=\"#\">\n                              <div class=\"avatar\">\n                                  <img class=\"media-object img-raised\" alt=\"64x64\" src=\"assets/img/james.jpg\">\n                              </div>\n                          </a>\n                          <div class=\"media-body\">\n                              <h5 class=\"media-heading\">Rosa Thompson\n                                  <small class=\"text-muted\">&middot; 2 Days Ago</small>\n                              </h5>\n                              <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>\n                              <p> Don't forget, You're Awesome!</p>\n                              <div class=\"media-footer\">\n                                  <a href=\"#\" class=\"btn btn-primary btn-neutral pull-right\" placement=\"top\" ngbTooltip=\"Reply to Comment\">\n                                      <i class=\"now-ui-icons ui-1_send\"></i> Reply\n                                  </a>\n                                  <a href=\"#\" class=\"btn btn-danger btn-neutral pull-right\">\n                                      <i class=\"now-ui-icons ui-2_favourite-28\"></i> 243\n                                  </a>\n                              </div>\n                          </div>\n                      </div>\n                      <div class=\"pagination pagination-primary justify-content-center\">\n                        <ngb-pagination [collectionSize]=\"60\" [(page)]=\"page1\" [maxSize]=\"5\" [rotate]=\"true\" class=\"pagination-primary\"></ngb-pagination>\n                      </div>\n                  </div>\n                  <h4 class=\"text-center\">Post your comment\n                      <br>\n                      <small class=\"text-muted\">- Logged In User -</small>\n                  </h4>\n                  <div class=\"media media-post\">\n                      <a class=\"pull-left author\" href=\"#\">\n                          <div class=\"avatar\">\n                              <img class=\"media-object img-raised\" alt=\"64x64\" src=\"assets/img/james.jpg\">\n                          </div>\n                      </a>\n                      <div class=\"media-body\">\n                          <textarea class=\"form-control\" placeholder=\"Write some nice stuff or nothing...\" rows=\"6\"></textarea>\n                          <div class=\"media-footer\">\n                              <a href=\"#\" class=\"btn btn-primary btn-wd pull-right\">Post Comment</a>\n                          </div>\n                      </div>\n                  </div>\n                  <!-- end media-post -->\n                  <h4 class=\"text-center\">Post your comment\n                      <br>\n                      <small class=\"text-muted\">- Not Logged In User -</small>\n                  </h4>\n                  <div class=\"media media-post\">\n                      <a class=\"pull-left author\" href=\"#\">\n                          <div class=\"avatar\">\n                              <img class=\"media-object img-raised\" alt=\"64x64\" src=\"assets/img/placeholder.jpg\" />\n                          </div>\n                      </a>\n                      <div class=\"media-body\">\n                          <form class=\"form\">\n                              <div class=\"row\">\n                                  <div class=\"col-md-6\">\n                                      <div class=\"form-group\">\n                                          <input type=\"text\" class=\"form-control\" placeholder=\"Your Name\" />\n                                      </div>\n                                  </div>\n                                  <div class=\"col-md-6\">\n                                      <div class=\"form-group\">\n                                          <input type=\"email\" class=\"form-control\" placeholder=\"Your email\" />\n                                      </div>\n                                  </div>\n                              </div>\n                              <textarea class=\"form-control\" placeholder=\"Write some nice stuff or nothing...\" rows=\"6\"></textarea>\n                              <div class=\"media-footer\">\n                                  <h6 class=\"text-muted\">Sign in with</h6>\n                                  <a href=\"\" class=\"btn btn-icon btn-round btn-twitter\">\n                                      <i class=\"fa fa-twitter\"></i>\n                                  </a>\n                                  <a href=\"\" class=\"btn btn-icon btn-round btn-facebook\">\n                                      <i class=\"fa fa-facebook-square\"></i>\n                                  </a>\n                                  <a href=\"\" class=\"btn btn-icon btn-round btn-google\">\n                                      <i class=\"fa fa-google-plus-square\"></i>\n                                  </a>\n                                  <a href=\"#\" class=\"btn btn-primary pull-right\">Post Comment</a>\n                              </div>\n                          </form>\n                      </div>\n                      <!-- end media-body -->\n                  </div>\n                  <!-- end media-post -->\n              </div>\n          </div>\n      </div>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "LmEr":
+/*!*******************************************************!*\
+  !*** ./src/app/components/footer/footer.component.ts ***!
+  \*******************************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var _raw_loader_footer_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./footer.component.html */ "WwN9");
+/* harmony import */ var _footer_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.component.scss */ "yZN6");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let FooterComponent = class FooterComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+FooterComponent.ctorParameters = () => [];
+FooterComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-footer',
+        template: _raw_loader_footer_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        styles: [_footer_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
+
+
 
 /***/ }),
 
@@ -1717,6 +1780,50 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjb250YWN0LmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "Qbzz":
+/*!***************************************************!*\
+  !*** ./src/app/components/hero/hero.component.ts ***!
+  \***************************************************/
+/*! exports provided: HeroComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeroComponent", function() { return HeroComponent; });
+/* harmony import */ var _raw_loader_hero_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./hero.component.html */ "fgAc");
+/* harmony import */ var _hero_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hero.component.scss */ "lJoQ");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let HeroComponent = class HeroComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+HeroComponent.ctorParameters = () => [];
+HeroComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-hero',
+        template: _raw_loader_hero_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        styles: [_hero_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [])
+], HeroComponent);
+
+
 
 /***/ }),
 
@@ -2083,14 +2190,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _primeng_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../primeng.module */ "ThbA");
 /* harmony import */ var _presentation_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./presentation.component */ "gVBG");
-/* harmony import */ var app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! app/components/work-history/work-history.component */ "I4vR");
-/* harmony import */ var app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! app/components/contact/contact.component */ "G2Gn");
+/* harmony import */ var app_components_skills_skills_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! app/components/skills/skills.component */ "A9VX");
+/* harmony import */ var app_components_projects_projects_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! app/components/projects/projects.component */ "6bE9");
+/* harmony import */ var app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/components/work-history/work-history.component */ "I4vR");
+/* harmony import */ var app_components_resume_resume_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/components/resume/resume.component */ "h+Is");
+/* harmony import */ var app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/components/contact/contact.component */ "G2Gn");
+/* harmony import */ var app_components_hero_hero_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/components/hero/hero.component */ "Qbzz");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -2115,13 +2230,21 @@ PresentationModule = __decorate([
         ],
         declarations: [
             _presentation_component__WEBPACK_IMPORTED_MODULE_7__["PresentationComponent"],
-            app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_8__["WorkHistoryComponent"],
-            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__["ContactComponent"]
+            app_components_hero_hero_component__WEBPACK_IMPORTED_MODULE_13__["HeroComponent"],
+            app_components_skills_skills_component__WEBPACK_IMPORTED_MODULE_8__["SkillsComponent"],
+            app_components_projects_projects_component__WEBPACK_IMPORTED_MODULE_9__["ProjectsComponent"],
+            app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_10__["WorkHistoryComponent"],
+            app_components_resume_resume_component__WEBPACK_IMPORTED_MODULE_11__["ResumeComponent"],
+            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"]
         ],
         exports: [
             _presentation_component__WEBPACK_IMPORTED_MODULE_7__["PresentationComponent"],
-            app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_8__["WorkHistoryComponent"],
-            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__["ContactComponent"]
+            app_components_hero_hero_component__WEBPACK_IMPORTED_MODULE_13__["HeroComponent"],
+            app_components_skills_skills_component__WEBPACK_IMPORTED_MODULE_8__["SkillsComponent"],
+            app_components_projects_projects_component__WEBPACK_IMPORTED_MODULE_9__["ProjectsComponent"],
+            app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_10__["WorkHistoryComponent"],
+            app_components_resume_resume_component__WEBPACK_IMPORTED_MODULE_11__["ResumeComponent"],
+            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"]
         ],
         providers: []
     })
@@ -2746,6 +2869,19 @@ ImageUploadComponent = __decorate([
 
 /***/ }),
 
+/***/ "UZyq":
+/*!*********************************************************!*\
+  !*** ./src/app/components/resume/resume.component.scss ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZXN1bWUuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
 /***/ "Umj7":
 /*!*****************************************************************!*\
   !*** ./src/app/shared/image-upload/image-upload.component.scss ***!
@@ -2781,7 +2917,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n");
 
 /***/ }),
 
@@ -2876,6 +3012,45 @@ ContactsComponent = __decorate([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjYXJkcy1hcmVhcy5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "WtuU":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/skills/skills.component.html ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Skills</h2>\n      <div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n        <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n          class=\"btn btn-primary category-button\">All</button>\n        <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n          class=\"btn btn-primary category-button\">Front-End</button>\n        <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n          class=\"btn btn-primary category-button\">Back-End</button>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <ul *ngIf=\"!loadingSkills\" class=\"skills-list\">\n        <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n          <div class=\"card card-profile card-plain\">\n            <div class=\"card-image skill-image\">\n              <div class=\"img img-raised rounded\">\n                <img src=\"{{ skill.img }}\" />\n              </div>\n            </div>\n            <div class=\"card-body\">\n              <h4 class=\"card-title\">{{ skill.name }}</h4>\n              <h6 class=\"category\">{{ skill.experience }}</h6>\n              <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "WwN9":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/footer/footer.component.html ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<footer class=\"footer \" data-background-color=\"black\">\n  <div class=\"container\">\n    <nav>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{date | date: 'yyyy'}}, Designed by\n      <a href=\"https://joshlevy.dev\" target=\"_blank\">Josh Levy</a>.\n    </div>\n  </div>\n</footer>");
+
+/***/ }),
+
+/***/ "XUpm":
+/*!*********************************************************!*\
+  !*** ./src/app/components/skills/skills.component.scss ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJza2lsbHMuY29tcG9uZW50LnNjc3MifQ== */");
 
 /***/ }),
 
@@ -2979,6 +3154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/navbar/navbar.component */ "EtQq");
 /* harmony import */ var _presentation_presentation_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./presentation/presentation.module */ "SsGY");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/footer/footer.component */ "LmEr");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2998,13 +3174,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-            _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_10__["NavbarComponent"]
+            _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_10__["NavbarComponent"],
+            _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_13__["FooterComponent"]
         ],
         imports: [
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_0__["BrowserAnimationsModule"],
@@ -3022,7 +3200,9 @@ AppModule = __decorate([
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]
         ],
         providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+        bootstrap: [
+            _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]
+        ]
     })
 ], AppModule);
 
@@ -3187,6 +3367,19 @@ ProductpageComponent = __decorate([
 ], ProductpageComponent);
 
 
+
+/***/ }),
+
+/***/ "aggk":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/projects/projects.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Projects</h2>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid centered-section\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <div *ngIf=\"loadingProjects\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <p-timeline *ngIf=\"!loadingProjects\" [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n        <ng-template pTemplate=\"marker\" let-project>\n          <span class=\"custom-marker p-shadow-2\" [style.backgroundColor]=\"markerColor\">\n            <i class=\"fas fa-code\"></i>\n          </span>\n        </ng-template>\n        <ng-template pTemplate=\"opposite\" let-project>\n          <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n            <p class=\"card-description\">{{ project.description }}</p>\n            <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n            <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n          </p-card>\n        </ng-template>\n      </p-timeline>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -3545,7 +3738,7 @@ ProjectsComponent = __decorate([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- <p>work-history works!</p>\n<ul>\n  <li *ngFor=\"let jerb of jobs\">\n    <button (click)=\"displayDetails(jerb)\">{{ jerb.title }}</button>\n    <ul *ngIf=\"isExpanded(jerb.id)\">\n      <li *ngFor=\"let duty of jerb.description.responsibilities\">{{ duty }}</li>\n    </ul>\n  </li>\n</ul> -->\n\n<div class=\"content-section implementation\">\n  <div class=\"card\">\n    <p-table [value]=\"jobs\" dataKey=\"company\">\n      <ng-template pTemplate=\"header\">\n        <tr>\n          <th class=\"dark-table-header\" style=\"width: 3rem\"></th>\n          <th class=\"dark-table-header\">Company</th>\n          <th class=\"dark-table-header\">Title</th>\n          <th class=\"dark-table-header\">Start Date</th>\n          <th class=\"dark-table-header\">End Date</th>\n          <th class=\"dark-table-header\">Actions</th>\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"body\" let-job let-expanded=\"expanded\">\n        <tr>\n          <td>\n            <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-rounded p-button-plain\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button>\n          </td>\n          <td>{{job.company}}</td>\n          <td>{{job.title}}</td>\n          <td>{{job.startDate}}</td>\n          <td>{{job.endDate}}</td>\n          <td>\n            <!-- <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-info\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button> -->\n            <button *ngIf=\"!expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"View Details\" class=\"p-button-raised actions-button\"></button>\n            <button *ngIf=\"expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"Hide Details\" class=\"p-button-raised p-button-secondary actions-button\"></button>\n          </td>\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"rowexpansion\" let-job>\n        <tr>\n          <td colspan=\"6\">\n            <div>\n              <p-table [value]=\"job.description.results\" dataKey=\"id\">\n                <ng-template pTemplate=\"header\">\n                  <tr>\n                    <th style=\"width: 2.5rem\"></th>\n                    <th>Responsibilities</th>\n                  </tr>\n                </ng-template>\n                <ng-template pTemplate=\"body\" let-description>\n                  <tr>\n                    <td>{{description.id}}</td>\n                    <td>{{description.responsibility}}</td>\n                  </tr>\n                </ng-template>\n              </p-table>\n            </div>\n          </td>\n        </tr>\n      </ng-template>\n    </p-table>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Work History</h2>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid padded-container\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <div *ngIf=\"loadingJobs\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <div *ngIf=\"!loadingJobs\" class=\"content-section implementation\">\n        <div class=\"card\">\n          <p-table [value]=\"jobs\" dataKey=\"company\">\n            <ng-template pTemplate=\"header\">\n              <tr>\n                <th class=\"dark-table-header\" style=\"width: 3rem\"></th>\n                <th class=\"dark-table-header\">Company</th>\n                <th class=\"dark-table-header\">Title</th>\n                <th class=\"dark-table-header\">Start Date</th>\n                <th class=\"dark-table-header\">End Date</th>\n                <th class=\"dark-table-header\">Actions</th>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"body\" let-job let-expanded=\"expanded\">\n              <tr>\n                <td>\n                  <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-rounded p-button-plain\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button>\n                </td>\n                <td>{{job.company}}</td>\n                <td>{{job.title}}</td>\n                <td>{{job.startDate}}</td>\n                <td>{{job.endDate}}</td>\n                <td>\n                  <button *ngIf=\"!expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"View Details\" class=\"p-button-raised actions-button\"></button>\n                  <button *ngIf=\"expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"Hide Details\" class=\"p-button-raised p-button-secondary actions-button\"></button>\n                </td>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"rowexpansion\" let-job>\n              <tr>\n                <td colspan=\"6\">\n                  <div>\n                    <p-table [value]=\"job.description.results\" dataKey=\"id\">\n                      <ng-template pTemplate=\"header\">\n                        <tr>\n                          <th style=\"width: 2.5rem\"></th>\n                          <th>Responsibilities</th>\n                        </tr>\n                      </ng-template>\n                      <ng-template pTemplate=\"body\" let-description>\n                        <tr>\n                          <td>{{description.id}}</td>\n                          <td>{{description.responsibility}}</td>\n                        </tr>\n                      </ng-template>\n                    </p-table>\n                  </div>\n                </td>\n              </tr>\n            </ng-template>\n          </p-table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -3677,6 +3870,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "fgAc":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/hero/hero.component.html ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n  <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n  </div>\n</div>\n<div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n  <div class=\"page-header-image page-header-city\"\n    style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n  </div>\n</div>\n<div class=\"rellax-text-container rellax-text\">\n  <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n</div>\n<h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>");
+
+/***/ }),
+
 /***/ "gVBG":
 /*!********************************************************!*\
   !*** ./src/app/presentation/presentation.component.ts ***!
@@ -3690,12 +3896,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_presentation_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./presentation.component.html */ "+pZr");
 /* harmony import */ var _presentation_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./presentation.component.scss */ "71yw");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/components/contact/contact.component */ "G2Gn");
-/* harmony import */ var app_services_job_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/services/job.service */ "qLOZ");
-/* harmony import */ var app_services_project_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/services/project.service */ "c3AT");
-/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/api */ "7zfz");
-/* harmony import */ var primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/dynamicdialog */ "J7/z");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3708,129 +3908,26 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
 let PresentationComponent = class PresentationComponent {
-    constructor(skillService, projectService, jobService, dialogService, config) {
-        this.skillService = skillService;
-        this.projectService = projectService;
-        this.jobService = jobService;
-        this.dialogService = dialogService;
-        this.config = config;
-        this.date = new Date();
-        this.allSelected = true;
-        this.frontEndSelected = false;
-        this.backEndSelected = false;
-    }
+    constructor() { }
     ngOnInit() {
-        this.loadingSkills = true;
-        this.loadingProjects = true;
-        this.loadingJobs = true;
-        this.markerColor = '#ae0001';
-        this.markerIcon = primeng_api__WEBPACK_IMPORTED_MODULE_7__["PrimeIcons"].HEART;
-        this.filter = 'All';
         const body = document.getElementsByTagName('body')[0];
         body.classList.add('presentation-page');
-        this.getSkills();
-        this.getProjects();
-        this.getJobs();
-    }
-    getSkills() {
-        return this.skillService.getSkills().subscribe(data => {
-            if (data) {
-                this.loadingSkills = false;
-                this.skills = data.skills;
-                this.filterSkills(this.filter);
-            }
-        });
-    }
-    filterSkills(filter) {
-        this.filter = filter;
-        this.filteredSkills = [];
-        for (let i = 0; i < this.skills.length; i++) {
-            if (this.filter === 'Front-End') {
-                this.allSelected = false;
-                this.frontEndSelected = true;
-                this.backEndSelected = false;
-                if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
-                    this.filteredSkills.push(this.skills[i]);
-                }
-            }
-            else if (this.filter === 'Back-End') {
-                this.allSelected = false;
-                this.frontEndSelected = false;
-                this.backEndSelected = true;
-                if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
-                    this.filteredSkills.push(this.skills[i]);
-                }
-            }
-            else {
-                this.allSelected = true;
-                this.frontEndSelected = false;
-                this.backEndSelected = false;
-                this.filteredSkills.push(this.skills[i]);
-            }
-        }
-    }
-    getProjects() {
-        return this.projectService.getProjects().subscribe(data => {
-            if (data) {
-                this.loadingProjects = false;
-                this.projects = data.projects;
-                this.projects.sort(function (a, b) {
-                    return a.id - b.id;
-                });
-            }
-        });
-    }
-    getJobs() {
-        return this.jobService.getJobs().subscribe(data => {
-            if (data) {
-                this.loadingJobs = false;
-                this.jobs = data.jobs;
-                this.jobs.sort(function (a, b) {
-                    return a.id - b.id;
-                });
-            }
-        });
-    }
-    showContactModal() {
-        this.ref = this.dialogService.open(app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__["ContactComponent"], {
-            header: 'Contact Me',
-            width: '50%'
-        });
     }
     ngOnDestroy() {
         const body = document.getElementsByTagName('body')[0];
         body.classList.remove('presentation-page');
     }
 };
-PresentationComponent.ctorParameters = () => [
-    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_6__["SkillService"] },
-    { type: app_services_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"] },
-    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_4__["JobService"] },
-    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__["DialogService"] },
-    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__["DynamicDialogConfig"] }
-];
+PresentationComponent.ctorParameters = () => [];
 PresentationComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-presentation',
         template: _raw_loader_presentation_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
-        providers: [
-            primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__["DialogService"],
-            primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__["DynamicDialogConfig"]
-        ],
+        providers: [],
         styles: [_presentation_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_6__["SkillService"],
-        app_services_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"],
-        app_services_job_service__WEBPACK_IMPORTED_MODULE_4__["JobService"],
-        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__["DialogService"],
-        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_8__["DynamicDialogConfig"]])
+    __metadata("design:paramtypes", [])
 ], PresentationComponent);
 
 
@@ -4062,6 +4159,50 @@ RegisterComponent = __decorate([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<p>\n  examples works!\n</p>\n");
+
+/***/ }),
+
+/***/ "h+Is":
+/*!*******************************************************!*\
+  !*** ./src/app/components/resume/resume.component.ts ***!
+  \*******************************************************/
+/*! exports provided: ResumeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResumeComponent", function() { return ResumeComponent; });
+/* harmony import */ var _raw_loader_resume_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./resume.component.html */ "8ceZ");
+/* harmony import */ var _resume_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./resume.component.scss */ "UZyq");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let ResumeComponent = class ResumeComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+ResumeComponent.ctorParameters = () => [];
+ResumeComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-resume',
+        template: _raw_loader_resume_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        styles: [_resume_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [])
+], ResumeComponent);
+
+
 
 /***/ }),
 
@@ -4495,6 +4636,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <ngb-carousel>\n      <ng-template ngbSlide>\n        <div class=\"page-header header-filter\">\n          <div class=\"page-header-image\" style=\"background-image: url('assets/img/bg40.jpg');\"></div>\n          <div class=\"content-center text-center\">\n              <div class=\"row\">\n                  <div class=\"col-md-8 ml-auto mr-auto2\">\n                      <h1 class=\"title\">Finding the Perfect.</h1>\n                      <h4 class=\"description text-white\">The haute couture crowds make stylish statements between shows during couture season in Paris...</h4>\n                  </div>\n              </div>\n          </div>\n        </div>\n      </ng-template>\n      <ng-template ngbSlide>\n        <div class=\"page-header header-filter\">\n            <div class=\"page-header-image\" style=\"background-image: url('assets/img/bg41.jpg');\"></div>\n            <div class=\"content-center\">\n                <div class=\"row\">\n                    <div class=\"col-md-8 ml-auto mr-auto text-center\">\n                        <h1 class=\"title\">Street Style: Couture.</h1>\n                        <h4 class=\"description text-white\">See what Karlie Kloss, Tracee Ellis Ross and others wore between the shows...</h4>\n                    </div>\n                </div>\n            </div>\n        </div>\n      </ng-template>\n      <ng-template ngbSlide>\n        <div class=\"page-header header-filter\">\n            <div class=\"page-header-image\" style=\"background-image: url('assets/img/bg29.jpg');\"></div>\n            <div class=\"content-center text-center\">\n                <div class=\"row\">\n                    <div class=\"col-md-8 ml-auto mr-auto\">\n                        <h1 class=\"title\">For Men With Style.</h1>\n                        <h4 class=\"description text-white\">Shirts that actually fit? Check. Linen shorts? Yup. Those wider pants suddenly in style? Got them, too....</h4>\n                    </div>\n                </div>\n            </div>\n        </div>\n      </ng-template>\n  </ngb-carousel>\n    <div class=\"main\">\n        <div class=\"section\">\n            <div class=\"container\">\n                <h2 class=\"section-title\">Find what you need</h2>\n                <div class=\"row\">\n                    <div class=\"col-md-3\">\n                      <h4 class=\"card-title card-refine\">\n                          Refine\n                          <button class=\"btn btn-default btn-icon btn-neutral pull-right\" placement=\"top\" ngbTooltip=\"Reset Filter\">\n                              <i class=\"arrows-1_refresh-69 now-ui-icons\"></i>\n                          </button>\n                      </h4>\n                      <ngb-accordion #acc=\"ngbAccordion\" activeIds=\"config-panel-one\" class=\"card-plain\">\n                          <ngb-panel id=\"config-panel-one\">\n                              <ng-template ngbPanelTitle>\n                                    <h6 class=\"mb-0\">\n                                        <a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseOne\" aria-expanded=\"true\" aria-controls=\"collapseOne\">\n                                            Price Range\n                                            <i class=\"now-ui-icons arrows-1_minimal-down\"></i>\n                                        </a>\n                                    </h6>\n                              </ng-template>\n                              <ng-template ngbPanelContent>\n                                <nouislider class=\"slider slider-default\" [connect]=\"true\" [min]=\"0\" [max]=\"10000\" [step]=\"1\" [(ngModel)]=\"doubleSlider\" [tooltips]=\"true\"></nouislider>\n                              </ng-template>\n                          </ngb-panel>\n                          <ngb-panel>\n                              <ng-template ngbPanelTitle>\n                                <h6 class=\"mb-0\">\n                                    <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\">\n                                        Clothing\n                                        <i class=\"now-ui-icons arrows-1_minimal-down\"></i>\n                                    </a>\n                                </h6>\n                              </ng-template>\n                              <ng-template ngbPanelContent>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Blazers\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Casual Shirts\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Formal Shirts\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Jeans\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Polos\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Pijamas\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Shorts\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Trousers\n                                    </label>\n                                </div>\n                              </ng-template>\n                          </ngb-panel>\n                          <ngb-panel>\n                              <ng-template ngbPanelTitle>\n                                <h6 class=\"mb-0\">\n                                    <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\" aria-expanded=\"false\" aria-controls=\"collapseThree\">\n                                        Designer\n                                        <i class=\"now-ui-icons arrows-1_minimal-down\"></i>\n                                    </a>\n                                </h6>\n                              </ng-template>\n                              <ng-template ngbPanelContent>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        All\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Polo Ralph Lauren\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Wooyoungmi\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Alexander McQueen\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Tom Ford\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        AMI\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Berena\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Thom Sweeney\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Burberry Prorsum\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Calvin Klein\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Kingsman\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Club Monaco\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Dolce & Gabbana\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Gucci\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Biglioli\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Lanvin\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Loro Piana\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Massimo Alba\n                                    </label>\n                                </div>\n                              </ng-template>\n                          </ngb-panel>\n                          <ngb-panel>\n                              <ng-template ngbPanelTitle>\n                                <h6 class=\"mb-0\">\n                                    <a class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapsefour\" aria-expanded=\"false\" aria-controls=\"collapsefour\">\n                                        Colour\n                                        <i class=\"now-ui-icons arrows-1_minimal-down\"></i>\n                                    </a>\n                                </h6>\n                              </ng-template>\n                              <ng-template ngbPanelContent>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        All\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Black\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Blue\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Brown\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Gray\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Green\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Neutrals\n                                    </label>\n                                </div>\n                                <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                        <input class=\"form-check-input\" type=\"checkbox\">\n                                        <span class=\"form-check-sign\"></span>\n                                        Purple\n                                    </label>\n                                </div>\n                              </ng-template>\n                          </ngb-panel>\n                      </ngb-accordion>\n                    </div>\n                    <div class=\"col-md-9\">\n                        <div class=\"row\">\n                            <div class=\"col-lg-4 col-md-6\">\n                                <div class=\"card card-product card-plain\">\n                                    <div class=\"card-image\">\n                                        <a href=\"#\">\n                                            <img src=\"assets/img/polo.jpg\" alt=\"...\" />\n                                        </a>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <a href=\"#\">\n                                            <h4 class=\"card-title\">Polo Ralph Lauren</h4>\n                                        </a>\n                                        <p class=\"card-description\">\n                                            Impeccably tailored in Italy from lightweight navy wool.\n                                        </p>\n                                        <div class=\"card-footer\">\n                                            <div class=\"price-container\">\n                                                <span class=\"price\"> &euro; 300</span>\n                                            </div>\n                                            <button class=\"btn btn-danger btn-neutral btn-icon btn-round pull-right\" placement=\"top\" ngbTooltip=\"Remove from wishlist\">\n                                                <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                            </button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <!-- end card -->\n                            </div>\n                            <div class=\"col-lg-4 col-md-6\">\n                                <div class=\"card card-product card-plain\">\n                                    <div class=\"card-image\">\n                                        <a href=\"#\">\n                                            <img src=\"assets/img/tom-ford.jpg\" alt=\"...\" />\n                                        </a>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <a href=\"#\">\n                                            <h4 class=\"card-title\">Tom Ford</h4>\n                                        </a>\n                                        <p class=\"card-description\">\n                                            Immaculate tailoring is TOM FORD's forte.\n                                        </p>\n                                        <div class=\"card-footer\">\n                                            <div class=\"price-container\">\n                                                <span class=\"price\"> &euro; 879</span>\n                                            </div>\n                                            <button class=\"btn btn-neutral btn-icon btn-round pull-right\"  placement=\"top\" ngbTooltip=\"Add to wishlist\">\n                                                <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                            </button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <!-- end card -->\n                            </div>\n                            <div class=\"col-lg-4 col-md-6\">\n                                <div class=\"card card-product card-plain\">\n                                    <div class=\"card-image\">\n                                        <a href=\"#\">\n                                            <img src=\"assets/img/wooyoungmi.jpg\" alt=\"...\" />\n                                        </a>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <a href=\"#\">\n                                            <h4 class=\"card-title\">Wooyoungmi</h4>\n                                        </a>\n                                        <p class=\"card-description\">\n                                            Dark-grey slub wool, pintucked notch lapels.\n                                        </p>\n                                        <div class=\"card-footer\">\n                                            <div class=\"price-container\">\n                                                <span class=\"price\">&euro; 555</span>\n                                            </div>\n                                            <button class=\"btn btn-neutral btn-icon btn-round pull-right\"  placement=\"top\" ngbTooltip=\"Add to wishlist\">\n                                                <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                            </button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <!-- end card -->\n                            </div>\n                            <div class=\"col-lg-4 col-md-6\">\n                                <div class=\"card card-product card-plain\">\n                                    <div class=\"card-image\">\n                                        <a href=\"#\">\n                                            <img src=\"assets/img/sweeney.jpg\" alt=\"...\" />\n                                        </a>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <a href=\"#\">\n                                            <h4 class=\"card-title\">Thom Sweeney</h4>\n                                        </a>\n                                        <p class=\"card-description\">\n                                            It's made from lightweight grey wool woven.\n                                        </p>\n                                        <div class=\"card-footer\">\n                                            <div class=\"price-container\">\n                                                <span class=\"price\"> &euro; 680</span>\n                                            </div>\n                                            <button class=\"btn btn-neutral btn-icon btn-round pull-right\" placement=\"top\" ngbTooltip=\"Add to wishlist\">\n                                                <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                            </button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <!-- end card -->\n                            </div>\n                            <div class=\"col-lg-4 col-md-6\">\n                                <div class=\"card card-product card-plain\">\n                                    <div class=\"card-image\">\n                                        <a href=\"#\">\n                                            <img src=\"assets/img/kingsman.jpg\" alt=\"...\" />\n                                        </a>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <a href=\"#\">\n                                            <h4 class=\"card-title\">Kingsman</h4>\n                                        </a>\n                                        <p class=\"card-description\">\n                                            Crafted from khaki cotton and fully canvassed.\n                                        </p>\n                                        <div class=\"card-footer\">\n                                            <div class=\"price-container\">\n                                                <span class=\"price\"> &euro; 725</span>\n                                            </div>\n                                            <button class=\"btn btn-neutral btn-icon btn-round pull-right\" placement=\"top\" ngbTooltip=\"Remove from wishlist\">\n                                                <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                            </button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <!-- end card -->\n                            </div>\n                            <div class=\"col-lg-4 col-md-6\">\n                                <div class=\"card card-product card-plain\">\n                                    <div class=\"card-image\">\n                                        <a href=\"#\">\n                                            <img src=\"assets/img/boglioli.jpg\" alt=\"...\" />\n                                        </a>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <a href=\"#\">\n                                            <h4 class=\"card-title\">Boglioli</h4>\n                                        </a>\n                                        <p class=\"card-description\">\n                                            Masterfully crafted in Northern Italy.\n                                        </p>\n                                        <div class=\"card-footer\">\n                                            <div class=\"price-container\">\n                                                <span class=\"price\">&euro; 699</span>\n                                            </div>\n                                            <button class=\"btn btn-neutral btn-icon btn-round pull-right\" placement=\"top\" ngbTooltip=\"Add to wishlist\">\n                                                <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                            </button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <!-- end card -->\n                            </div>\n                            <div class=\"col-md-3 ml-auto mr-auto\">\n                                <button class=\"btn btn-primary btn-round\">Load more...</button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- section -->\n        <div class=\"container\">\n            <h2 class=\"section-title\">News in fashion</h2>\n        </div>\n        <div class=\"projects-4\">\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 px-0\">\n                        <div class=\"card card-fashion card-background\" style=\"background-image: url('assets/img/bg35.jpg')\">\n                            <div class=\"card-body\">\n                                <div class=\"card-title text-left\">\n                                    <h2>\n                                        <a href=\"#\">\n                                            The New York Times Todd Snyder and Raf Simons Party During Men’s Fashion Week\n                                        </a>\n                                    </h2>\n                                </div>\n                                <div class=\"card-footer text-left\">\n                                    <div class=\"stats\">\n                                        <span>\n                                            <i class=\"now-ui-icons users_circle-08\"></i>Emy Grace\n                                        </span>\n                                        <span>\n                                            <i class=\"now-ui-icons tech_watch-time\"></i> June 6, 2017\n                                        </span>\n                                    </div>\n                                    <div class=\"stats-link pull-right\">\n                                        <a href=\"#\" class=\"footer-link\">Fashion Week</a>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-md-6 px-0\">\n                        <div class=\"card-container\">\n                            <div class=\"card card-fashion\">\n                                <div class=\"card-title\">\n                                    <a href=\"#\">\n                                    </a>\n                                    <h4>\n                                        <a href=\"#\">\n                                        </a>\n                                        <a href=\"#\">\n                                            Valentina Garavani Holds a Summer Lunch in Honor of Sofia Coppola...\n                                        </a>\n                                    </h4>\n                                </div>\n                                <div class=\"card-body\">\n                                    <div class=\"card-footer text-left\">\n                                        <div class=\"stats\">\n                                            <span>\n                                                <i class=\"now-ui-icons users_circle-08\"></i>Jerry McGregor\n                                            </span>\n                                            <span>\n                                                <i class=\"now-ui-icons tech_watch-time\"></i> June 10, 2017\n                                            </span>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"card card-fashion card-background\" style=\"background-image: url('assets/img/bg40.jpg')\">\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"section\">\n            <div class=\"container\">\n                <h2 class=\"section-title\">Latest Offers</h2>\n                <div class=\"row\">\n                    <div class=\"col-md-4\">\n                        <div class=\"card card-product card-plain\">\n                            <div class=\"card-image\">\n                                <img class=\"img rounded\" src=\"assets/img/saint-laurent1.jpg\" />\n                            </div>\n                            <div class=\"card-body\">\n                                <h4 class=\"card-title\">\n                                    <a href=\"#\">Saint Laurent</a>\n                                </h4>\n                                <p class=\"card-description\">The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket square and leather loafers.</p>\n                                <div class=\"card-footer\">\n                                    <div class=\"price-container\">\n                                        <span class=\"price price-old\"> &euro;1,430</span>\n                                        <span class=\"price price-new\"> &euro;743</span>\n                                    </div>\n                                    <div class=\"stats stats-right\">\n                                        <button type=\"button\" placement=\"top\" ngbTooltip=\"\" class=\"btn btn-icon btn-neutral\" data-original-title=\"Saved to Wishlist\">\n                                            <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                        </button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <div class=\"card card-product card-plain\">\n                            <div class=\"card-image\">\n                                <img class=\"img rounded\" src=\"assets/img/saint-laurent.jpg\" />\n                            </div>\n                            <div class=\"card-body\">\n                                <h4 class=\"card-title\">\n                                    <h4 class=\"card-title\">Saint Laurent</h4>\n                                </h4>\n                                <p class=\"card-description\">The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket square and leather loafers.</p>\n                                <div class=\"card-footer\">\n                                    <div class=\"price-container\">\n                                        <span class=\"price price-old\"> &euro;1,430</span>\n                                        <span class=\"price price-new\">&euro;743</span>\n                                    </div>\n                                    <div class=\"stats stats-right\">\n                                        <button type=\"button\" placement=\"top\" ngbTooltip=\"\" class=\"btn btn-icon btn-neutral\" data-original-title=\"Saved to Wishlist\">\n                                            <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                        </button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <div class=\"card card-product card-plain\">\n                            <div class=\"card-image\">\n                                <img class=\"img rounded\" src=\"assets/img/gucci.jpg\" />\n                            </div>\n                            <div class=\"card-body\">\n                                <h4 class=\"card-title\">\n                                    <h4 class=\"card-title\">Gucci</h4>\n                                </h4>\n                                <p class=\"card-description\">The smooth woven-wool is water resistant to ensure you stay pristine after a long-haul flight. Cut in a trim yet comfortable regular fit.</p>\n                                <div class=\"card-footer\">\n                                    <div class=\"price-container\">\n                                        <span class=\"price price-old\"> &euro;2,430</span>\n                                        <span class=\"price price-new\">&euro;890</span>\n                                    </div>\n                                    <div class=\"stats stats-right\">\n                                        <button type=\"button\" placement=\"top\" ngbTooltip=\"\" class=\"btn btn-icon btn-neutral btn-default\" data-original-title=\"Add to Wishlist\">\n                                            <i class=\"now-ui-icons ui-2_favourite-28\"></i>\n                                        </button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- section -->\n        <div class=\"subscribe-line subscribe-line-image\" style=\"background-image: url('assets/img/bg43.jpg');\">\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 ml-auto mr-auto\">\n                        <div class=\"text-center\">\n                            <h4 class=\"title\">Subscribe to our Newsletter</h4>\n                            <p class=\"description\">\n                                Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.\n                            </p>\n                        </div>\n                        <div class=\"card card-raised card-form-horizontal\">\n                            <div class=\"card-body\">\n                                <form method=\"\" action=\"\">\n                                    <div class=\"row\">\n                                        <div class=\"col-sm-8\">\n                                            <div class=\"input-group\" [ngClass]=\"{'input-group-focus':focus===true}\">\n                                              <div class=\"input-group-prepend\">\n                                                  <span class=\"input-group-text\">  <i class=\"now-ui-icons ui-1_email-85\"></i></span>\n                                              </div>\n                                                <input type=\"email\" class=\"form-control\" placeholder=\"Your Email...\" (focus)=\"focus=true\" (blur)=\"focus=false\">\n                                            </div>\n                                        </div>\n                                        <div class=\"col-sm-4\">\n                                            <button type=\"button\" class=\"btn btn-primary btn-block\">Subscribe</button>\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!-- end-main-raised -->\n    <footer class=\"footer \">\n        <div class=\"container\">\n            <nav>\n                <ul>\n                    <li>\n                        <a href=\"https://www.josh-levy.com\">\n                            Josh Levy\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"https://www.josh-levy.com/about-us\">\n                            About Us\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"http://blog.josh-levy.com\">\n                            Blog\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"https://www.josh-levy.com/license\">\n                            License\n                        </a>\n                    </li>\n                </ul>\n            </nav>\n            <div class=\"copyright\">\n                &copy;\n                {{data | date: 'yyyy'}}, Designed by\n                <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n                <a href=\"https://www.josh-levy.com\" target=\"_blank\">Josh Levy</a>.\n            </div>\n        </div>\n    </footer>\n</div>\n");
+
+/***/ }),
+
+/***/ "lJoQ":
+/*!*****************************************************!*\
+  !*** ./src/app/components/hero/hero.component.scss ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoZXJvLmNvbXBvbmVudC5zY3NzIn0= */");
 
 /***/ }),
 
@@ -5261,6 +5415,19 @@ ProfileComponent = __decorate([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cd-section\" id=\"blogs\">\n    <!--     *********     BLOGS 1      *********      -->\n    <div class=\"blogs-1\" id=\"blogs-1\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-10 ml-auto mr-auto\">\n                    <h2 class=\"title\">Latest Blogposts</h2>\n                    <br />\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"row\">\n                            <div class=\"col-md-5\">\n                                <div class=\"card-image\">\n                                    <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog4.jpg\" />\n                                </div>\n                            </div>\n                            <div class=\"col-md-7\">\n                                <h6 class=\"category text-info\">Enterprise</h6>\n                                <h3 class=\"card-title\">\n                                    <a href=\"#\">Warner Music Group buys concert discovery service Songkick</a>\n                                </h3>\n                                <p class=\"card-description\">\n                                    Warner Music Group announced today it’s acquiring the selected assets of the music platform Songkick, including its app for finding concerts and the company’s trademark. Songkick has been involved in a lawsuit against the major…\n                                    <a href=\"#\"> Read More </a>\n                                </p>\n                                <p class=\"author\">\n                                    by\n                                    <a href=\"#\">\n                                        <b>Sarah Perez</b>\n                                    </a>, 2 days ago\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"row\">\n                            <div class=\"col-md-7\">\n                                <h6 class=\"category text-danger\">\n                                    <i class=\"now-ui-icons now-ui-icons media-2_sound-wave\"></i> Startup\n                                </h6>\n                                <h3 class=\"card-title\">\n                                    <a href=\"#\">Insticator raises $5.2M to help publishers</a>\n                                </h3>\n                                <p class=\"card-description\">\n                                    Insticator is announcing that it has raised $5.2 million in Series A funding. The startup allows online publishers to add quizzes, polls and other interactive elements (either created by Insticator or by the publisher themselves) to their stories.\n                                    <a href=\"#\"> Read More </a>\n                                </p>\n                                <p class=\"author\">\n                                    by\n                                    <a href=\"#\">\n                                        <b>Anthony Ha</b>\n                                    </a>, 5 days ago\n                                </p>\n                            </div>\n                            <div class=\"col-md-5\">\n                                <div class=\"card-image\">\n                                    <img class=\"img img-raised rounded\n                        \" src=\"assets/img/examples/card-blog6.jpg\" />\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--     *********    END BLOGS 1      *********      -->\n    <!--     *********     BLOGS 2      *********      -->\n    <div class=\"blogs-2\" id=\"blogs-2\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-10 ml-auto mr-auto\">\n                    <h2 class=\"title\">Latest Blogposts 2</h2>\n                    <br />\n                    <div class=\"row justify-content-center\">\n                        <div class=\"col-md-5\">\n                            <div class=\"card card-plain card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog7.jpg\" />\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-info\">Enterprise</h6>\n                                    <h5 class=\"card-title\">\n                                        <a href=\"#\">Alexa brings hands-free TV to more devices</a>\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        Alexa’s latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward, rewind and more, without having to first invoke a specific skill, or even press a button on their remote.\n                                        <a href=\"#\">Read More </a>\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"col-md-5\">\n                            <div class=\"card card-plain card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog9.jpg\" />\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-success\">\n                                        M&A\n                                    </h6>\n                                    <h5 class=\"card-title\">\n                                        <a href=\"#\">Uber, Yandex combine ridesharing and UberEATS in $3.72B. JV</a>\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        As Uber works through a huge amount of internal management turmoil, the company is also consolidating and rationalizing more of its international business. Today, the company announced it will be combining its rides-on-demand business and UberEATS.\n                                        <a href=\"#\">Read More</a>\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"row justify-content-center\">\n                        <div class=\"col-md-5\">\n                            <div class=\"card card-plain card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog16.jpg\" />\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-info\">Music</h6>\n                                    <h5 class=\"card-title\">\n                                        <a href=\"#\">The Affect Music Has On Different Teens</a>\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music have many ways of leaving an impact on someone.\n                                        <a href=\"#\">Read More </a>\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"col-md-5\">\n                            <div class=\"card card-plain card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog15.jpg\" />\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-success\">\n                                        Broadcasting\n                                    </h6>\n                                    <h5 class=\"card-title\">\n                                        <a href=\"#\">Radio networks to broadcast a common radio format</a>\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        Radio broadcasting is a unidirectional wireless transmission over radio waves intended to reach a wide audience. Stations can be linked in radio networks to broadcast a common radio format.\n                                        <a href=\"#\"> Read More </a>\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--     *********    END BLOGS 2      *********      -->\n    <!--     *********     BLOGS 3      *********      -->\n    <div class=\"blogs-3\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-10 ml-auto mr-auto\">\n                    <h2 class=\"title\">Latest Blogposts 3</h2>\n                    <br />\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div class=\"card-image\">\n                                    <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog10.jpg\" />\n                                </div>\n                            </div>\n                            <div class=\"col-md-8\">\n                                <h3 class=\"card-title\">\n                                    <a href=\"#\">Rover raised $65 million for pet sitting</a>\n                                </h3>\n                                <p class=\"card-description\">\n                                    Finding temporary housing for your dog should be as easy as renting an Airbnb. That’s the idea behind Rover, which raised $65 million to expand its pet sitting and dog-walking businesses..\n                                    <a href=\"#\"> Read More </a>\n                                </p>\n                                <div class=\"author\">\n                                    <img src=\"assets/img/olivia.jpg\" alt=\"...\" class=\"avatar img-raised\">\n                                    <span>Katie Roof</span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog11.jpg\" />\n                                    </a>\n                                </div>\n                            </div>\n                            <div class=\"col-md-8\">\n                                <h3 class=\"card-title\">\n                                    <a href=\"#\">MateLabs mixes machine learning with IFTTT</a>\n                                </h3>\n                                <p class=\"card-description\">\n                                    If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with a new offering from MateLabs. MateVerse, a platform where novices can spin out machine...\n                                    <a href=\"#\"> Read More </a>\n                                </p>\n                                <div class=\"author\">\n                                    <img src=\"assets/img/james.jpg\" alt=\"...\" class=\"avatar img-raised\">\n                                    <span>John Mannes</span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog12.jpg\" />\n                                    </a>\n                                </div>\n                            </div>\n                            <div class=\"col-md-8\">\n                                <h3 class=\"card-title\">\n                                    <a href=\"#\">US venture investment ticks up in Q2 2017</a>\n                                </h3>\n                                <p class=\"card-description\">\n                                    Venture investment in U.S. startups rose sequentially in the second quarter of 2017, boosted by large, late-stage financings and a few outsized early-stage rounds in tech and healthcare..\n                                    <a href=\"#\"> Read More </a>\n                                </p>\n                                <div class=\"author\">\n                                    <img src=\"assets/img/michael.jpg\" alt=\"...\" class=\"avatar img-raised\">\n                                    <span>Devin Coldewey</span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--     *********    END BLOGS 4      *********      -->\n    <div class=\"blogs-4\" id=\"blogs-4\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-8 ml-auto mr-auto\">\n                    <h2 class=\"title\">Latest Blogposts 4</h2>\n                    <br />\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"card-image\">\n                            <a href=\"#\">\n                                <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog13.jpg\" />\n                            </a>\n                        </div>\n                        <h6 class=\"category text-info\">Fashion</h6>\n                        <h3 class=\"card-title\">\n                            <a href=\"#\">Groupon Moves Into Flash Fashion</a>\n                        </h3>\n                        <h5 class=\"card-description\">\n                            More acquisitions for Groupon to widen the net of consumers using its platform for more than daily deals. Today it is announcing the acquisition of ideeli, a flash fashion retailer, for $43 million in...\n                        </h5>\n                        <a href=\"#\" class=\"btn btn-primary btn-round\">Read More</a>\n                    </div>\n                    <div class=\"card card-plain card-blog\">\n                        <div class=\"card-image\">\n                            <a href=\"#\">\n                                <img class=\"img img-raised rounded\" src=\"assets/img/examples/card-blog14.jpg\" />\n                            </a>\n                        </div>\n                        <h6 class=\"category text-success\">Entertainment</h6>\n                        <h3 class=\"card-title\">\n                            <a href=\"#\">When music and technology collide</a>\n                        </h3>\n                        <h5 class=\"card-description\">\n                            Some might say that technology is killing the music industry. But if you look around, there’s a beautiful marriage there — the music industry is evolving every day, and artists are embracing technology in new and innovative ways...\n                        </h5>\n                        <a href=\"#\" class=\"btn btn-primary btn-round\"> Read More</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--     *********    END BLOGS 4      *********      -->\n    <!--     *********    END BLOGS 5      *********      -->\n    <div class=\"blogs-5\" data-background-color=\"gray\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-10 ml-auto mr-auto\">\n                    <h2 class=\"title\">Latest Blogposts 5</h2>\n                    <div class=\"row\">\n                        <div class=\"col-md-4\">\n                            <div class=\"card card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img rounded\" src=\"assets/img/card-blog2.jpg\">\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-primary\">Features</h6>\n                                    <h5 class=\"card-title\">\n                                        That’s One Way To Ditch Your Passenger\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        As near as we can tell, this guy must have thought he was going over backwards and tapped the rear...\n                                    </p>\n                                    <div class=\"card-footer\">\n                                        <div class=\"author\">\n                                            <img src=\"assets/img/julie.jpg\" alt=\"...\" class=\"avatar img-raised\">\n                                            <span>Mike John</span>\n                                        </div>\n                                        <div class=\"stats stats-right\">\n                                            <i class=\"now-ui-icons tech_watch-time\"></i> 5 min read\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"col-md-4\">\n                            <div class=\"card card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img rounded\" src=\"assets/img/examples/card-blog18.jpg\">\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-danger\">Animals</h6>\n                                    <h5 class=\"card-title\">\n                                        Shark Week: How to Watch It Like a Scientist\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        Just when you thought it was safe to turn on your television, the Discovery Channel's \"Shark Week\"...\n                                    </p>\n                                    <div class=\"card-footer\">\n                                        <div class=\"author\">\n                                            <img src=\"assets/img/julie.jpg\" alt=\"...\" class=\"avatar img-raised\">\n                                            <span>Mike John</span>\n                                        </div>\n                                        <div class=\"stats stats-right\">\n                                            <i class=\"now-ui-icons tech_watch-time\"></i> 5 min read\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"col-md-4\">\n                            <div class=\"card card-blog\">\n                                <div class=\"card-image\">\n                                    <a href=\"#\">\n                                        <img class=\"img rounded\" src=\"assets/img/examples/card-blog17.jpg\">\n                                    </a>\n                                </div>\n                                <div class=\"card-body\">\n                                    <h6 class=\"category text-primary\">Cars</h6>\n                                    <h5 class=\"card-title\">\n                                        Who's Afraid of the Self-Driving Car?\n                                    </h5>\n                                    <p class=\"card-description\">\n                                        It's been 60 years since the cover of Popular Mechanics magazine gave us the promise of flying cars...\n                                    </p>\n                                    <div class=\"card-footer\">\n                                        <div class=\"author\">\n                                            <img src=\"assets/img/olivia.jpg\" alt=\"...\" class=\"avatar img-raised\">\n                                            <span>Johanna Zmud</span>\n                                        </div>\n                                        <div class=\"stats stats-right\">\n                                            <i class=\"now-ui-icons ui-2_favourite-28\"></i> 2.4K\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--     *********    END BLOGS 5      *********      -->\n</div>\n");
+
+/***/ }),
+
+/***/ "yZN6":
+/*!*********************************************************!*\
+  !*** ./src/app/components/footer/footer.component.scss ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmb290ZXIuY29tcG9uZW50LnNjc3MifQ== */");
 
 /***/ }),
 

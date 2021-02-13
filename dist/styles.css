@@ -17394,6 +17394,26 @@ ngb-carousel .carousel-control-next-icon {
 .padded-container {
   padding: 0px 50px !important;
 }
+.centered-section {
+  display: flex;
+  justify-content: center;
+}
+.resume-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.download-resume-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.embedded-resume {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .progress-spinner {
   display: flex;
   width: 100%;
@@ -17554,6 +17574,85 @@ iframe {
   border-radius: 50% !important;
   height: 28px !important;
   width: 28px !important;
+  background-color: #ae0001;
+}
+.skills-list {
+  list-style-type: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  margin-bottom: 100px !important;
+}
+.skill-image {
+  height: 300px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #fff !important;
+  transition: all 0.4s ease 0s !important;
+}
+.skill-image:hover {
+  transition: all 0.4s ease 0s !important;
+  transform: scale(1.02);
+}
+.skill-image .img {
+  height: 300px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  background-color: #fff !important;
+  transition: none !important;
+}
+.skill-image .img:hover {
+  transition: none !important;
+  transform: none !important;
+}
+.skill-image .img img {
+  height: 100% !important;
+  width: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 30px !important;
+  background-color: #fff !important;
+  transition: none !important;
+  box-shadow: none;
+}
+.skill-image .img img:hover {
+  transition: none !important;
+  transform: none !important;
+  box-shadow: none;
+}
+.card-title {
+  font-size: 1.75em !important;
+  font-weight: 700 !important;
+}
+.category {
+  font-size: 1.1em !important;
+  font-weight: 700 !important;
+  color: #666 !important;
+}
+.category-button {
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  margin-top: 0px !important;
+  background-color: #ae0001 !important;
+}
+.card-description {
+  color: #222 !important;
+}
+.p-text-secondary {
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+.p-timeline-event {
+  min-height: 300px !important;
+  height: 300px !important;
+}
+.timeline-card {
+  margin-bottom: 30px !important;
 }
 /*!
 
@@ -17960,7 +18059,7 @@ iframe {
 }
 .presentation-page .section-examples .section-description {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .presentation-page .section-testimonials {
   padding-bottom: 0;
