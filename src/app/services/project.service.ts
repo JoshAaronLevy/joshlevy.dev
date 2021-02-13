@@ -28,6 +28,7 @@ export class ProjectService {
     return this.http.get(url)
       .pipe(
         map(res => {
+          console.log(res);
           return res;
         })
       );

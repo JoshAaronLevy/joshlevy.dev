@@ -24,6 +24,7 @@ import { FootersAreasComponent } from './footers-areas/footers-areas.component';
 import { TablesAreasComponent } from './tables-areas/tables-areas.component';
 import { CommentsAreasComponent } from './comments-areas/comments-areas.component';
 import { CardsAreasComponent } from './cards-areas/cards-areas.component';
+import { WorkHistoryComponent } from './work-history/work-history.component';
 
 @NgModule({
     imports: [
@@ -50,7 +51,8 @@ import { CardsAreasComponent } from './cards-areas/cards-areas.component';
         FootersAreasComponent,
         TablesAreasComponent,
         CommentsAreasComponent,
-        CardsAreasComponent
+        CardsAreasComponent,
+        WorkHistoryComponent
     ],
     exports: [ ComponentsComponent ]
 })

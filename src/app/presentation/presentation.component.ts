@@ -1,4 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { JobService } from 'app/services/job.service';
+import { ProjectService } from 'app/services/project.service';
 import { SkillService } from 'app/services/skill.service';
 import { PrimeIcons } from 'primeng/api';
 
@@ -8,19 +10,24 @@ import { PrimeIcons } from 'primeng/api';
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit, OnDestroy {
-  events: any;
+  events1: any;
   date: Date = new Date();
   skills: any;
   skill: any;
+  projects: any;
   filter: any;
   filteredSkills: any;
+  jobs: any;
   allSelected = true;
   frontEndSelected = false;
   backEndSelected = false;
+  responsibilities: any;
 
   constructor(
-    public skillService: SkillService
-  ) {}
+    public skillService: SkillService,
+    public projectService: ProjectService,
+    public jobService: JobService
+  ) { }
 
   ngOnInit() {
     this.filter = 'All';
@@ -29,12 +36,8 @@ export class PresentationComponent implements OnInit, OnDestroy {
     // const navbar = document.getElementsByTagName('nav')[0];
     // navbar.classList.add('navbar-transparent');
     this.getSkills();
-    this.events = [
-      {status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg'},
-      {status: 'Processing', date: '15/10/2020 14:00', icon: PrimeIcons.COG, color: '#673AB7'},
-      {status: 'Shipped', date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800'},
-      {status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B'}
-    ];
+    this.getProjects();
+    this.getJobs();
   }
 
   getSkills() {
@@ -71,10 +74,30 @@ export class PresentationComponent implements OnInit, OnDestroy {
     }
   }
 
+  getProjects() {
+    return this.projectService.getProjects().subscribe(data => {
+      this.projects = data.projects;
+      this.projects.sort(function (a, b) {
+        return a.id - b.id;
+      });
+    });
+  }
+
+  getJobs() {
+    return this.jobService.getJobs().subscribe(data => {
+      this.jobs = data.jobs;
+      this.jobs.sort(function (a, b) {
+        return a.id - b.id;
+      });
+      this.responsibilities = 
+      console.log(this.jobs);
+    });
+  }
+
   ngOnDestroy() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove('presentation-page');
     // const navbar = document.getElementsByTagName('nav')[0];
     // navbar.classList.remove('navbar-transparent');
   }
-}
+} 

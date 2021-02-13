@@ -62,20 +62,13 @@
         </div>
       </div>
       <div class="row">
-        <p-timeline [value]="events1" align="alternate">
-          <ng-template pTemplate="marker" let-event>
-            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
-              <i [ngClass]="event.icon"></i>
-            </span>
+        <p-timeline [value]="projects" align="alternate" styleClass="timeline-card">
+          <ng-template pTemplate="content" let-project>
+            <small class="p-text-secondary">{{ project.date }}</small>
           </ng-template>
-          <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.status" [subheader]="event.date">
-              <img *ngIf="event.image" [src]="'assets/showcase/images/demo/product/' + event.image" [alt]="event.name"
-                width="200" class="p-shadow-2" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-                numquam deserunt
-                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-                neque quas!</p>
+          <ng-template pTemplate="opposite" let-project>
+            <p-card [header]="project.name">
+              <p class="card-description">{{ project.description }}</p>
               <button pButton label="Read more" class="p-button-text"></button>
             </p-card>
           </ng-template>
@@ -83,38 +76,111 @@
       </div>
     </div>
   </div>
-  <footer class="footer " data-background-color="black">
+  <div class="section section-sections" data-background-color="gray">
     <div class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/about-us">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="http://blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              License
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright">
-        &copy;
-        {{date | date: 'yyyy'}}, Designed by
-        <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="section-description text-center">
+          <h2 class="title">Work History</h2>
+        </div>
       </div>
     </div>
-  </footer>
+    <div class="container-fluid">
+      <div class="section-cols">
+        <div class="row">
+          <p-table [value]="jobs" dataKey="id">
+            <ng-template pTemplate="header">
+              <tr>
+                <th style="width: 3rem"></th>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-job let-expanded="expanded">
+              <tr>
+                <td>
+                  <button type="button" pButton pRipple [pRowToggler]="job" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                </td>
+                <td>{{ job.company }}</td>
+                <td>{{ job.title }}</td>
+                <td>{{ job.startDate }}</td>
+                <td>{{ job.endDate }}</td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-job>
+              <tr>
+                  <td colspan="7">
+                      <div class="p-p-3">
+                          <p-table [value]="job" dataKey="id">
+                              <ng-template pTemplate="body" let-order>
+                                  <tr>
+                                      <td>{{order.id}}</td>
+                                      <td>{{order.customer}}</td>
+                                      <td>{{order.id}}</td>
+                                      <td>{{order.amount | currency:'USD'}}</td>
+                                      <td><span [class]="'order-badge order-' + order.status.toLowerCase()">{{order.status}}</span></td>
+                                      <td><p-button type="button" icon="pi pi-search"></p-button></td>
+                                  </tr>
+                              </ng-template>
+                              <ng-template pTemplate="emptymessage">
+                                  <tr>
+                                      <td colspan="6">There are no order for this product yet.</td>
+                                  </tr>
+                              </ng-template>
+                          </p-table>
+                      </div>
+                  </td>
+              </tr>
+            </ng-template>
+            <!-- <ng-template pTemplate="rowexpansion" let-job>
+              <tr>
+                <td colspan="7">
+                  <div class="p-p-3">
+                    <ul>
+                      <li *ngFor="let responsibility of responsibilities">{{ responsibility }}</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </ng-template> -->
+          </p-table>
+        </div>
+      </div>
+    </div>
+</div>
+<footer class="footer " data-background-color="black">
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.creative-tim.com">
+            Creative Tim
+          </a>
+        </li>
+        <li>
+          <a href="https://www.creative-tim.com/about-us">
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="http://blog.creative-tim.com">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="https://www.creative-tim.com/license">
+            License
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright">
+      &copy;
+      {{date | date: 'yyyy'}}, Designed by
+      <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+      <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+    </div>
+  </div>
+</footer>
 </div>
