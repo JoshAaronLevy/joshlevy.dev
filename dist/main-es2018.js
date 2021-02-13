@@ -88,7 +88,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n          <div class=\"filter-buttons\">\n            <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n              class=\"btn btn-primary category-button\">All</button>\n            <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n              class=\"btn btn-primary category-button\">Front-End</button>\n            <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n              class=\"btn btn-primary category-button\">Back-End</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <ul class=\"skills-list\">\n            <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n              <div class=\"card card-profile card-plain\">\n                <div class=\"card-image skill-image\">\n                  <div class=\"img img-raised rounded\">\n                    <img src=\"{{ skill.img }}\" />\n                  </div>\n                </div>\n                <div class=\"card-body\">\n                  <h4 class=\"card-title\">{{ skill.name }}</h4>\n                  <h6 class=\"category\">{{ skill.experience }}</h6>\n                  <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                    class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n                </div>\n              </div>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Projects</h2>\n        </div>\n      </div>\n      <div class=\"row\">\n        <p-timeline [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n          <ng-template pTemplate=\"content\" let-project>\n            <small class=\"p-text-secondary\">{{ project.date }}</small>\n          </ng-template>\n          <ng-template pTemplate=\"opposite\" let-project>\n            <p-card [header]=\"project.name\">\n              <p class=\"card-description\">{{ project.description }}</p>\n              <button pButton label=\"Read more\" class=\"p-button-text\"></button>\n            </p-card>\n          </ng-template>\n          <!-- <ng-template pTemplate=\"content\" let-project>\n            <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n              <img *ngIf=\"project.image\" [src]=\"'assets/showcase/images/demo/product/' + project.image\" [alt]=\"project.name\"\n                width=\"200\" class=\"p-shadow-2\" />\n              <p class=\"card-description\">{{ project.description }}</p>\n              <button pButton label=\"Read more\" class=\"p-button-text\"></button>\n            </p-card>\n          </ng-template> -->\n        </p-timeline>\n      </div>\n    </div>\n  </div>\n  <footer class=\"footer \" data-background-color=\"black\">\n    <div class=\"container\">\n      <nav>\n        <ul>\n          <li>\n            <a href=\"https://www.creative-tim.com\">\n              Creative Tim\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/about-us\">\n              About Us\n            </a>\n          </li>\n          <li>\n            <a href=\"http://blog.creative-tim.com\">\n              Blog\n            </a>\n          </li>\n          <li>\n            <a href=\"https://www.creative-tim.com/license\">\n              License\n            </a>\n          </li>\n        </ul>\n      </nav>\n      <div class=\"copyright\">\n        &copy;\n        {{date | date: 'yyyy'}}, Designed by\n        <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n        <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n      </div>\n    </div>\n  </footer>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n          <div class=\"filter-buttons\">\n            <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n              class=\"btn btn-primary category-button\">All</button>\n            <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n              class=\"btn btn-primary category-button\">Front-End</button>\n            <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n              class=\"btn btn-primary category-button\">Back-End</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <ul class=\"skills-list\">\n            <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n              <div class=\"card card-profile card-plain\">\n                <div class=\"card-image skill-image\">\n                  <div class=\"img img-raised rounded\">\n                    <img src=\"{{ skill.img }}\" />\n                  </div>\n                </div>\n                <div class=\"card-body\">\n                  <h4 class=\"card-title\">{{ skill.name }}</h4>\n                  <h6 class=\"category\">{{ skill.experience }}</h6>\n                  <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                    class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n                </div>\n              </div>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"projects\" class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Projects</h2>\n        </div>\n      </div>\n      <div class=\"row\">\n        <p-timeline [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n          <ng-template pTemplate=\"content\" let-project>\n            <small class=\"p-text-secondary\">{{ project.date }}</small>\n          </ng-template>\n          <ng-template pTemplate=\"opposite\" let-project>\n            <p-card [header]=\"project.name\">\n              <p class=\"card-description\">{{ project.description }}</p>\n              <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n              <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n            </p-card>\n          </ng-template>\n        </p-timeline>\n      </div>\n    </div>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Work History</h2>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid padded-container\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <app-work-history></app-work-history>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Resume</h2>\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid flex-container\">\n      <div class=\"section-cols\">\n        <div class=\"row \">\n          <div class=\"d-none d-lg-block\">\n            <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n<footer class=\"footer \" data-background-color=\"black\">\n  <div class=\"container\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"https://www.creative-tim.com\">\n            Creative Tim\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"http://blog.creative-tim.com\">\n            Blog\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/license\">\n            License\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{date | date: 'yyyy'}}, Designed by\n      <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n    </div>\n  </div>\n</footer>\n</div>");
 
 /***/ }),
 
@@ -288,6 +288,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header\" filter-color=\"orange\">\n    <div class=\"page-header-image\" style=\"background-image:url(assets/img/login.jpg)\"></div>\n    <div class=\"content-center\">\n        <div class=\"container\">\n            <div class=\"col-md-4 content-center\">\n                <div class=\"card card-login card-plain\">\n                    <form class=\"form\" method=\"\" action=\"\">\n                        <div class=\"card-header text-center\">\n                            <div class=\"logo-container\">\n                                <img src=\"assets/img/now-logo.png\" alt=\"\">\n                            </div>\n                        </div>\n                        <div class=\"card-body\">\n                            <div class=\"input-group form-group-no-border input-lg\" [ngClass]=\"{'input-group-focus':focus===true}\">\n                              <div class=\"input-group-prepend\">\n                                  <span class=\"input-group-text\">  <i class=\"now-ui-icons users_circle-08\"></i></span>\n                              </div>\n                                <input type=\"text\" class=\"form-control\" placeholder=\"First Name...\" (focus)=\"focus=true\" (blur)=\"focus=false\" >\n                            </div>\n                            <div class=\"input-group form-group-no-border input-lg\" [ngClass]=\"{'input-group-focus':focus1===true}\">\n                              <div class=\"input-group-prepend\">\n                                  <span class=\"input-group-text\"><i class=\"now-ui-icons text_caps-small\"></i></span>\n                              </div>\n                                <input type=\"text\" placeholder=\"Last Name...\" class=\"form-control\" (focus)=\"focus1=true\" (blur)=\"focus1=false\"/>\n                            </div>\n                        </div>\n                        <div class=\"card-footer text-center\">\n                            <a href=\"#\" class=\"btn btn-primary btn-round btn-lg btn-block\">Get Started</a>\n                        </div>\n                        <div class=\"pull-left\">\n                            <h6>\n                                <a href=\"#\" class=\"link footer-link\">Create Account</a>\n                            </h6>\n                        </div>\n                        <div class=\"pull-right\">\n                            <h6>\n                                <a href=\"#\" class=\"link footer-link\">Need Help?</a>\n                            </h6>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n    <footer class=\"footer \">\n        <div class=\"container\">\n            <nav>\n                <ul>\n                    <li>\n                        <a href=\"https://www.josh-levy.com\">\n                            Josh Levy\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"https://www.josh-levy.com/about-us\">\n                            About Us\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"http://blog.josh-levy.com\">\n                            Blog\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"https://www.josh-levy.com/license\">\n                            License\n                        </a>\n                    </li>\n                </ul>\n            </nav>\n            <div class=\"copyright\">\n                &copy;\n                {{data | date: 'yyyy'}}, Designed by\n                <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n                <a href=\"https://www.josh-levy.com\" target=\"_blank\">Josh Levy</a>.\n            </div>\n        </div>\n    </footer>\n</div>\n");
+
+/***/ }),
+
+/***/ "5v2N":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/work-history/work-history.component.scss ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ3b3JrLWhpc3RvcnkuY29tcG9uZW50LnNjc3MifQ== */");
 
 /***/ }),
 
@@ -1112,6 +1125,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navbar_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar.component.scss */ "cruu");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/dynamicdialog */ "J7/z");
+/* harmony import */ var app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/components/contact/contact.component */ "G2Gn");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1125,15 +1140,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 let NavbarComponent = class NavbarComponent {
-    constructor(location, element) {
+    constructor(location, element, dialogService, config) {
         this.location = location;
         this.element = element;
+        this.dialogService = dialogService;
+        this.config = config;
         this.sidebarVisible = false;
     }
     ngOnInit() {
         const navbar = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+    }
+    openContactModal() {
+        this.ref = this.dialogService.open(app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_5__["ContactComponent"], {
+            width: '50%'
+        });
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
@@ -1182,15 +1206,25 @@ let NavbarComponent = class NavbarComponent {
 };
 NavbarComponent.ctorParameters = () => [
     { type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"] },
-    { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"] }
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"] },
+    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__["DialogService"] },
+    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__["DynamicDialogConfig"] }
 ];
 NavbarComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-navbar',
         template: _raw_loader_navbar_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        providers: [
+            primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__["DialogService"],
+            primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__["DynamicDialogConfig"],
+            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_5__["ContactComponent"]
+        ],
         styles: [_navbar_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"]])
+    __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"],
+        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__["DialogService"],
+        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_4__["DynamicDialogConfig"]])
 ], NavbarComponent);
 
 
@@ -1257,6 +1291,61 @@ CommentsAreasComponent = __decorate([
 
 /***/ }),
 
+/***/ "G2Gn":
+/*!*********************************************************!*\
+  !*** ./src/app/components/contact/contact.component.ts ***!
+  \*********************************************************/
+/*! exports provided: ContactComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
+/* harmony import */ var _raw_loader_contact_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./contact.component.html */ "jmJk");
+/* harmony import */ var _contact_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact.component.scss */ "P7M0");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/dynamicdialog */ "J7/z");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+let ContactComponent = class ContactComponent {
+    constructor(ref, config) {
+        this.ref = ref;
+        this.config = config;
+    }
+    ngOnInit() { }
+    closeModal() {
+        this.ref.close();
+    }
+};
+ContactComponent.ctorParameters = () => [
+    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_3__["DynamicDialogRef"] },
+    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_3__["DynamicDialogConfig"] }
+];
+ContactComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-contact',
+        template: _raw_loader_contact_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        styles: [_contact_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_3__["DynamicDialogRef"],
+        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_3__["DynamicDialogConfig"]])
+], ContactComponent);
+
+
+
+/***/ }),
+
 /***/ "G7Kx":
 /*!*************************************************************!*\
   !*** ./src/app/examples/blogposts/blogposts.component.scss ***!
@@ -1267,6 +1356,250 @@ CommentsAreasComponent = __decorate([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJibG9ncG9zdHMuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "Gdn9":
+/*!*********************************************!*\
+  !*** ./src/app/services/product.service.ts ***!
+  \*********************************************/
+/*! exports provided: ProductService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let ProductService = class ProductService {
+    constructor(http) {
+        this.http = http;
+        this.status = ['OUTOFSTOCK', 'INSTOCK', 'LOWSTOCK'];
+        this.productNames = [
+            'Bamboo Watch',
+            'Black Watch',
+            'Blue Band',
+            'Blue T-Shirt',
+            'Bracelet',
+            'Brown Purse',
+            'Chakra Bracelet',
+            'Galaxy Earrings',
+            'Game Controller',
+            'Gaming Set',
+            'Gold Phone Case',
+            'Green Earbuds',
+            'Green T-Shirt',
+            'Grey T-Shirt',
+            'Headphones',
+            'Light Green T-Shirt',
+            'Lime Band',
+            'Mini Speakers',
+            'Painted Phone Case',
+            'Pink Band',
+            'Pink Purse',
+            'Purple Band',
+            'Purple Gemstone Necklace',
+            'Purple T-Shirt',
+            'Shoes',
+            'Sneakers',
+            'Teal T-Shirt',
+            'Yellow Earbuds',
+            'Yoga Mat',
+            'Yoga Set',
+        ];
+    }
+    getProductsSmall() {
+        return this.http.get('assets/data/products-small.json')
+            .toPromise()
+            .then(res => res.data)
+            .then(data => { return data; });
+    }
+    getProducts() {
+        return this.http.get('assets/data/products.json')
+            .toPromise()
+            .then(res => res.data)
+            .then(data => { return data; });
+    }
+    getProductsWithOrdersSmall() {
+        return this.http.get('assets/data/products-orders-small.json')
+            .toPromise()
+            .then(res => res.data)
+            .then(data => { return data; });
+    }
+    generatePrduct() {
+        const product = {
+            id: this.generateId(),
+            name: this.generateName(),
+            description: 'Product Description',
+            price: this.generatePrice(),
+            quantity: this.generateQuantity(),
+            category: 'Product Category',
+            inventoryStatus: this.generateStatus(),
+            rating: this.generateRating()
+        };
+        product.image = product.name.toLocaleLowerCase().split(/[ ,]+/).join('-') + '.jpg';
+        return product;
+    }
+    generateId() {
+        let text = '';
+        const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        for (let i = 0; i < 5; i++) {
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+        return text;
+    }
+    generateName() {
+        return this.productNames[Math.floor(Math.random() * Math.floor(30))];
+    }
+    generatePrice() {
+        return Math.floor(Math.random() * Math.floor(299) + 1);
+    }
+    generateQuantity() {
+        return Math.floor(Math.random() * Math.floor(75) + 1);
+    }
+    generateStatus() {
+        return this.status[Math.floor(Math.random() * Math.floor(3))];
+    }
+    generateRating() {
+        return Math.floor(Math.random() * Math.floor(5) + 1);
+    }
+};
+ProductService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }
+];
+ProductService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]])
+], ProductService);
+
+
+
+/***/ }),
+
+/***/ "I4vR":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/work-history/work-history.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: WorkHistoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkHistoryComponent", function() { return WorkHistoryComponent; });
+/* harmony import */ var _raw_loader_work_history_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./work-history.component.html */ "dQ/m");
+/* harmony import */ var _work_history_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./work-history.component.scss */ "5v2N");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var app_services_job_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/job.service */ "qLOZ");
+/* harmony import */ var app_services_product_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/services/product.service */ "Gdn9");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+let WorkHistoryComponent = class WorkHistoryComponent {
+    constructor(jobService, productService) {
+        this.jobService = jobService;
+        this.productService = productService;
+        this.jobs = [];
+        // expandedJobs: number[] = [];
+        this.expandedJobs = {};
+    }
+    ngOnInit() {
+        this.getJobs();
+        this.getProducts();
+    }
+    getJobs() {
+        return this.jobService.getJobs().subscribe(data => {
+            this.jobs = data.jobs;
+            this.jobs.sort(function (a, b) {
+                return a.id - b.id;
+            });
+        });
+    }
+    getProducts() {
+        this.productService.getProductsWithOrdersSmall().then(data => {
+            this.products = data;
+            console.log(this.products);
+        });
+    }
+    // displayDetails(selectedJob) {
+    //   let superJenkyJoshArray = [];
+    //   this.jobDetails = selectedJob.id;
+    //   if (!this.isExpanded(this.jobDetails)) {
+    //     this.expandedJobs.push(selectedJob.id);
+    //   } else {
+    //     for (let i = 0; i < this.expandedJobs.length; i++) {
+    //       if (this.expandedJobs[i] !== this.jobDetails) {
+    //         superJenkyJoshArray.push(this.expandedJobs[i]);
+    //       }
+    //     }
+    //     this.expandedJobs = superJenkyJoshArray;
+    //   }
+    //   console.log(this.expandedJobs);
+    // }
+    // Checking which job details are being displayed from the expandedJobs array
+    // displayDetails(selectedJob) {
+    //   this.jobDetails = selectedJob.id;
+    //   if (!this.isExpanded(this.jobDetails)) {
+    //     this.expandedJobs.push(selectedJob.id);
+    //   } else {
+    //     this.expandedJobs.splice(this.expandedJobs.indexOf(selectedJob.id), 1);
+    //   }
+    //   console.log(this.expandedJobs);
+    // }
+    // Object key based tracking
+    displayDetails(selectedJob) {
+        this.jobDetails = selectedJob.id;
+        if (!this.isExpanded(this.jobDetails)) {
+            this.expandedJobs[this.jobDetails] = true;
+        }
+        else {
+            this.expandedJobs[this.jobDetails] = false;
+        }
+    }
+    isExpanded(jobId) {
+        return this.expandedJobs[jobId];
+    }
+};
+WorkHistoryComponent.ctorParameters = () => [
+    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"] },
+    { type: app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"] }
+];
+WorkHistoryComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-work-history',
+        template: _raw_loader_work_history_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        providers: [
+            app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"],
+            app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"]
+        ],
+        styles: [_work_history_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+    }),
+    __metadata("design:paramtypes", [app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"],
+        app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"]])
+], WorkHistoryComponent);
+
+
 
 /***/ }),
 
@@ -1371,6 +1704,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<button class=\"btn btn-primary text-margin\" (click)=\"open(classic,'' , '')\">\n    <i class=\"now-ui-icons files_single-copy-04\"></i> Classic\n</button>\n<ng-template #classic let-c=\"close\" let-d=\"dismiss\">\n    <div class=\"modal-header justify-content-center\">\n        <button type=\"button\" class=\"close\" (click)=\"d('Cross click')\">\n            <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n        </button>\n        <h4 class=\"title title-up\">Modal title</h4>\n    </div>\n    <div class=\"modal-body\">\n        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.\n        </p>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\">Nice Button</button>\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"c('Close click')\">Close</button>\n    </div>\n</ng-template>\n\n<button class=\"btn btn-primary text-margin\" (click)=\"open(modal_mini, 'modal_mini', 'sm')\">\n    <i class=\"now-ui-icons media-1_button-power\"></i> Launch Modal Mini\n</button>\n<ng-template #modal_mini let-c=\"close\" let-d=\"dismiss\">\n  <div class=\"modal-header justify-content-center\">\n      <div class=\"modal-profile\">\n          <i class=\"now-ui-icons users_circle-08\"></i>\n      </div>\n  </div>\n  <div class=\"modal-body\">\n      <p>Always have an access to your profile</p>\n  </div>\n  <div class=\"modal-footer\">\n      <button type=\"button\" class=\"btn btn-link btn-neutral\">Back</button>\n      <button type=\"button\" class=\"btn btn-link btn-neutral\" (click)=\"c('Close click')\">Close</button>\n  </div>\n</ng-template>\n\n\n<button class=\"btn btn-primary text-margin\" (click)=\"open(Notice, '', '')\">\n    <i class=\"now-ui-icons travel_info\"></i> Notice\n</button>\n<ng-template #Notice let-c=\"close\" let-d=\"dismiss\">\n  <div class=\"modal-header\">\n      <button type=\"button\" class=\"close\" (click)=\"d('Cross click')\">\n          <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n      </button>\n      <h5 class=\"modal-title\" id=\"myModalLabel\">How Do You Become an Affiliate?</h5>\n  </div>\n  <div class=\"modal-body\">\n      <div class=\"instruction\">\n          <div class=\"row\">\n              <div class=\"col-md-8\">\n                  <strong>1. Register</strong>\n                  <p class=\"description\">The first step is to create an account at\n                      <a href=\"https://www.josh-levy.com/\">Josh Levy</a>. You can choose a social network or go for the classic version, whatever works best for you.</p>\n              </div>\n              <div class=\"col-md-4\">\n                  <div class=\"picture\">\n                      <img src=\"assets/img/pricing1.jpg\" alt=\"Thumbnail Image\" class=\"rounded img-raised\">\n                  </div>\n              </div>\n          </div>\n      </div>\n      <div class=\"instruction\">\n          <div class=\"row\">\n              <div class=\"col-md-8\">\n                  <strong>2. Apply</strong>\n                  <p class=\"description\">The first step is to create an account at\n                      <a href=\"https://www.josh-levy.com/\">Josh Levy</a>. You can choose a social network or go for the classic version, whatever works best for you.</p>\n              </div>\n              <div class=\"col-md-4\">\n                  <div class=\"picture\">\n                      <img src=\"assets/img/project9.jpg\" alt=\"Thumbnail Image\" class=\"rounded img-raised\">\n                  </div>\n              </div>\n          </div>\n      </div>\n      <p>If you have more questions, don't hesitate to contact us or send us a tweet @creativetim. We're here to help!</p>\n  </div>\n  <div class=\"modal-footer justify-content-center\">\n      <button type=\"button\" class=\"btn btn-info btn-round\"(click)=\"c('Close click')\">Sounds good!</button>\n  </div>\n</ng-template>\n\n\n<button class=\"btn btn-primary text-margin\" (click)=\"open(Login, 'Login', 'md')\">\n    <i class=\"now-ui-icons users_single-02\"></i> Login Modal\n</button>\n<ng-template #Login let-c=\"close\" let-d=\"dismiss\">\n  <div class=\"card card-login card-plain\">\n      <div class=\"modal-header justify-content-center\">\n          <button type=\"button\" class=\"close\" (click)=\"d('Cross click')\">\n              <i class=\"now-ui-icons ui-1_simple-remove\"></i>\n          </button>\n          <div class=\"header header-primary text-center\">\n              <div class=\"logo-container\">\n                  <img src=\"assets/img/now-logo.png\" alt=\"\">\n              </div>\n          </div>\n      </div>\n      <div class=\"modal-body\">\n          <form class=\"form\" method=\"\" action=\"\">\n              <div class=\"card-content\">\n                  <div class=\"input-group form-group-no-border input-lg\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\"><i class=\"now-ui-icons users_circle-08\"></i></span>\n                    </div>\n                      <input type=\"text\" class=\"form-control\" placeholder=\"First Name...\">\n                  </div>\n                  <div class=\"input-group form-group-no-border input-lg\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\">  <i class=\"now-ui-icons ui-1_lock-circle-open\"></i></span>\n                    </div>\n                      <input type=\"password\" placeholder=\"Password...\" class=\"form-control\">\n                  </div>\n              </div>\n          </form>\n      </div>\n      <div class=\"modal-footer text-center\">\n          <a href=\"#getstart\" class=\"btn btn-neutral btn-round btn-lg btn-block\">Get Started</a>\n      </div>\n  </div>\n</ng-template>\n");
+
+/***/ }),
+
+/***/ "P7M0":
+/*!***********************************************************!*\
+  !*** ./src/app/components/contact/contact.component.scss ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjb250YWN0LmNvbXBvbmVudC5zY3NzIn0= */");
 
 /***/ }),
 
@@ -1737,12 +2083,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _primeng_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../primeng.module */ "ThbA");
 /* harmony import */ var _presentation_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./presentation.component */ "gVBG");
+/* harmony import */ var app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! app/components/work-history/work-history.component */ "I4vR");
+/* harmony import */ var app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! app/components/contact/contact.component */ "G2Gn");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1763,8 +2113,16 @@ PresentationModule = __decorate([
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"],
             _primeng_module__WEBPACK_IMPORTED_MODULE_6__["PrimeNGBundleModule"]
         ],
-        declarations: [_presentation_component__WEBPACK_IMPORTED_MODULE_7__["PresentationComponent"]],
-        exports: [_presentation_component__WEBPACK_IMPORTED_MODULE_7__["PresentationComponent"]],
+        declarations: [
+            _presentation_component__WEBPACK_IMPORTED_MODULE_7__["PresentationComponent"],
+            app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_8__["WorkHistoryComponent"],
+            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__["ContactComponent"]
+        ],
+        exports: [
+            _presentation_component__WEBPACK_IMPORTED_MODULE_7__["PresentationComponent"],
+            app_components_work_history_work_history_component__WEBPACK_IMPORTED_MODULE_8__["WorkHistoryComponent"],
+            app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_9__["ContactComponent"]
+        ],
         providers: []
     })
 ], PresentationModule);
@@ -1791,6 +2149,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_add_operator_filter__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(rxjs_add_operator_filter__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/navbar/navbar.component */ "EtQq");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/api */ "7zfz");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1808,8 +2167,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 let AppComponent = class AppComponent {
-    constructor(renderer, router, document, element, location) {
+    constructor(primengConfig, renderer, router, document, element, location) {
+        this.primengConfig = primengConfig;
         this.renderer = renderer;
         this.router = router;
         this.document = document;
@@ -1817,6 +2178,7 @@ let AppComponent = class AppComponent {
         this.location = location;
     }
     ngOnInit() {
+        this.primengConfig.ripple = true;
         const navbar = this.element.nativeElement.children[0].children[0];
         this._router = this.router.events.filter(event => event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_3__["NavigationEnd"]).subscribe((event) => {
             if (this.location.path() !== '/sections') {
@@ -1867,6 +2229,7 @@ let AppComponent = class AppComponent {
     }
 };
 AppComponent.ctorParameters = () => [
+    { type: primeng_api__WEBPACK_IMPORTED_MODULE_7__["PrimeNGConfig"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Renderer2"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"],] }] },
@@ -1882,7 +2245,8 @@ AppComponent = __decorate([
         template: _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_app_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_2__["Renderer2"],
+    __metadata("design:paramtypes", [primeng_api__WEBPACK_IMPORTED_MODULE_7__["PrimeNGConfig"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["Renderer2"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], Object, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"],
         _angular_common__WEBPACK_IMPORTED_MODULE_5__["Location"]])
 ], AppComponent);
@@ -3172,6 +3536,19 @@ ProjectsComponent = __decorate([
 
 /***/ }),
 
+/***/ "dQ/m":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/work-history/work-history.component.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <p>work-history works!</p>\n<ul>\n  <li *ngFor=\"let jerb of jobs\">\n    <button (click)=\"displayDetails(jerb)\">{{ jerb.title }}</button>\n    <ul *ngIf=\"isExpanded(jerb.id)\">\n      <li *ngFor=\"let duty of jerb.description.responsibilities\">{{ duty }}</li>\n    </ul>\n  </li>\n</ul> -->\n\n<div class=\"content-section implementation\">\n  <div class=\"card\">\n    <p-table [value]=\"jobs\" dataKey=\"company\">\n      <ng-template pTemplate=\"header\">\n        <tr>\n          <th class=\"dark-table-header\" style=\"width: 3rem\"></th>\n          <th class=\"dark-table-header\">Company</th>\n          <th class=\"dark-table-header\">Title</th>\n          <th class=\"dark-table-header\">Start Date</th>\n          <th class=\"dark-table-header\">End Date</th>\n          <th class=\"dark-table-header\">Actions</th>\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"body\" let-job let-expanded=\"expanded\">\n        <tr>\n          <td>\n            <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-rounded p-button-plain\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button>\n          </td>\n          <td>{{job.company}}</td>\n          <td>{{job.title}}</td>\n          <td>{{job.startDate}}</td>\n          <td>{{job.endDate}}</td>\n          <td>\n            <!-- <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-info\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button> -->\n            <button pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"View Details\" class=\"actions-button\" [ngClass]=\"expanded ? 'p-button-raised p-button-secondary' : 'p-button-raised'\"></button>\n          </td>\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"rowexpansion\" let-job>\n        <tr>\n          <td colspan=\"6\">\n            <div>\n              <p-table [value]=\"job.description.results\" dataKey=\"id\">\n                <ng-template pTemplate=\"header\">\n                  <tr>\n                    <th style=\"width: 2.5rem\"></th>\n                    <th>Responsibilities</th>\n                  </tr>\n                </ng-template>\n                <ng-template pTemplate=\"body\" let-description>\n                  <tr>\n                    <td>{{description.id}}</td>\n                    <td>{{description.responsibility}}</td>\n                  </tr>\n                </ng-template>\n              </p-table>\n            </div>\n          </td>\n        </tr>\n      </ng-template>\n    </p-table>\n  </div>\n</div>");
+
+/***/ }),
+
 /***/ "eJqO":
 /*!*********************************************************!*\
   !*** ./src/app/sections/pricing/pricing.component.scss ***!
@@ -3313,9 +3690,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_presentation_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./presentation.component.html */ "+pZr");
 /* harmony import */ var _presentation_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./presentation.component.scss */ "71yw");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var app_services_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/project.service */ "c3AT");
-/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! primeng/api */ "7zfz");
+/* harmony import */ var app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/components/contact/contact.component */ "G2Gn");
+/* harmony import */ var app_services_job_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/services/job.service */ "qLOZ");
+/* harmony import */ var app_services_project_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/services/project.service */ "c3AT");
+/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
+/* harmony import */ var primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/dynamicdialog */ "J7/z");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3331,10 +3710,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 let PresentationComponent = class PresentationComponent {
-    constructor(skillService, projectService) {
+    constructor(skillService, projectService, jobService, dialogService, config) {
         this.skillService = skillService;
         this.projectService = projectService;
+        this.jobService = jobService;
+        this.dialogService = dialogService;
+        this.config = config;
         this.date = new Date();
         this.allSelected = true;
         this.frontEndSelected = false;
@@ -3348,12 +3732,7 @@ let PresentationComponent = class PresentationComponent {
         // navbar.classList.add('navbar-transparent');
         this.getSkills();
         this.getProjects();
-        this.events1 = [
-            { status: 'Ordered', date: '15/10/2020 10:30', icon: primeng_api__WEBPACK_IMPORTED_MODULE_5__["PrimeIcons"].SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg' },
-            { status: 'Processing', date: '15/10/2020 14:00', icon: primeng_api__WEBPACK_IMPORTED_MODULE_5__["PrimeIcons"].COG, color: '#673AB7' },
-            { status: 'Shipped', date: '15/10/2020 16:15', icon: primeng_api__WEBPACK_IMPORTED_MODULE_5__["PrimeIcons"].ENVELOPE, color: '#FF9800' },
-            { status: 'Delivered', date: '16/10/2020 10:00', icon: primeng_api__WEBPACK_IMPORTED_MODULE_5__["PrimeIcons"].CHECK, color: '#607D8B' }
-        ];
+        this.getJobs();
     }
     getSkills() {
         return this.skillService.getSkills().subscribe(data => {
@@ -3395,7 +3774,22 @@ let PresentationComponent = class PresentationComponent {
             this.projects.sort(function (a, b) {
                 return a.id - b.id;
             });
-            // this.filterSkills(this.filter);
+        });
+    }
+    getJobs() {
+        return this.jobService.getJobs().subscribe(data => {
+            this.jobs = data.jobs;
+            this.jobs.sort(function (a, b) {
+                return a.id - b.id;
+            });
+            this.responsibilities =
+                console.log(this.jobs);
+        });
+    }
+    showContactModal() {
+        this.ref = this.dialogService.open(app_components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__["ContactComponent"], {
+            header: 'Contact Me',
+            width: '50%'
         });
     }
     ngOnDestroy() {
@@ -3406,17 +3800,27 @@ let PresentationComponent = class PresentationComponent {
     }
 };
 PresentationComponent.ctorParameters = () => [
-    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_4__["SkillService"] },
-    { type: app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] }
+    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_6__["SkillService"] },
+    { type: app_services_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"] },
+    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_4__["JobService"] },
+    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__["DialogService"] },
+    { type: primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__["DynamicDialogConfig"] }
 ];
 PresentationComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-presentation',
         template: _raw_loader_presentation_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        providers: [
+            primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__["DialogService"],
+            primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__["DynamicDialogConfig"]
+        ],
         styles: [_presentation_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_4__["SkillService"],
-        app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"]])
+    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_6__["SkillService"],
+        app_services_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"],
+        app_services_job_service__WEBPACK_IMPORTED_MODULE_4__["JobService"],
+        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__["DialogService"],
+        primeng_dynamicdialog__WEBPACK_IMPORTED_MODULE_7__["DynamicDialogConfig"]])
 ], PresentationComponent);
 
 
@@ -3947,7 +4351,9 @@ ComponentsModule = __decorate([
             _comments_areas_comments_areas_component__WEBPACK_IMPORTED_MODULE_21__["CommentsAreasComponent"],
             _cards_areas_cards_areas_component__WEBPACK_IMPORTED_MODULE_22__["CardsAreasComponent"]
         ],
-        exports: [_components_component__WEBPACK_IMPORTED_MODULE_15__["ComponentsComponent"]]
+        exports: [
+            _components_component__WEBPACK_IMPORTED_MODULE_15__["ComponentsComponent"]
+        ]
     })
 ], ComponentsModule);
 
@@ -3996,6 +4402,19 @@ CardsAreasComponent = __decorate([
 ], CardsAreasComponent);
 
 
+
+/***/ }),
+
+/***/ "jmJk":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/contact/contact.component.html ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<b-container fluid>\n  <div class=\"mb-1 text-center w-100\">\n    <h3 class=\"name\">Josh Levy</h3>\n  </div>\n  <div class=\"mb-1 text-center w-100\">\n    <div class=\"social\">\n      <a href=\"https://linkedin.com/in/JoshAaronLevy\" target=\"_blank\"><i class=\"fab fa-linkedin\"></i></a>\n      <a href=\"https://github.com/JoshAaronLevy\" target=\"_blank\"><i class=\"fab fa-github\"></i></a>\n    </div>\n  </div>\n  <div class=\"mb-1 text-center w-100\">\n    <div class=\"contact\">\n      <a href=\"mailto:joshaaronlevy@gmail.com\"><i class=\"fas fa-envelope\"></i><h4>joshaaronlevy@gmail.com</h4></a>\n    </div>\n  </div>\n  <div class=\"mb-1 text-center w-100\">\n    <div class=\"contact\">\n      <a href=\"tel:7208834980\"><i class=\"fas fa-mobile\"></i><h4>(720) 883-4980</h4></a>\n    </div>\n  </div>\n  <div class=\"mb-1 text-center w-100\">\n    <div class=\"contact\">\n      <a href=\"https://goo.gl/maps/bpZCa8oQx1v\" target=\"_blank\"><i class=\"fas fa-map-marked-alt\"></i><h4>Denver, CO<sup>*</sup></h4></a>\n    </div>\n  </div>\n  <div class=\"mb-1 text-center w-100\">\n    <div class=\"footnote\">\n      <h6><sup>*</sup>Currently in Denver, yet able to easily relocate, and seeking such opportunities as well.</h6>\n    </div>\n  </div>\n</b-container>");
 
 /***/ }),
 
@@ -4468,6 +4887,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "qLOZ":
+/*!*****************************************!*\
+  !*** ./src/app/services/job.service.ts ***!
+  \*****************************************/
+/*! exports provided: JobService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobService", function() { return JobService; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../environments/environment */ "AytR");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+// const httpOptions = {
+//   headers: new HttpHeaders({
+//     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
+//     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
+//     'Content-Type':  'application/json'
+//   })
+// };
+const apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
+let JobService = class JobService {
+    constructor(http) {
+        this.http = http;
+    }
+    getJobs() {
+        const url = `${apiUrl}/jobs`;
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(res => {
+            return res;
+        }));
+    }
+    addJob(params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpParams"]()) {
+        const url = `${apiUrl}/jobs`;
+        return this.http.post(url, params)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+};
+JobService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }
+];
+JobService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]])
+], JobService);
+
+
+
+/***/ }),
+
 /***/ "qmXc":
 /*!*******************************************************!*\
   !*** ./src/app/examples/aboutus/aboutus.component.ts ***!
@@ -4801,7 +5289,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg bg-white fixed-top\" color-on-scroll=\"500\">\n  <div class=\"container\">\n    <div class=\"navbar-translate\">\n      <a class=\"navbar-brand\" [routerLink]=\"['/presentation']\">\n        <img src=\"./assets/img/Josh-Levy-Logo.png\" />\n      </a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\"\n        aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\n        (click)=\"sidebarToggle()\">\n        <span class=\"navbar-toggler-bar bar1\"></span>\n        <span class=\"navbar-toggler-bar bar2\"></span>\n        <span class=\"navbar-toggler-bar bar3\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse\" data-nav-image=\"assets/img/blurred-image-1.jpg\" data-color=\"orange\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/components']\">\n            <p>Skills</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/sections']\">\n            <p>Projects</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Experience</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Resume</p>\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/examples']\">\n            <p>Contact</p>\n          </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg bg-white fixed-top\" color-on-scroll=\"500\">\n  <div class=\"container\">\n    <div class=\"navbar-translate\">\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">\n        <img src=\"./assets/img/Josh-Levy-Logo.png\" />\n      </a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\"\n        aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\n        (click)=\"sidebarToggle()\">\n        <span class=\"navbar-toggler-bar bar1\"></span>\n        <span class=\"navbar-toggler-bar bar2\"></span>\n        <span class=\"navbar-toggler-bar bar3\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse\" data-nav-image=\"assets/img/blurred-image-1.jpg\" data-color=\"orange\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#skills\">\n            Skills\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#projects\">\n            Projects\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#experience\">\n            Experience\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#resume\">\n            Resume\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" (click)=\"openContactModal()\">\n            Contact\n          </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>");
 
 /***/ }),
 
