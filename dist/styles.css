@@ -17394,6 +17394,47 @@ ngb-carousel .carousel-control-next-icon {
 .padded-container {
   padding: 0px 50px !important;
 }
+.progress-spinner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.p-progress-spinner {
+  height: 200px !important;
+  width: 200px !important;
+}
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  -webkit-animation: 3s ease-in-out infinite, custom-progress-spinner-color 6s ease-in-out infinite;
+          animation: 3s ease-in-out infinite, custom-progress-spinner-color 6s ease-in-out infinite;
+}
+@-webkit-keyframes custom-progress-spinner-color {
+  100%, 0% {
+    stroke: #d62d20 !important;
+  }
+  40% {
+    stroke: #d62d20 !important;
+  }
+  66% {
+    stroke: #d62d20 !important;
+  }
+  80%, 90% {
+    stroke: #d62d20 !important;
+  }
+}
+@keyframes custom-progress-spinner-color {
+  100%, 0% {
+    stroke: #d62d20 !important;
+  }
+  40% {
+    stroke: #d62d20 !important;
+  }
+  66% {
+    stroke: #d62d20 !important;
+  }
+  80%, 90% {
+    stroke: #d62d20 !important;
+  }
+}
 th.dark-table-header {
   background-color: #333 !important;
   border: 1px solid #333 !important;

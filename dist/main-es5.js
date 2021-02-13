@@ -151,7 +151,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n          <div class=\"filter-buttons\">\n            <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n              class=\"btn btn-primary category-button\">All</button>\n            <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n              class=\"btn btn-primary category-button\">Front-End</button>\n            <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n              class=\"btn btn-primary category-button\">Back-End</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <ul class=\"skills-list\">\n            <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n              <div class=\"card card-profile card-plain\">\n                <div class=\"card-image skill-image\">\n                  <div class=\"img img-raised rounded\">\n                    <img src=\"{{ skill.img }}\" />\n                  </div>\n                </div>\n                <div class=\"card-body\">\n                  <h4 class=\"card-title\">{{ skill.name }}</h4>\n                  <h6 class=\"category\">{{ skill.experience }}</h6>\n                  <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                    class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n                </div>\n              </div>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"projects\" class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Projects</h2>\n        </div>\n      </div>\n      <div class=\"row\">\n        <p-timeline [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n          <ng-template pTemplate=\"marker\" let-project>\n            <span class=\"custom-marker p-shadow-2\" [style.backgroundColor]=\"markerColor\">\n              <i class=\"fas fa-code\"></i>\n            </span>\n            <!-- <small class=\"p-text-secondary\">{{ project.date }}</small> -->\n          </ng-template>\n          <ng-template pTemplate=\"opposite\" let-project>\n            <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n              <p class=\"card-description\">{{ project.description }}</p>\n              <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n              <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n            </p-card>\n          </ng-template>\n        </p-timeline>\n      </div>\n    </div>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Work History</h2>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid padded-container\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <app-work-history></app-work-history>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Resume</h2>\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid flex-container\">\n      <div class=\"section-cols\">\n        <div class=\"row \">\n          <div class=\"d-none d-lg-block\">\n            <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n<footer class=\"footer \" data-background-color=\"black\">\n  <div class=\"container\">\n    <nav>\n      <ul>\n        <li>\n          <a href=\"https://www.creative-tim.com\">\n            Creative Tim\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/about-us\">\n            About Us\n          </a>\n        </li>\n        <li>\n          <a href=\"http://blog.creative-tim.com\">\n            Blog\n          </a>\n        </li>\n        <li>\n          <a href=\"https://www.creative-tim.com/license\">\n            License\n          </a>\n        </li>\n      </ul>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{date | date: 'yyyy'}}, Designed by\n      <a href=\"https://www.invisionapp.com\" target=\"_blank\">Invision</a>. Coded by\n      <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>.\n    </div>\n  </div>\n</footer>\n</div>";
+      __webpack_exports__["default"] = "<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n      <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n      </div>\n    </div>\n    <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n      <div class=\"page-header-image page-header-city\"\n        style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n      </div>\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    </div>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Skills</h2>\n          <div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n            <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n              class=\"btn btn-primary category-button\">All</button>\n            <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n              class=\"btn btn-primary category-button\">Front-End</button>\n            <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n              class=\"btn btn-primary category-button\">Back-End</button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n            <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n          </div>\n          <ul *ngIf=\"!loadingSkills\" class=\"skills-list\">\n            <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n              <div class=\"card card-profile card-plain\">\n                <div class=\"card-image skill-image\">\n                  <div class=\"img img-raised rounded\">\n                    <img src=\"{{ skill.img }}\" />\n                  </div>\n                </div>\n                <div class=\"card-body\">\n                  <h4 class=\"card-title\">{{ skill.name }}</h4>\n                  <h6 class=\"category\">{{ skill.experience }}</h6>\n                  <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                    class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n                </div>\n              </div>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"projects\" class=\"section section-examples\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto text-center\">\n        <div class=\"section-description\">\n          <h2 class=\"title\">Projects</h2>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div *ngIf=\"loadingProjects\" class=\"progress-spinner\">\n          <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n        </div>\n        <p-timeline *ngIf=\"!loadingProjects\" [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n          <ng-template pTemplate=\"marker\" let-project>\n            <span class=\"custom-marker p-shadow-2\" [style.backgroundColor]=\"markerColor\">\n              <i class=\"fas fa-code\"></i>\n            </span>\n            <!-- <small class=\"p-text-secondary\">{{ project.date }}</small> -->\n          </ng-template>\n          <ng-template pTemplate=\"opposite\" let-project>\n            <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n              <p class=\"card-description\">{{ project.description }}</p>\n              <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n              <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n            </p-card>\n          </ng-template>\n        </p-timeline>\n      </div>\n    </div>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Work History</h2>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid padded-container\">\n      <div class=\"section-cols\">\n        <div class=\"row\">\n          <div *ngIf=\"loadingJobs\" class=\"progress-spinner\">\n            <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n          </div>\n          <app-work-history *ngIf=\"!loadingJobs\"></app-work-history>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <div class=\"container\">\n      <div class=\"col-md-8 ml-auto mr-auto\">\n        <div class=\"section-description text-center\">\n          <h2 class=\"title\">Resume</h2>\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"container-fluid flex-container\">\n      <div class=\"section-cols\">\n        <div class=\"row \">\n          <div class=\"d-none d-lg-block\">\n            <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n<footer class=\"footer \" data-background-color=\"black\">\n  <div class=\"container\">\n    <nav>\n    </nav>\n    <div class=\"copyright\">\n      &copy;\n      {{date | date: 'yyyy'}}, Designed by\n      <a href=\"https://joshlevy.dev\" target=\"_blank\">Josh Levy</a>.\n    </div>\n  </div>\n</footer>\n</div>";
       /***/
     },
 
@@ -6131,13 +6131,14 @@
         _createClass(PresentationComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
+            this.loadingSkills = true;
+            this.loadingProjects = true;
+            this.loadingJobs = true;
             this.markerColor = '#ae0001';
             this.markerIcon = primeng_api__WEBPACK_IMPORTED_MODULE_7__["PrimeIcons"].HEART;
             this.filter = 'All';
             var body = document.getElementsByTagName('body')[0];
-            body.classList.add('presentation-page'); // const navbar = document.getElementsByTagName('nav')[0];
-            // navbar.classList.add('navbar-transparent');
-
+            body.classList.add('presentation-page');
             this.getSkills();
             this.getProjects();
             this.getJobs();
@@ -6148,9 +6149,12 @@
             var _this6 = this;
 
             return this.skillService.getSkills().subscribe(function (data) {
-              _this6.skills = data.skills;
+              if (data) {
+                _this6.loadingSkills = false;
+                _this6.skills = data.skills;
 
-              _this6.filterSkills(_this6.filter);
+                _this6.filterSkills(_this6.filter);
+              }
             });
           }
         }, {
@@ -6190,11 +6194,14 @@
             var _this7 = this;
 
             return this.projectService.getProjects().subscribe(function (data) {
-              _this7.projects = data.projects;
+              if (data) {
+                _this7.loadingProjects = false;
+                _this7.projects = data.projects;
 
-              _this7.projects.sort(function (a, b) {
-                return a.id - b.id;
-              });
+                _this7.projects.sort(function (a, b) {
+                  return a.id - b.id;
+                });
+              }
             });
           }
         }, {
@@ -6203,13 +6210,14 @@
             var _this8 = this;
 
             return this.jobService.getJobs().subscribe(function (data) {
-              _this8.jobs = data.jobs;
+              if (data) {
+                _this8.loadingJobs = false;
+                _this8.jobs = data.jobs;
 
-              _this8.jobs.sort(function (a, b) {
-                return a.id - b.id;
-              });
-
-              _this8.responsibilities = console.log(_this8.jobs);
+                _this8.jobs.sort(function (a, b) {
+                  return a.id - b.id;
+                });
+              }
             });
           }
         }, {
@@ -6224,8 +6232,7 @@
           key: "ngOnDestroy",
           value: function ngOnDestroy() {
             var body = document.getElementsByTagName('body')[0];
-            body.classList.remove('presentation-page'); // const navbar = document.getElementsByTagName('nav')[0];
-            // navbar.classList.remove('navbar-transparent');
+            body.classList.remove('presentation-page');
           }
         }]);
 
