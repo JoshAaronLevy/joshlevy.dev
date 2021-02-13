@@ -30,6 +30,8 @@ export class PresentationComponent implements OnInit, OnDestroy {
   responsibilities: any;
   displayModal: boolean;
   ref: DynamicDialogRef;
+  markerColor: any;
+  markerIcon: any;
 
   constructor(
     public skillService: SkillService,
@@ -40,6 +42,8 @@ export class PresentationComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.markerColor = '#ae0001';
+    this.markerIcon = PrimeIcons.HEART;
     this.filter = 'All';
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('presentation-page');

@@ -32,7 +32,8 @@
           <td>{{job.endDate}}</td>
           <td>
             <!-- <button type="button" pButton pRipple [pRowToggler]="job" class="p-button-text p-button-info" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button> -->
-            <button pButton pRipple [pRowToggler]="job" type="button" label="View Details" class="actions-button" [ngClass]="expanded ? 'p-button-raised p-button-secondary' : 'p-button-raised'"></button>
+            <button *ngIf="!expanded" pButton pRipple [pRowToggler]="job" type="button" label="View Details" class="p-button-raised actions-button"></button>
+            <button *ngIf="expanded" pButton pRipple [pRowToggler]="job" type="button" label="Hide Details" class="p-button-raised p-button-secondary actions-button"></button>
           </td>
         </tr>
       </ng-template>

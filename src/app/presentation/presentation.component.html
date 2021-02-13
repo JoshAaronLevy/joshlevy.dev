@@ -63,11 +63,14 @@
       </div>
       <div class="row">
         <p-timeline [value]="projects" align="alternate" styleClass="timeline-card">
-          <ng-template pTemplate="content" let-project>
-            <small class="p-text-secondary">{{ project.date }}</small>
+          <ng-template pTemplate="marker" let-project>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
+              <i class="fas fa-code"></i>
+            </span>
+            <!-- <small class="p-text-secondary">{{ project.date }}</small> -->
           </ng-template>
           <ng-template pTemplate="opposite" let-project>
-            <p-card [header]="project.name">
+            <p-card [header]="project.name" [subheader]="project.date">
               <p class="card-description">{{ project.description }}</p>
               <a [ngClass]="project.deployedUrl === null ? 'no-display' : null" href="{{ project?.deployedUrl }}" target="_blank"><i v-b-tooltip.hover title="View deployed website in a new tab." class="fas fa-link"></i></a>
               <a href="{{ project?.githubUrl }}" target="_blank"><i v-b-tooltip.hover title="View GitHub repository in a new tab." class="fab fa-github"></i></a>
