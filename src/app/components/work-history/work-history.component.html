@@ -1,64 +1,69 @@
-<!-- <p>work-history works!</p>
-<ul>
-  <li *ngFor="let jerb of jobs">
-    <button (click)="displayDetails(jerb)">{{ jerb.title }}</button>
-    <ul *ngIf="isExpanded(jerb.id)">
-      <li *ngFor="let duty of jerb.description.responsibilities">{{ duty }}</li>
-    </ul>
-  </li>
-</ul> -->
-
-<div class="content-section implementation">
-  <div class="card">
-    <p-table [value]="jobs" dataKey="company">
-      <ng-template pTemplate="header">
-        <tr>
-          <th class="dark-table-header" style="width: 3rem"></th>
-          <th class="dark-table-header">Company</th>
-          <th class="dark-table-header">Title</th>
-          <th class="dark-table-header">Start Date</th>
-          <th class="dark-table-header">End Date</th>
-          <th class="dark-table-header">Actions</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-job let-expanded="expanded">
-        <tr>
-          <td>
-            <button type="button" pButton pRipple [pRowToggler]="job" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
-          </td>
-          <td>{{job.company}}</td>
-          <td>{{job.title}}</td>
-          <td>{{job.startDate}}</td>
-          <td>{{job.endDate}}</td>
-          <td>
-            <!-- <button type="button" pButton pRipple [pRowToggler]="job" class="p-button-text p-button-info" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button> -->
-            <button *ngIf="!expanded" pButton pRipple [pRowToggler]="job" type="button" label="View Details" class="p-button-raised actions-button"></button>
-            <button *ngIf="expanded" pButton pRipple [pRowToggler]="job" type="button" label="Hide Details" class="p-button-raised p-button-secondary actions-button"></button>
-          </td>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="rowexpansion" let-job>
-        <tr>
-          <td colspan="6">
-            <div>
-              <p-table [value]="job.description.results" dataKey="id">
-                <ng-template pTemplate="header">
-                  <tr>
-                    <th style="width: 2.5rem"></th>
-                    <th>Responsibilities</th>
-                  </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-description>
-                  <tr>
-                    <td>{{description.id}}</td>
-                    <td>{{description.responsibility}}</td>
-                  </tr>
-                </ng-template>
-              </p-table>
-            </div>
-          </td>
-        </tr>
-      </ng-template>
-    </p-table>
+<div class="container">
+  <div class="col-md-8 ml-auto mr-auto">
+    <div class="section-description text-center">
+      <h2 class="title">Work History</h2>
+    </div>
+  </div>
+</div>
+<div class="container-fluid padded-container">
+  <div class="section-cols">
+    <div class="row">
+      <div *ngIf="loadingJobs" class="progress-spinner">
+        <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
+      </div>
+      <div *ngIf="!loadingJobs" class="content-section implementation">
+        <div class="card">
+          <p-table [value]="jobs" dataKey="company">
+            <ng-template pTemplate="header">
+              <tr>
+                <th class="dark-table-header" style="width: 3rem"></th>
+                <th class="dark-table-header">Company</th>
+                <th class="dark-table-header">Title</th>
+                <th class="dark-table-header">Start Date</th>
+                <th class="dark-table-header">End Date</th>
+                <th class="dark-table-header">Actions</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-job let-expanded="expanded">
+              <tr>
+                <td>
+                  <button type="button" pButton pRipple [pRowToggler]="job" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                </td>
+                <td>{{job.company}}</td>
+                <td>{{job.title}}</td>
+                <td>{{job.startDate}}</td>
+                <td>{{job.endDate}}</td>
+                <td>
+                  <button *ngIf="!expanded" pButton pRipple [pRowToggler]="job" type="button" label="View Details" class="p-button-raised actions-button"></button>
+                  <button *ngIf="expanded" pButton pRipple [pRowToggler]="job" type="button" label="Hide Details" class="p-button-raised p-button-secondary actions-button"></button>
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-job>
+              <tr>
+                <td colspan="6">
+                  <div>
+                    <p-table [value]="job.description.results" dataKey="id">
+                      <ng-template pTemplate="header">
+                        <tr>
+                          <th style="width: 2.5rem"></th>
+                          <th>Responsibilities</th>
+                        </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-description>
+                        <tr>
+                          <td>{{description.id}}</td>
+                          <td>{{description.responsibility}}</td>
+                        </tr>
+                      </ng-template>
+                    </p-table>
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

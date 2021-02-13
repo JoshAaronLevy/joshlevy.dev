@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="col-md-8 ml-auto mr-auto">
+    <div class="section-description text-center">
+      <h2 class="title">Skills</h2>
+      <div *ngIf="!loadingSkills" class="filter-buttons">
+        <button [disabled]="allSelected" (click)="filterSkills('All')"
+          class="btn btn-primary category-button">All</button>
+        <button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')"
+          class="btn btn-primary category-button">Front-End</button>
+        <button [disabled]="backEndSelected" (click)="filterSkills('Back-End')"
+          class="btn btn-primary category-button">Back-End</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="section-cols">
+    <div class="row">
+      <div *ngIf="loadingSkills" class="progress-spinner">
+        <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
+      </div>
+      <ul *ngIf="!loadingSkills" class="skills-list">
+        <li *ngFor="let skill of filteredSkills" class="col-md-3 skill">
+          <div class="card card-profile card-plain">
+            <div class="card-image skill-image">
+              <div class="img img-raised rounded">
+                <img src="{{ skill.img }}" />
+              </div>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{ skill.name }}</h4>
+              <h6 class="category">{{ skill.experience }}</h6>
+              <button type="button" (click)="filterSkills(skill.type)"
+                class="btn btn-primary btn-round category-button">{{ skill.type }}</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

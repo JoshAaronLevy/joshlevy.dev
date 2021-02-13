@@ -8,33 +8,35 @@ import { SectionsModule } from './sections/sections.module';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { AppComponent } from './app.component';
-import { PresentationComponent } from './presentation/presentation.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PresentationModule } from './presentation/presentation.module';
 import { HttpClientModule } from '@angular/common/http';
-import { PrimeNGBundleModule } from './primeng.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        NavbarComponent
+      AppComponent,
+      NavbarComponent,
+      FooterComponent
     ],
     imports: [
-        BrowserAnimationsModule,
-        NgbModule,
-        FormsModule,
-        RouterModule,
-        AppRoutingModule,
-        PresentationModule,
-        SectionsModule,
-        ComponentsModule,
-        ExamplesModule,
-        HttpClientModule
+      BrowserAnimationsModule,
+      NgbModule,
+      FormsModule,
+      RouterModule,
+      AppRoutingModule,
+      PresentationModule,
+      SectionsModule,
+      ComponentsModule,
+      ExamplesModule,
+      HttpClientModule
     ],
     schemas: [
       CUSTOM_ELEMENTS_SCHEMA
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [
+      AppComponent
+    ]
 })
 export class AppModule { }
