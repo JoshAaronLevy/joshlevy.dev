@@ -140,3 +140,12 @@ iframe {
 .no-display {
   display: none !important;
 }
+
+.custom-marker {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 50% !important;
+  height: 28px !important;
+  width: 28px !important;
+}
