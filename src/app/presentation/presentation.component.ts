@@ -32,6 +32,9 @@ export class PresentationComponent implements OnInit, OnDestroy {
   ref: DynamicDialogRef;
   markerColor: any;
   markerIcon: any;
+  loadingSkills: boolean;
+  loadingProjects: boolean;
+  loadingJobs: boolean;
 
   constructor(
     public skillService: SkillService,
@@ -42,13 +45,14 @@ export class PresentationComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.loadingSkills = true;
+    this.loadingProjects = true;
+    this.loadingJobs = true;
     this.markerColor = '#ae0001';
     this.markerIcon = PrimeIcons.HEART;
     this.filter = 'All';
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('presentation-page');
-    // const navbar = document.getElementsByTagName('nav')[0];
-    // navbar.classList.add('navbar-transparent');
     this.getSkills();
     this.getProjects();
     this.getJobs();
@@ -56,8 +60,11 @@ export class PresentationComponent implements OnInit, OnDestroy {
 
   getSkills() {
     return this.skillService.getSkills().subscribe(data => {
-      this.skills = data.skills;
-      this.filterSkills(this.filter);
+      if (data) {
+        this.loadingSkills = false;
+        this.skills = data.skills;
+        this.filterSkills(this.filter);
+      }
     });
   }
 
@@ -90,21 +97,25 @@ export class PresentationComponent implements OnInit, OnDestroy {
 
   getProjects() {
     return this.projectService.getProjects().subscribe(data => {
-      this.projects = data.projects;
-      this.projects.sort(function (a, b) {
-        return a.id - b.id;
-      });
+      if (data) {
+        this.loadingProjects = false;
+        this.projects = data.projects;
+        this.projects.sort(function (a, b) {
+          return a.id - b.id;
+        });
+      }
     });
   }
 
   getJobs() {
     return this.jobService.getJobs().subscribe(data => {
-      this.jobs = data.jobs;
-      this.jobs.sort(function (a, b) {
-        return a.id - b.id;
-      });
-      this.responsibilities = 
-      console.log(this.jobs);
+      if (data) {
+        this.loadingJobs = false;
+        this.jobs = data.jobs;
+        this.jobs.sort(function (a, b) {
+          return a.id - b.id;
+        });
+      }
     });
   }
 
@@ -118,7 +129,5 @@ export class PresentationComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove('presentation-page');
-    // const navbar = document.getElementsByTagName('nav')[0];
-    // navbar.classList.remove('navbar-transparent');
   }
 }
