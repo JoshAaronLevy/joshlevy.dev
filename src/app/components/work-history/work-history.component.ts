@@ -1,24 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { Jobs } from 'app/models/jobs.interface';
+import { Product } from 'app/models/product.interface';
 import { JobService } from 'app/services/job.service';
+import { ProductService } from 'app/services/product.service';
 
 @Component({
   selector: 'app-work-history',
   templateUrl: './work-history.component.html',
-  styleUrls: ['./work-history.component.scss']
+  styleUrls: ['./work-history.component.scss'],
+  providers: [
+    JobService,
+    ProductService
+  ]
 })
 export class WorkHistoryComponent implements OnInit {
   jobs: Jobs[] = [];
   jobDetails: number;
   // expandedJobs: number[] = [];
   expandedJobs: {[jobId: number]: boolean} = {};
+  products: Product[];
 
   constructor(
-    public jobService: JobService
+    public jobService: JobService,
+    private productService: ProductService
   ) { }
 
   ngOnInit(): void {
     this.getJobs();
+    this.getProducts();
   }
 
   getJobs() {
@@ -27,6 +36,13 @@ export class WorkHistoryComponent implements OnInit {
       this.jobs.sort(function (a, b) {
         return a.id - b.id;
       });
+    });
+  }
+
+  getProducts() {
+    this.productService.getProductsWithOrdersSmall().then(data => {
+      this.products = data;
+      console.log(this.products);
     });
   }
 
