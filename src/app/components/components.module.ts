@@ -51,9 +51,10 @@ import { WorkHistoryComponent } from './work-history/work-history.component';
         FootersAreasComponent,
         TablesAreasComponent,
         CommentsAreasComponent,
-        CardsAreasComponent,
-        WorkHistoryComponent
+        CardsAreasComponent
     ],
-    exports: [ ComponentsComponent ]
+    exports: [
+      ComponentsComponent
+    ]
 })
 export class ComponentsModule { }

@@ -1,6 +1,9 @@
 <p>work-history works!</p>
 <ul>
   <li *ngFor="let jerb of jobs">
-    {{ jerb.title }}
+    <button (click)="displayDetails(jerb)">{{ jerb.title }}</button>
+    <ul *ngIf="isExpanded(jerb.id)">
+      <li *ngFor="let duty of jerb.description.responsibilities">{{ duty }}</li>
+    </ul>
   </li>
 </ul>

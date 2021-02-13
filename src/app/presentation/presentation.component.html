@@ -87,7 +87,8 @@
     <div class="container-fluid">
       <div class="section-cols">
         <div class="row">
-          <p-table [value]="jobs" dataKey="id">
+          <app-work-history></app-work-history>
+          <!-- <p-table [value]="jobs" dataKey="id">
             <ng-template pTemplate="header">
               <tr>
                 <th style="width: 3rem"></th>
@@ -133,18 +134,7 @@
                   </td>
               </tr>
             </ng-template>
-            <!-- <ng-template pTemplate="rowexpansion" let-job>
-              <tr>
-                <td colspan="7">
-                  <div class="p-p-3">
-                    <ul>
-                      <li *ngFor="let responsibility of responsibilities">{{ responsibility }}</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </ng-template> -->
-          </p-table>
+          </p-table> -->
         </div>
       </div>
     </div>
