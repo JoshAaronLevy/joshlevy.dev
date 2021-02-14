@@ -1,5 +1,5 @@
 {
-  "name": "josh-levy",
+  "name": "joshlevy",
   "version": "1.2.0",
   "scripts": {
     "start": "ng serve -o --port=4100",
