@@ -8,6 +8,11 @@
 <div class="container-fluid padded-container">
   <div class="section-cols">
     <div class="row">
+      <p-messages *ngIf="loadingError" severity="error" class="api-error">
+        <ng-template pTemplate>
+          <div class="p-ml-2">Error: Unable to fetch work history from the server. Please try again.</div>
+        </ng-template>
+      </p-messages>
       <div *ngIf="loadingJobs" class="progress-spinner">
         <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
       </div>

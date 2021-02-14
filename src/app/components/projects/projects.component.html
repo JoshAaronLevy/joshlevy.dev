@@ -5,9 +5,14 @@
     </div>
   </div>
 </div>
-<div class="container-fluid centered-section">
+<div class="container-fluid centered-section padded-container">
   <div class="section-cols">
     <div class="row">
+      <p-messages *ngIf="loadingError" severity="error" class="api-error">
+        <ng-template pTemplate>
+          <div class="p-ml-2">Error: Unable to fetch project list from the server. Please try again.</div>
+        </ng-template>
+      </p-messages>
       <div *ngIf="loadingProjects" class="progress-spinner">
         <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
       </div>

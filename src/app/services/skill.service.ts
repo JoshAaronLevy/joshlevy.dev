@@ -40,7 +40,6 @@ export class SkillService {
     return this.http.post<any>(url, params)
       .pipe(
         map(res => {
-          console.log(res);
           return res;
         })
       );

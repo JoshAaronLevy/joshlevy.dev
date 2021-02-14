@@ -28,7 +28,6 @@ export class ProjectService {
     return this.http.get(url)
       .pipe(
         map(res => {
-          console.log(res);
           return res;
         })
       );
@@ -41,7 +40,6 @@ export class ProjectService {
     return this.http.post<any>(url, params)
       .pipe(
         map(res => {
-          console.log(res);
           return res;
         })
       );

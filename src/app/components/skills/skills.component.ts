@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { SkillService } from 'app/services/skill.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
+  providers: [
+    MessageService
+  ]
 })
 export class SkillsComponent implements OnInit {
   loadingSkills: boolean;
+  loadingError: boolean;
   skills: any;
   skill: any;
   filter: any;
@@ -18,10 +23,12 @@ export class SkillsComponent implements OnInit {
 
   constructor(
     public skillService: SkillService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
     this.loadingSkills = true;
+    this.loadingError = false;
     this.getSkills();
   }
 
@@ -31,6 +38,10 @@ export class SkillsComponent implements OnInit {
         this.loadingSkills = false;
         this.skills = data.skills;
         this.filterSkills(this.filter);
+      } else {
+        this.loadingSkills = false;
+        this.loadingError = true;
+        this.showGetError();
       }
     });
   }
@@ -60,5 +71,11 @@ export class SkillsComponent implements OnInit {
         this.filteredSkills.push(this.skills[i]);
       }
     }
+  }
+
+  showGetError() {
+    this.messageService.add({
+      severity: 'error'
+    });
   }
 }
