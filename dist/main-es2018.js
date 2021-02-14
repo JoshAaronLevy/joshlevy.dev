@@ -99,7 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.tech/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.dev/src/main.ts */"zUnb");
 
 
 /***/ }),
