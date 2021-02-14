@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <app-hero></app-hero>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <app-skills></app-skills>\n  </div>\n  <div id=\"projects\" class=\"section section-examples\" data-background-color=\"black\">\n    <app-projects></app-projects>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <app-work-history></app-work-history>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <app-resume></app-resume>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <div class=\"page-header clear-filter\">\n    <app-hero></app-hero>\n  </div>\n  <div id=\"skills\" class=\"section section-sections\" data-background-color=\"gray\">\n    <app-skills></app-skills>\n  </div>\n  <div id=\"projects\" class=\"section section-sections\" data-background-color=\"black\">\n    <app-projects></app-projects>\n  </div>\n  <div id=\"experience\" class=\"section section-sections\" data-background-color=\"gray\">\n    <app-work-history></app-work-history>\n  </div>\n  <div id=\"resume\" class=\"section section-sections\" data-background-color=\"black\">\n    <app-resume></app-resume>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -52,6 +52,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _projects_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects.component.scss */ "Ai5d");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var app_services_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/project.service */ "c3AT");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ "7zfz");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,12 +66,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 let ProjectsComponent = class ProjectsComponent {
-    constructor(projectService) {
+    constructor(projectService, messageService) {
         this.projectService = projectService;
+        this.messageService = messageService;
     }
     ngOnInit() {
         this.loadingProjects = true;
+        this.loadingError = false;
         this.markerColor = '#ae0001';
         this.getProjects();
     }
@@ -83,19 +87,32 @@ let ProjectsComponent = class ProjectsComponent {
                     return a.id - b.id;
                 });
             }
+            else {
+                this.loadingProjects = false;
+                this.loadingError = true;
+                this.showGetError();
+            }
+        });
+    }
+    showGetError() {
+        this.messageService.add({
+            severity: 'error'
         });
     }
 };
 ProjectsComponent.ctorParameters = () => [
-    { type: app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] }
+    { type: app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] },
+    { type: primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
 ];
 ProjectsComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-projects',
         template: _raw_loader_projects_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        providers: [primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]],
         styles: [_projects_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"]])
+    __metadata("design:paramtypes", [app_services_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"],
+        primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
 ], ProjectsComponent);
 
 
@@ -124,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid flex-container\">\n  <div class=\"section-cols\">\n    <div class=\"row centered-section\">\n      <div class=\"container\">\n        <div class=\"col-md-8 ml-auto mr-auto\">\n          <div class=\"section-description text-center\">\n            <h2 class=\"title\">Resume</h2>\n          </div>\n        </div>\n      </div>\n      <div class=\"resume-section\">\n        <div class=\"download-resume-button\">\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n        <div class=\"embedded-resume\">\n          <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid flex-container padded-container\">\n  <div class=\"section-cols\">\n    <div class=\"row centered-section\">\n      <div class=\"container\">\n        <div class=\"col-md-8 ml-auto mr-auto\">\n          <div class=\"section-description text-center\">\n            <h2 class=\"title\">Resume</h2>\n          </div>\n        </div>\n      </div>\n      <div class=\"resume-section\">\n        <div class=\"download-resume-button\">\n          <button pButton pRipple href=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/view\" target=\"_blank\" type=\"button\" label=\"Download Resume PDF\" class=\"p-button-raised p-button-danger\"></button>\n        </div>\n        <div class=\"embedded-resume\">\n          <iframe src=\"https://drive.google.com/file/d/1u9kupYDAdh7o_cYGaXCkmdJx4GBGFsRM/preview\"></iframe>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -253,7 +270,6 @@ let SkillService = class SkillService {
         const url = `${apiUrl}/skills`;
         return this.http.post(url, params)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(res => {
-            console.log(res);
             return res;
         }));
     }
@@ -286,6 +302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _skills_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skills.component.scss */ "XUpm");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ "7zfz");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -299,15 +316,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 let SkillsComponent = class SkillsComponent {
-    constructor(skillService) {
+    constructor(skillService, messageService) {
         this.skillService = skillService;
+        this.messageService = messageService;
         this.allSelected = true;
         this.frontEndSelected = false;
         this.backEndSelected = false;
     }
     ngOnInit() {
         this.loadingSkills = true;
+        this.loadingError = false;
         this.getSkills();
     }
     getSkills() {
@@ -316,6 +336,11 @@ let SkillsComponent = class SkillsComponent {
                 this.loadingSkills = false;
                 this.skills = data.skills;
                 this.filterSkills(this.filter);
+            }
+            else {
+                this.loadingSkills = false;
+                this.loadingError = true;
+                this.showGetError();
             }
         });
     }
@@ -347,17 +372,27 @@ let SkillsComponent = class SkillsComponent {
             }
         }
     }
+    showGetError() {
+        this.messageService.add({
+            severity: 'error'
+        });
+    }
 };
 SkillsComponent.ctorParameters = () => [
-    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"] }
+    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"] },
+    { type: primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
 ];
 SkillsComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-skills',
         template: _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        providers: [
+            primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]
+        ],
         styles: [_skills_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"]])
+    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"],
+        primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
 ], SkillsComponent);
 
 
@@ -584,6 +619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _work_history_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./work-history.component.scss */ "5v2N");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var app_services_job_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/job.service */ "qLOZ");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ "7zfz");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -597,14 +633,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 let WorkHistoryComponent = class WorkHistoryComponent {
-    constructor(jobService) {
+    constructor(jobService, messageService) {
         this.jobService = jobService;
+        this.messageService = messageService;
         this.jobs = [];
         this.expandedJobs = {};
     }
     ngOnInit() {
         this.loadingJobs = true;
+        this.loadingError = false;
         this.getJobs();
     }
     getJobs() {
@@ -615,6 +654,11 @@ let WorkHistoryComponent = class WorkHistoryComponent {
                 this.jobs.sort(function (a, b) {
                     return a.id - b.id;
                 });
+            }
+            else {
+                this.loadingJobs = false;
+                this.loadingError = true;
+                this.showGetError();
             }
         });
     }
@@ -631,20 +675,28 @@ let WorkHistoryComponent = class WorkHistoryComponent {
     isExpanded(jobId) {
         return this.expandedJobs[jobId];
     }
+    showGetError() {
+        this.messageService.add({
+            severity: 'error'
+        });
+    }
 };
 WorkHistoryComponent.ctorParameters = () => [
-    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"] }
+    { type: app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"] },
+    { type: primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
 ];
 WorkHistoryComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-work-history',
         template: _raw_loader_work_history_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         providers: [
-            app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"]
+            app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"],
+            primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]
         ],
         styles: [_work_history_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"]])
+    __metadata("design:paramtypes", [app_services_job_service__WEBPACK_IMPORTED_MODULE_3__["JobService"],
+        primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
 ], WorkHistoryComponent);
 
 
@@ -1606,7 +1658,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Skills</h2>\n      <div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n        <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n          class=\"btn btn-primary category-button\">All</button>\n        <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n          class=\"btn btn-primary category-button\">Front-End</button>\n        <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n          class=\"btn btn-primary category-button\">Back-End</button>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <ul *ngIf=\"!loadingSkills\" class=\"skills-list\">\n        <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n          <div class=\"card card-profile card-plain\">\n            <div class=\"card-image skill-image\">\n              <div class=\"img img-raised rounded\">\n                <img src=\"{{ skill.img }}\" />\n              </div>\n            </div>\n            <div class=\"card-body\">\n              <h4 class=\"card-title\">{{ skill.name }}</h4>\n              <h6 class=\"category\">{{ skill.experience }}</h6>\n              <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Skills</h2>\n      <div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n        <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n          class=\"btn btn-primary category-button\">All</button>\n        <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n          class=\"btn btn-primary category-button\">Front-End</button>\n        <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n          class=\"btn btn-primary category-button\">Back-End</button>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid padded-container\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <p-messages *ngIf=\"loadingError\" severity=\"error\" class=\"api-error\">\n        <ng-template pTemplate>\n          <div class=\"p-ml-2\">Error: Unable to fetch skill list from the server. Please try again.</div>\n        </ng-template>\n      </p-messages>\n      <div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <ul *ngIf=\"!loadingSkills\" class=\"skills-list\">\n        <li *ngFor=\"let skill of filteredSkills\" class=\"col-md-3 skill\">\n          <div class=\"card card-profile card-plain\">\n            <div class=\"card-image skill-image\">\n              <div class=\"img img-raised rounded\">\n                <img src=\"{{ skill.img }}\" />\n              </div>\n            </div>\n            <div class=\"card-body\">\n              <h4 class=\"card-title\">{{ skill.name }}</h4>\n              <h6 class=\"category\">{{ skill.experience }}</h6>\n              <button type=\"button\" (click)=\"filterSkills(skill.type)\"\n                class=\"btn btn-primary btn-round category-button\">{{ skill.type }}</button>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -1718,7 +1770,7 @@ AppModule = __decorate([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Projects</h2>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid centered-section\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <div *ngIf=\"loadingProjects\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <p-timeline *ngIf=\"!loadingProjects\" [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n        <ng-template pTemplate=\"marker\" let-project>\n          <span class=\"custom-marker p-shadow-2\" [style.backgroundColor]=\"markerColor\">\n            <i class=\"fas fa-code\"></i>\n          </span>\n        </ng-template>\n        <ng-template pTemplate=\"opposite\" let-project>\n          <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n            <p class=\"card-description\">{{ project.description }}</p>\n            <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n            <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n          </p-card>\n        </ng-template>\n      </p-timeline>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Projects</h2>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid centered-section padded-container\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <p-messages *ngIf=\"loadingError\" severity=\"error\" class=\"api-error\">\n        <ng-template pTemplate>\n          <div class=\"p-ml-2\">Error: Unable to fetch project list from the server. Please try again.</div>\n        </ng-template>\n      </p-messages>\n      <div *ngIf=\"loadingProjects\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <p-timeline *ngIf=\"!loadingProjects\" [value]=\"projects\" align=\"alternate\" styleClass=\"timeline-card\">\n        <ng-template pTemplate=\"marker\" let-project>\n          <span class=\"custom-marker p-shadow-2\" [style.backgroundColor]=\"markerColor\">\n            <i class=\"fas fa-code\"></i>\n          </span>\n        </ng-template>\n        <ng-template pTemplate=\"opposite\" let-project>\n          <p-card [header]=\"project.name\" [subheader]=\"project.date\">\n            <p class=\"card-description\">{{ project.description }}</p>\n            <a [ngClass]=\"project.deployedUrl === null ? 'no-display' : null\" href=\"{{ project?.deployedUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View deployed website in a new tab.\" class=\"fas fa-link\"></i></a>\n            <a href=\"{{ project?.githubUrl }}\" target=\"_blank\"><i v-b-tooltip.hover title=\"View GitHub repository in a new tab.\" class=\"fab fa-github\"></i></a>\n          </p-card>\n        </ng-template>\n      </p-timeline>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -1818,7 +1870,6 @@ let ProjectService = class ProjectService {
         const url = `${apiUrl}/projects`;
         return this.http.get(url)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(res => {
-            console.log(res);
             return res;
         }));
     }
@@ -1826,7 +1877,6 @@ let ProjectService = class ProjectService {
         const url = `${apiUrl}/projects`;
         return this.http.post(url, params)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(res => {
-            console.log(res);
             return res;
         }));
     }
@@ -1867,7 +1917,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Work History</h2>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid padded-container\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <div *ngIf=\"loadingJobs\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <div *ngIf=\"!loadingJobs\" class=\"content-section implementation\">\n        <div class=\"card\">\n          <p-table [value]=\"jobs\" dataKey=\"company\">\n            <ng-template pTemplate=\"header\">\n              <tr>\n                <th class=\"dark-table-header\" style=\"width: 3rem\"></th>\n                <th class=\"dark-table-header\">Company</th>\n                <th class=\"dark-table-header\">Title</th>\n                <th class=\"dark-table-header\">Start Date</th>\n                <th class=\"dark-table-header\">End Date</th>\n                <th class=\"dark-table-header\">Actions</th>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"body\" let-job let-expanded=\"expanded\">\n              <tr>\n                <td>\n                  <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-rounded p-button-plain\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button>\n                </td>\n                <td>{{job.company}}</td>\n                <td>{{job.title}}</td>\n                <td>{{job.startDate}}</td>\n                <td>{{job.endDate}}</td>\n                <td>\n                  <button *ngIf=\"!expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"View Details\" class=\"p-button-raised actions-button\"></button>\n                  <button *ngIf=\"expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"Hide Details\" class=\"p-button-raised p-button-secondary actions-button\"></button>\n                </td>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"rowexpansion\" let-job>\n              <tr>\n                <td colspan=\"6\">\n                  <div>\n                    <p-table [value]=\"job.description.results\" dataKey=\"id\">\n                      <ng-template pTemplate=\"header\">\n                        <tr>\n                          <th style=\"width: 2.5rem\"></th>\n                          <th>Responsibilities</th>\n                        </tr>\n                      </ng-template>\n                      <ng-template pTemplate=\"body\" let-description>\n                        <tr>\n                          <td>{{description.id}}</td>\n                          <td>{{description.responsibility}}</td>\n                        </tr>\n                      </ng-template>\n                    </p-table>\n                  </div>\n                </td>\n              </tr>\n            </ng-template>\n          </p-table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"col-md-8 ml-auto mr-auto\">\n    <div class=\"section-description text-center\">\n      <h2 class=\"title\">Work History</h2>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid padded-container\">\n  <div class=\"section-cols\">\n    <div class=\"row\">\n      <p-messages *ngIf=\"loadingError\" severity=\"error\" class=\"api-error\">\n        <ng-template pTemplate>\n          <div class=\"p-ml-2\">Error: Unable to fetch work history from the server. Please try again.</div>\n        </ng-template>\n      </p-messages>\n      <div *ngIf=\"loadingJobs\" class=\"progress-spinner\">\n        <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n      </div>\n      <div *ngIf=\"!loadingJobs\" class=\"content-section implementation\">\n        <div class=\"card\">\n          <p-table [value]=\"jobs\" dataKey=\"company\">\n            <ng-template pTemplate=\"header\">\n              <tr>\n                <th class=\"dark-table-header\" style=\"width: 3rem\"></th>\n                <th class=\"dark-table-header\">Company</th>\n                <th class=\"dark-table-header\">Title</th>\n                <th class=\"dark-table-header\">Start Date</th>\n                <th class=\"dark-table-header\">End Date</th>\n                <th class=\"dark-table-header\">Actions</th>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"body\" let-job let-expanded=\"expanded\">\n              <tr>\n                <td>\n                  <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-rounded p-button-plain\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button>\n                </td>\n                <td>{{job.company}}</td>\n                <td>{{job.title}}</td>\n                <td>{{job.startDate}}</td>\n                <td>{{job.endDate}}</td>\n                <td>\n                  <button *ngIf=\"!expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"View Details\" class=\"p-button-raised actions-button\"></button>\n                  <button *ngIf=\"expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"Hide Details\" class=\"p-button-raised p-button-secondary actions-button\"></button>\n                </td>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"rowexpansion\" let-job>\n              <tr>\n                <td colspan=\"6\">\n                  <div>\n                    <p-table [value]=\"job.description.results\" dataKey=\"id\">\n                      <ng-template pTemplate=\"header\">\n                        <tr>\n                          <th style=\"width: 2.5rem\"></th>\n                          <th>Responsibilities</th>\n                        </tr>\n                      </ng-template>\n                      <ng-template pTemplate=\"body\" let-description>\n                        <tr>\n                          <td>{{description.id}}</td>\n                          <td>{{description.responsibility}}</td>\n                        </tr>\n                      </ng-template>\n                    </p-table>\n                  </div>\n                </td>\n              </tr>\n            </ng-template>\n          </p-table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -2122,7 +2172,6 @@ let JobService = class JobService {
         const url = `${apiUrl}/jobs`;
         return this.http.post(url, params)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(res => {
-            console.log(res);
             return res;
         }));
     }
