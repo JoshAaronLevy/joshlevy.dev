@@ -18,7 +18,7 @@
       </div>
       <div *ngIf="!loadingJobs" class="content-section implementation">
         <div class="card">
-          <p-table [value]="jobs" dataKey="company">
+          <p-table [value]="jobs" dataKey="company" styleClass="p-d-none p-d-md-inline-flex">
             <ng-template pTemplate="header">
               <tr>
                 <th class="dark-table-header" style="width: 3rem"></th>
@@ -68,6 +68,23 @@
             </ng-template>
           </p-table>
         </div>
+        <p-table [columns]="cols" [value]="jobs" styleClass="p-d-md-none p-datatable-responsive-demo">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th *ngFor="let col of columns">
+                {{col.header}}
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+              <td *ngFor="let col of columns">
+                <span class="p-column-title">{{col.header}}</span>
+                {{rowData[col.field]}}
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
       </div>
     </div>
   </div>

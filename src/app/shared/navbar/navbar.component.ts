@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location } from '@angular/common';
 import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ContactComponent } from 'app/components/contact/contact.component';
 
@@ -45,7 +45,6 @@ export class NavbarComponent implements OnInit {
       toggleButton.classList.add('toggled');
     }, 500);
     html.classList.add('nav-open');
-
     this.sidebarVisible = true;
   };
 
@@ -65,22 +64,10 @@ export class NavbarComponent implements OnInit {
   };
 
   isHome() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-
-    if (titlee === '/home') {
+    const title = this.location.prepareExternalUrl(this.location.path());
+    if (title === '/') {
       return true;
-    }
-    else {
-      return false;
-    }
-  }
-
-  isDocumentation() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee === '/documentation') {
-      return true;
-    }
-    else {
+    } else {
       return false;
     }
   }

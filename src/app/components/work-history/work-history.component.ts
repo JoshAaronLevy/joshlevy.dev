@@ -18,6 +18,29 @@ export class WorkHistoryComponent implements OnInit {
   jobs: Jobs[] = [];
   jobDetails: number;
   expandedJobs: {[jobId: number]: boolean} = {};
+  cols: any = [];
+  columns: any = [
+    {
+      header: 'Company',
+      field: 'company'
+    },
+    {
+      header: 'Title',
+      field: 'title'
+    },
+    {
+      header: 'Start Date',
+      field: 'startDate'
+    },
+    {
+      header: 'End Date',
+      field: 'endDate'
+    },
+    {
+      header: 'Actions',
+      field: ''
+    }
+  ];
 
   constructor(
     public jobService: JobService,
@@ -38,6 +61,20 @@ export class WorkHistoryComponent implements OnInit {
         this.jobs.sort(function (a, b) {
           return a.id - b.id;
         });
+        this.cols = [
+          {
+            header: 'Company',
+            field: 'company'
+          },
+          {
+            header: 'Start Date',
+            field: 'startDate'
+          },
+          {
+            header: 'End Date',
+            field: 'endDate'
+          }
+        ];
       } else {
         this.loadingJobs = false;
         this.loadingError = true;
