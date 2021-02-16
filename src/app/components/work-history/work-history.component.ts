@@ -67,6 +67,10 @@ export class WorkHistoryComponent implements OnInit {
             field: 'company'
           },
           {
+            header: 'Title',
+            field: 'shortTitle'
+          },
+          {
             header: 'Start Date',
             field: 'startDate'
           },
