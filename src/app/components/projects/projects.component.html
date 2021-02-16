@@ -30,7 +30,7 @@
           </p-card>
         </ng-template>
       </p-timeline>
-      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="right" styleClass="p-d-md-none">
+      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="right" styleClass="customized-timeline p-d-md-none">
         <ng-template pTemplate="marker" let-project>
           <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
             <i class="fas fa-code"></i>

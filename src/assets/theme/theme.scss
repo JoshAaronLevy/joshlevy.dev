@@ -2964,6 +2964,11 @@ p-togglebutton {
 		}
 	}
 }
+@media screen and (max-width: 576px) {
+  .p-timeline-right .p-timeline-event-opposite {
+    display: none !important;
+  }
+}
 .p-timeline {
 	.p-timeline-event-connector {
 		background-color: #dee2e6;
