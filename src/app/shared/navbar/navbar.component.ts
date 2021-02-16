@@ -36,6 +36,7 @@ export class NavbarComponent implements OnInit {
     this.ref = this.dialogService.open(ContactComponent, {
       width: '50%'
     });
+    this.sidebarClose();
   }
 
   sidebarOpen() {
