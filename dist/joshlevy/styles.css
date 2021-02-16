@@ -13546,7 +13546,12 @@ img {
   display: flex;
   justify-content: center;
 }
+.cols-centered {
+  display: flex;
+  justify-content: center;
+}
 .resume-section {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -13561,6 +13566,9 @@ img {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.embedded-resume iframe {
+  width: 100%;
 }
 .progress-spinner {
   display: flex;
@@ -13612,10 +13620,6 @@ th.dark-table-header {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-}
-iframe {
-  width: 840px;
-  height: 1070px;
 }
 .flex-container {
   display: flex;
@@ -13807,6 +13811,9 @@ iframe {
   justify-content: center;
   width: 100%;
 }
+.p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td {
+  padding: 0.25rem 1rem !important;
+}
 ::ng-deep .p-timeline-event-content {
   line-height: 1;
 }
@@ -13815,6 +13822,18 @@ iframe {
   line-height: 1;
 }
 @media screen and (max-width: 960px) {
+  .section-description {
+    margin-bottom: 20px !important;
+  }
+
+  .p-paginator .p-paginator-first {
+    display: none !important;
+  }
+
+  .p-paginator .p-paginator-last {
+    display: none !important;
+  }
+
   .p-timeline-event {
     min-height: auto !important;
     height: auto !important;
@@ -13836,6 +13855,44 @@ iframe {
 
   .p-timeline.p-timeline-vertical .p-timeline-event-opposite {
     display: none !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .embedded-resume iframe {
+    height: 390px;
+  }
+}
+@media only screen and (max-width: 415px) and (min-width: 376px) {
+  .embedded-resume iframe {
+    height: 440px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 416px) {
+  .embedded-resume iframe {
+    height: 695px;
+  }
+
+  .section-cols {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .section-cols {
+    width: 95%;
+  }
+
+  .embedded-resume iframe {
+    height: 1275px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .section-cols {
+    width: 100%;
+  }
+
+  .embedded-resume iframe {
+    width: 50%;
+    height: 1050px;
   }
 }
 .text-margin {
