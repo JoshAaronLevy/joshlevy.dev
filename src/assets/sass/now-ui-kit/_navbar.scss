@@ -126,6 +126,7 @@
         vertical-align: middle;
         outline: 0;
         cursor: pointer;
+        margin-right: 15px;
 
         &.navbar-toggler-left{
             position: relative;
@@ -218,7 +219,7 @@
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
   align-items: center !important;
-  height: 74px !important;
+  height: 100% !important;
 }
 
 ul.navbar-nav.ml-auto {
@@ -230,13 +231,16 @@ ul.navbar-nav.ml-auto {
 ul.navbar-nav.ml-auto li {
   display: flex !important;
   align-items: center !important;
-  height: 100%;
+  justify-content: center !important;
+  height: 100px;
+  width: 100%;
 }
 
 ul.navbar-nav.ml-auto li a {
   display: flex !important;
   align-items: center !important;
   height: 100%;
+  font-weight: 700;
 }
 
 ul.navbar-nav.ml-auto li:hover {
