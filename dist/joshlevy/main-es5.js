@@ -2998,7 +2998,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n  <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky.jpg')\">\n  </div>\n</div>\n<div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n  <div class=\"page-header-image page-header-city\"\n    style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings.png')\">\n  </div>\n  <div class=\"rellax-text-container rellax-text\">\n    <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n</div>\n";
+      __webpack_exports__["default"] = "<div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n  <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky-black.jpg')\">\n  </div>\n</div>\n<div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n  <div class=\"page-header-image page-header-city\"\n    style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings-black-min.png')\">\n  </div>\n  <div class=\"rellax-text-container rellax-text\">\n    <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n    <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n  </div>\n</div>\n";
       /***/
     },
 

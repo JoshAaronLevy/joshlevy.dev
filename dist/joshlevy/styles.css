@@ -9783,6 +9783,7 @@ ngb-accordion .card .card-header button .arrows-1_minimal-down {
   vertical-align: middle;
   outline: 0;
   cursor: pointer;
+  margin-right: 15px;
 }
 .navbar .navbar-toggler.navbar-toggler-left {
   position: relative;
@@ -9849,7 +9850,7 @@ ngb-accordion .card .card-header button .arrows-1_minimal-down {
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
   align-items: center !important;
-  height: 74px !important;
+  height: 100% !important;
 }
 ul.navbar-nav.ml-auto {
   display: flex !important;
@@ -9859,12 +9860,15 @@ ul.navbar-nav.ml-auto {
 ul.navbar-nav.ml-auto li {
   display: flex !important;
   align-items: center !important;
-  height: 100%;
+  justify-content: center !important;
+  height: 100px;
+  width: 100%;
 }
 ul.navbar-nav.ml-auto li a {
   display: flex !important;
   align-items: center !important;
   height: 100%;
+  font-weight: 700;
 }
 ul.navbar-nav.ml-auto li:hover {
   background-color: #ae0001 !important;
@@ -12490,16 +12494,16 @@ img {
     display: block !important;
     top: 0;
     height: 100% !important;
-    width: 300px;
+    width: 150px;
     right: 0;
     z-index: 1032;
     visibility: visible;
-    background-color: #999;
+    background-color: #222;
     overflow-y: visible;
     border-top: none;
     text-align: left;
     max-height: none !important;
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(150px, 0, 0);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
   .navbar-collapse:after {
@@ -12552,7 +12556,7 @@ img {
   .menu-on-left .navbar-collapse {
     right: auto;
     left: 0;
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-170px, 0, 0);
   }
 
   .menu-on-left .navbar-brand {
@@ -12615,7 +12619,7 @@ img {
   .navbar .navbar-toggler-bar {
     display: block;
     position: relative;
-    width: 22px;
+    width: 32px;
     height: 1px;
     border-radius: 1px;
     background: #FFFFFF;
@@ -12628,10 +12632,10 @@ img {
     transition: width 0.2s linear;
   }
   .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
-    background: #888888;
+    background: #222222;
   }
   .navbar .toggled .navbar-toggler-bar {
-    width: 24px;
+    width: 32px;
   }
   .navbar .toggled .navbar-toggler-bar + .navbar-toggler-bar {
     margin-top: 5px;
@@ -12645,20 +12649,20 @@ img {
     transform: translate3d(-150px, 0, 0);
   }
   .nav-open .navbar-translate {
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
   }
   .nav-open .menu-on-left .navbar-collapse {
     transform: translate3d(0px, 0, 0);
   }
   .nav-open .menu-on-left .navbar-translate {
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(150px, 0, 0);
   }
   .nav-open .menu-on-left .wrapper {
     transform: translate3d(150px, 0, 0);
   }
   .nav-open .menu-on-left #bodyClick {
     right: auto;
-    left: 300px;
+    left: 150px;
   }
 
   .wrapper {
@@ -12668,7 +12672,7 @@ img {
   .bar1,
 .bar2,
 .bar3 {
-    outline: 1px solid transparent;
+    outline: 2px solid transparent;
   }
 
   .bar1 {
@@ -12875,7 +12879,7 @@ img {
   }
 
   [class*=navbar-toggleable-] .navbar-collapse {
-    width: 300px;
+    width: 150px;
   }
 
   .button-dropdown {
@@ -12934,16 +12938,16 @@ img {
     display: block !important;
     top: 0;
     height: 100% !important;
-    width: 300px;
+    width: 150px;
     right: 0;
     z-index: 1032;
     visibility: visible;
-    background-color: #999;
+    background-color: #222;
     overflow-y: visible;
     border-top: none;
     text-align: left;
     max-height: none !important;
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(150px, 0, 0);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
   .burger-menu .navbar-collapse:after {
@@ -12996,7 +13000,7 @@ img {
   .menu-on-left .burger-menu .navbar-collapse {
     right: auto;
     left: 0;
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-170px, 0, 0);
   }
   .burger-menu .menu-on-left .navbar-brand {
     float: right;
@@ -13057,7 +13061,7 @@ img {
   .burger-menu .navbar .navbar-toggler-bar {
     display: block;
     position: relative;
-    width: 22px;
+    width: 32px;
     height: 1px;
     border-radius: 1px;
     background: #FFFFFF;
@@ -13070,10 +13074,10 @@ img {
     transition: width 0.2s linear;
   }
   .burger-menu .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
-    background: #888888;
+    background: #222222;
   }
   .burger-menu .navbar .toggled .navbar-toggler-bar {
-    width: 24px;
+    width: 32px;
   }
   .burger-menu .navbar .toggled .navbar-toggler-bar + .navbar-toggler-bar {
     margin-top: 5px;
@@ -13086,20 +13090,20 @@ img {
     transform: translate3d(-150px, 0, 0);
   }
   .burger-menu .nav-open .navbar-translate {
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
   }
   .burger-menu .nav-open .menu-on-left .navbar-collapse {
     transform: translate3d(0px, 0, 0);
   }
   .burger-menu .nav-open .menu-on-left .navbar-translate {
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(150px, 0, 0);
   }
   .burger-menu .nav-open .menu-on-left .wrapper {
     transform: translate3d(150px, 0, 0);
   }
   .burger-menu .nav-open .menu-on-left #bodyClick {
     right: auto;
-    left: 300px;
+    left: 150px;
   }
   .burger-menu .wrapper {
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -13107,7 +13111,7 @@ img {
   .burger-menu .bar1,
 .burger-menu .bar2,
 .burger-menu .bar3 {
-    outline: 1px solid transparent;
+    outline: 2px solid transparent;
   }
   .burger-menu .bar1 {
     top: 0px;
@@ -13318,7 +13322,7 @@ img {
   .burger-menu.menu-on-left .navbar-collapse {
     right: auto;
     left: 0;
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-190px, 0, 0);
   }
   .burger-menu .navbar-toggleable-md .navbar-nav .dropdown-menu {
     position: static;
@@ -13328,17 +13332,17 @@ img {
     display: inline-block;
   }
   .nav-open .burger-menu.menu-on-left .navbar .navbar-translate {
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(150px, 0, 0);
   }
   .nav-open .burger-menu .navbar .navbar-translate {
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-190px, 0, 0);
   }
   .nav-open .burger-menu.menu-on-left .navbar-collapse {
     transform: translate3d(0px, 0, 0);
   }
   .nav-open .burger-menu.menu-on-left #bodyClick {
     right: auto;
-    left: 300px;
+    left: 150px;
   }
   .burger-menu.menu-on-left .navbar-brand {
     float: right;

@@ -6,7 +6,7 @@
     }
 
     [class*="navbar-toggleable-"] .navbar-collapse{
-        width: 300px;
+        width:150px;
     }
 
     .button-dropdown{
@@ -105,7 +105,7 @@
         &.menu-on-left .navbar-collapse{
             right: auto;
             left: 0;
-            @include transform-translate-x(-300px);
+            @include transform-translate-x(-190px);
         }
 
         .navbar-toggleable-md{
@@ -121,11 +121,11 @@
 
         .nav-open &{
             &.menu-on-left .navbar .navbar-translate{
-                @include transform-translate-x(300px);
+                @include transform-translate-x(150px);
             }
 
             .navbar .navbar-translate{
-                @include transform-translate-x(-300px);
+                @include transform-translate-x(-190px);
             }
 
             &.menu-on-left .navbar-collapse{
@@ -134,7 +134,7 @@
 
             &.menu-on-left #bodyClick{
                 right: auto;
-                left: 300px;
+                left: 150px;
             }
         }
 
