@@ -6,7 +6,7 @@
   </div>
 </div>
 <div class="container-fluid padded-container">
-  <div class="section-cols">
+  <div class="section-cols cols-centered">
     <div class="row">
       <p-messages *ngIf="loadingError" severity="error" class="api-error">
         <ng-template pTemplate>
@@ -26,7 +26,7 @@
                 <th class="dark-table-header">Title</th>
                 <th class="dark-table-header">Start Date</th>
                 <th class="dark-table-header">End Date</th>
-                <th class="dark-table-header">Actions</th>
+                <th class="dark-table-header right-column">Actions</th>
               </tr>
             </ng-template>
             <ng-template pTemplate="body" let-job let-expanded="expanded">
@@ -38,7 +38,7 @@
                 <td>{{job.title}}</td>
                 <td>{{job.startDate}}</td>
                 <td>{{job.endDate}}</td>
-                <td>
+                <td class="right-column">
                   <button *ngIf="!expanded" pButton pRipple [pRowToggler]="job" type="button" label="View Details" class="p-button-raised actions-button"></button>
                   <button *ngIf="expanded" pButton pRipple [pRowToggler]="job" type="button" label="Hide Details" class="p-button-raised p-button-secondary actions-button"></button>
                 </td>
