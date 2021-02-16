@@ -14487,15 +14487,22 @@ th.dark-table-header {
 
 .presentation-page .rellax-text-container,
 .index-page .rellax-text-container {
-  max-width: 1003px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  position: relative;
-  top: 24%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .presentation-page .rellax-text-container .h1-seo,
 .index-page .rellax-text-container .h1-seo {
+  margin-top: 0px !important;
+  margin-bottom: 20px !important;
   font-size: 14.8em;
   text-transform: uppercase;
   font-weight: 700;
@@ -14539,14 +14546,14 @@ th.dark-table-header {
 .presentation-page .h3-description,
 .index-page .h3-description {
   z-index: 3;
-  top: 50%;
-  position: absolute;
+  position: relative;
   font-weight: 500 !important;
-  font-size: 3em !important;
-  margin-top: 50px !important;
+  font-size: 3.5em !important;
+  margin-top: 20px !important;
+  margin-bottom: 0px !important;
   width: 100%;
   text-align: center;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.71);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.85);
 }
 
 .presentation-page .category-absolute,
@@ -14886,12 +14893,12 @@ th.dark-table-header {
 
   .presentation-page .rellax-text-container,
 .index-page .rellax-text-container {
-    top: 21%;
-    max-width: 360px;
+    top: 0;
+    max-width: 100%;
   }
 
   .index-page .rellax-text-container {
-    top: 25%;
+    top: 0;
   }
   .index-page .rellax-text-container .h1-seo {
     font-size: 3.8em;
@@ -14900,7 +14907,7 @@ th.dark-table-header {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .presentation-page .rellax-text-container {
-    top: 20% !important;
+    top: 0 !important;
   }
   .presentation-page .page-header + .section-components {
     padding-top: 200px;
@@ -14909,19 +14916,19 @@ th.dark-table-header {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .presentation-page .rellax-text-container {
-    top: 17% !important;
+    top: 0 !important;
   }
 }
 
 @media screen and (max-width: 768px) and (min-width: 576px) {
   .presentation-page .rellax-text-container,
 .index-page .rellax-text-container {
-    max-width: 565px;
-    top: 33%;
+    max-width: 100%;
+    top: 0;
   }
 
   .index-page .rellax-text-container {
-    top: 26%;
+    top: 0;
   }
 
   .presentation-page .rellax-text-container .h1-seo {
@@ -14934,26 +14941,24 @@ th.dark-table-header {
 
   .presentation-page .rellax-text-container .pro {
     font-size: 12px;
-    top: -14px;
-    right: 2px;
+    top: 0;
   }
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
   .presentation-page .rellax-text-container,
 .index-page .rellax-text-container {
-    max-width: 730px;
-    top: 32%;
+    max-width: 100%;
+    top: 0;
   }
 
   .index-page .rellax-text-container {
-    top: 24%;
+    top: 0;
   }
 
   .presentation-page .rellax-text-container .pro {
     font-size: 14px;
-    top: 18px;
-    right: -3px;
+    top: 0;
   }
 
   .presentation-page .rellax-text-container .h1-seo {
@@ -15351,7 +15356,7 @@ th.dark-table-header {
   }
   .presentation-page .h3-description,
 .presentation-page .index-page .h3-description {
-    top: 53%;
+    top: 0;
   }
 }
 
@@ -15367,12 +15372,11 @@ th.dark-table-header {
 
   .presentation-page .rellax-text-container,
 .index-page .rellax-text-container {
-    max-width: 900px;
-    top: 27%;
+    max-width: 100%;
   }
 
   .index-page .rellax-text-container {
-    top: 23%;
+    top: 0;
   }
 
   .presentation-page .rellax-text-container .pro {
