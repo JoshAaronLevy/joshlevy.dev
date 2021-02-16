@@ -24,23 +24,40 @@
       <div *ngIf="loadingSkills" class="progress-spinner">
         <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
       </div>
-      <ul *ngIf="!loadingSkills" class="skills-list">
-        <li *ngFor="let skill of filteredSkills" class="col-md-3 skill">
-          <div class="card card-profile card-plain">
-            <div class="card-image skill-image">
-              <div class="img img-raised rounded">
-                <img src="{{ skill.img }}" />
-              </div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">{{ skill.name }}</h4>
-              <h6 class="category">{{ skill.experience }}</h6>
-              <button type="button" (click)="filterSkills(skill.type)"
-                class="btn btn-primary btn-round category-button">{{ skill.type }}</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <div *ngIf="!loadingSkills && !loadingError" class="card">
+        <p-dataView #dv [value]="filteredSkills" [paginator]="true" [rows]="12" filterBy="name"
+            layout="grid">
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+                    <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+                        <i class="pi pi-search"></i>
+                        <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
+                    </span>
+                </div>
+            </ng-template>
+            <ng-template let-skill pTemplate="gridItem">
+                <div class="p-col-12 p-md-3">
+                    <div class="product-grid-item card">
+                        <div class="product-grid-item-content">
+                            <img [src]="skill.img"/>
+                            <div class="product-name">{{skill.name}}</div>
+                            <button 
+                              pButton
+                              pRipple
+                              type="button"
+                              label="{{skill.type}}"
+                              class="filter-button p-button-rounded"
+                              (click)="filterSkills(skill.type)">
+                            </button>
+                        </div>
+                        <div class="product-grid-item-bottom">
+                          <div class="product-description">Experience: {{skill.experience}}</div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+      </div>
     </div>
   </div>
 </div>

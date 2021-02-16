@@ -24,8 +24,8 @@
               "src/styles.scss",
               "src/assets/sass/now-ui-kit.scss",
               "src/assets/sass/demo.scss",
-              "src/assets/theme/theme.scss",
               "./node_modules/primeflex/primeflex.css",
+              "./node_modules/primeng/resources/themes/saga-blue/theme.css",
               "./node_modules/primeng/resources/primeng.min.css",
               "./node_modules/primeicons/primeicons.css"
             ],
@@ -83,8 +83,8 @@
               "src/styles.scss",
               "src/assets/sass/now-ui-kit.scss",
               "src/assets/sass/demo.scss",
-              "src/assets/theme/theme.scss",
               "./node_modules/primeflex/primeflex.css",
+              "./node_modules/primeng/resources/themes/saga-blue/theme.css",
               "./node_modules/primeng/resources/primeng.min.css",
               "./node_modules/primeicons/primeicons.css"
             ],

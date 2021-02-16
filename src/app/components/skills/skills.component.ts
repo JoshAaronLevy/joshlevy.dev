@@ -38,6 +38,7 @@ export class SkillsComponent implements OnInit {
         this.loadingSkills = false;
         this.skills = data.skills;
         this.filterSkills(this.filter);
+        console.log(this.skills[0]);
       } else {
         this.loadingSkills = false;
         this.loadingError = true;
