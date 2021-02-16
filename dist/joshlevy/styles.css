@@ -13899,6 +13899,12 @@ th.dark-table-header {
     height: 1050px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .p-dialog {
+    width: 90% !important;
+    min-width: 90% !important;
+  }
+}
 .text-margin {
   margin-right: 2px !important;
 }
