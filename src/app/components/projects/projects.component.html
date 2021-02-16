@@ -16,7 +16,7 @@
       <div *ngIf="loadingProjects" class="progress-spinner">
         <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
       </div>
-      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="alternate" styleClass="p-d-none p-d-md-inline-flex customized-timeline">
+      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="alternate" styleClass="p-d-none p-d-lg-inline-flex customized-timeline">
         <ng-template pTemplate="marker" let-project>
           <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
             <i class="fas fa-code"></i>
@@ -30,7 +30,7 @@
           </p-card>
         </ng-template>
       </p-timeline>
-      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="right" styleClass="customized-timeline p-d-md-none">
+      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="right" styleClass="customized-timeline p-d-lg-none">
         <ng-template pTemplate="marker" let-project>
           <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
             <i class="fas fa-code"></i>
