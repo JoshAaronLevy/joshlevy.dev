@@ -1,7 +1,16 @@
 :host ::ng-deep {
+  .p-input-icon-left {
+    display: flex !important;
+  }
+
   .p-dropdown {
-    width: 14rem !important;
+    width: auto !important;
     font-weight: normal !important;
+  }
+
+  .p-dropdown-label {
+    display: flex !important;
+    align-items: center !important;
   }
 
   .product-name {

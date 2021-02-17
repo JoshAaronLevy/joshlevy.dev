@@ -20,6 +20,8 @@ export class SkillsComponent implements OnInit {
   allSelected = true;
   frontEndSelected = false;
   backEndSelected = false;
+  first = 0;
+  rows = 12;
 
   constructor(
     public skillService: SkillService,
@@ -72,6 +74,26 @@ export class SkillsComponent implements OnInit {
         this.filteredSkills.push(this.skills[i]);
       }
     }
+  }
+
+  next() {
+    this.first = this.first + this.rows;
+  }
+
+  prev() {
+      this.first = this.first - this.rows;
+  }
+
+  reset() {
+      this.first = 0;
+  }
+
+  isLastPage(): boolean {
+      return this.filteredSkills ? this.first === (this.filteredSkills.length - this.rows): true;
+  }
+
+  isFirstPage(): boolean {
+      return this.filteredSkills ? this.first === 0 : true;
   }
 
   showGetError() {

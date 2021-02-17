@@ -5,11 +5,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PresentationComponent } from './presentation/presentation.component';
 import { ComponentsComponent } from './components/components.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { WorkHistoryComponent } from './components/work-history/work-history.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 const routes: Routes = [
-  { path: 'presentation', redirectTo: '', pathMatch: 'full' },
   { path: '', component: PresentationComponent },
-  { path: 'components', component: ComponentsComponent }
+  // { path: '', component: HeroComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'experience', component: WorkHistoryComponent },
+  { path: 'resume', component: ResumeComponent }
 ];
 
 @NgModule({

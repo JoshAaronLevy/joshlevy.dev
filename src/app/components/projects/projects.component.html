@@ -1,49 +1,51 @@
-<div class="container">
-  <div class="col-md-8 ml-auto mr-auto">
-    <div class="section-description text-center">
-      <h2 class="title">Projects</h2>
+<div class="section section-sections" data-background-color="black">
+  <div class="container">
+    <div class="col-md-8 ml-auto mr-auto">
+      <div class="section-description text-center">
+        <h2 class="title">Projects</h2>
+      </div>
     </div>
   </div>
-</div>
-<div class="container-fluid centered-section padded-container">
-  <div class="section-cols cols-centered">
-    <div class="row">
-      <p-messages *ngIf="loadingError" severity="error" class="api-error">
-        <ng-template pTemplate>
-          <div class="p-ml-2">Error: Unable to fetch project list from the server. Please try again.</div>
-        </ng-template>
-      </p-messages>
-      <div *ngIf="loadingProjects" class="progress-spinner">
-        <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
+  <div class="container-fluid centered-section padded-container">
+    <div class="section-cols cols-centered">
+      <div class="row">
+        <p-messages *ngIf="loadingError" severity="error" class="api-error">
+          <ng-template pTemplate>
+            <div class="p-ml-2">Error: Unable to fetch project list from the server. Please try again.</div>
+          </ng-template>
+        </p-messages>
+        <div *ngIf="loadingProjects" class="progress-spinner">
+          <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
+        </div>
+        <p-timeline *ngIf="!loadingProjects" [value]="projects" align="alternate" styleClass="p-d-none p-d-lg-inline-flex customized-timeline">
+          <ng-template pTemplate="marker" let-project>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
+              <i class="fas fa-code"></i>
+            </span>
+          </ng-template>
+          <ng-template pTemplate="opposite" let-project>
+            <p-card [header]="project.name" [subheader]="project.date">
+              <p class="card-description">{{ project.description }}</p>
+              <a [ngClass]="project.deployedUrl === null ? 'no-display' : null" href="{{ project?.deployedUrl }}" target="_blank"><i v-b-tooltip.hover title="View deployed website in a new tab." class="fas fa-link"></i></a>
+              <a href="{{ project?.githubUrl }}" target="_blank"><i v-b-tooltip.hover title="View GitHub repository in a new tab." class="fab fa-github"></i></a>
+            </p-card>
+          </ng-template>
+        </p-timeline>
+        <p-timeline *ngIf="!loadingProjects" [value]="projects" align="right" styleClass="customized-timeline p-d-lg-none">
+          <ng-template pTemplate="marker" let-project>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
+              <i class="fas fa-code"></i>
+            </span>
+          </ng-template>
+          <ng-template pTemplate="content" let-project>
+            <p-card [header]="project.name" [subheader]="project.date">
+              <p class="card-description">{{ project.description }}</p>
+              <a [ngClass]="project.deployedUrl === null ? 'no-display' : null" href="{{ project?.deployedUrl }}" target="_blank"><i v-b-tooltip.hover title="View deployed website in a new tab." class="fas fa-link"></i></a>
+              <a href="{{ project?.githubUrl }}" target="_blank"><i v-b-tooltip.hover title="View GitHub repository in a new tab." class="fab fa-github"></i></a>
+            </p-card>
+          </ng-template>
+        </p-timeline>
       </div>
-      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="alternate" styleClass="p-d-none p-d-lg-inline-flex customized-timeline">
-        <ng-template pTemplate="marker" let-project>
-          <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
-            <i class="fas fa-code"></i>
-          </span>
-        </ng-template>
-        <ng-template pTemplate="opposite" let-project>
-          <p-card [header]="project.name" [subheader]="project.date">
-            <p class="card-description">{{ project.description }}</p>
-            <a [ngClass]="project.deployedUrl === null ? 'no-display' : null" href="{{ project?.deployedUrl }}" target="_blank"><i v-b-tooltip.hover title="View deployed website in a new tab." class="fas fa-link"></i></a>
-            <a href="{{ project?.githubUrl }}" target="_blank"><i v-b-tooltip.hover title="View GitHub repository in a new tab." class="fab fa-github"></i></a>
-          </p-card>
-        </ng-template>
-      </p-timeline>
-      <p-timeline *ngIf="!loadingProjects" [value]="projects" align="right" styleClass="customized-timeline p-d-lg-none">
-        <ng-template pTemplate="marker" let-project>
-          <span class="custom-marker p-shadow-2" [style.backgroundColor]="markerColor">
-            <i class="fas fa-code"></i>
-          </span>
-        </ng-template>
-        <ng-template pTemplate="content" let-project>
-          <p-card [header]="project.name" [subheader]="project.date">
-            <p class="card-description">{{ project.description }}</p>
-            <a [ngClass]="project.deployedUrl === null ? 'no-display' : null" href="{{ project?.deployedUrl }}" target="_blank"><i v-b-tooltip.hover title="View deployed website in a new tab." class="fas fa-link"></i></a>
-            <a href="{{ project?.githubUrl }}" target="_blank"><i v-b-tooltip.hover title="View GitHub repository in a new tab." class="fab fa-github"></i></a>
-          </p-card>
-        </ng-template>
-      </p-timeline>
     </div>
   </div>
 </div>
