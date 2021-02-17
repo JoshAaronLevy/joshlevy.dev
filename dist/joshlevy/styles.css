@@ -9437,7 +9437,7 @@ p {
 }
 .title {
   font-weight: 700;
-  padding-top: 30px;
+  padding-top: 0px;
   font-size: 3em !important;
 }
 .title.title-up {
@@ -11372,7 +11372,7 @@ img {
 }
 .presentation-page .section-sections .section-description {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 .presentation-page .section-sections .col-md-3 {
   padding: 7.5px;
@@ -14521,7 +14521,7 @@ th.dark-table-header {
 
 .presentation-page .section-examples .section-description {
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .presentation-page .section-testimonials {
