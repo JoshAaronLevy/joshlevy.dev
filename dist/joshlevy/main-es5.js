@@ -404,14 +404,7 @@
 
       var __metadata = undefined && undefined.__metadata || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-      }; // const httpOptions = {
-      //   headers: new HttpHeaders({
-      //     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
-      //     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
-      //     'Content-Type':  'application/json'
-      //   })
-      // };
-
+      };
 
       var apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 
@@ -2942,14 +2935,7 @@
 
       var __metadata = undefined && undefined.__metadata || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-      }; // const httpOptions = {
-      //   headers: new HttpHeaders({
-      //     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
-      //     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
-      //     'Content-Type':  'application/json'
-      //   })
-      // };
-
+      };
 
       var apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 
@@ -3426,14 +3412,7 @@
 
       var __metadata = undefined && undefined.__metadata || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-      }; // const httpOptions = {
-      //   headers: new HttpHeaders({
-      //     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
-      //     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
-      //     'Content-Type':  'application/json'
-      //   })
-      // };
-
+      };
 
       var apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 

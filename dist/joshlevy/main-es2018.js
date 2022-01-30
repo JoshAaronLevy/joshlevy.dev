@@ -247,13 +247,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-// const httpOptions = {
-//   headers: new HttpHeaders({
-//     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
-//     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
-//     'Content-Type':  'application/json'
-//   })
-// };
 const apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 let SkillService = class SkillService {
     constructor(http) {
@@ -1914,13 +1907,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-// const httpOptions = {
-//   headers: new HttpHeaders({
-//     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
-//     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
-//     'Content-Type':  'application/json'
-//   })
-// };
 const apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 let ProjectService = class ProjectService {
     constructor(http) {
@@ -2209,13 +2195,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-// const httpOptions = {
-//   headers: new HttpHeaders({
-//     'X-Parse-Application-Id': parseKeys.PARSE_APP_ID,
-//     'X-Parse-REST-API-Key': parseKeys.PARSE_REST_API_KEY,
-//     'Content-Type':  'application/json'
-//   })
-// };
 const apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 let JobService = class JobService {
     constructor(http) {
