@@ -1,8 +1,9 @@
 export interface Jobs {
-  id: number;
-  company: string;
-  title: string;
-  startDate: string;
-  endDate: string;
-  description: any;
+	id: number;
+	order: number;
+	company: string;
+	title: string;
+	startDate: string;
+	endDate: string;
+	highlights: any;
 };

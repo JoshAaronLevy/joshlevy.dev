@@ -49,17 +49,17 @@
                 <tr>
                   <td colspan="6">
                     <div>
-                      <p-table [value]="job.description.results" dataKey="id">
+                      <p-table [value]="job.highlights" dataKey="id">
                         <ng-template pTemplate="header">
                           <tr>
                             <th style="width: 2.5rem"></th>
-                            <th>Responsibilities</th>
+                            <th>Highlights</th>
                           </tr>
                         </ng-template>
-                        <ng-template pTemplate="body" let-description>
+                        <ng-template pTemplate="body" let-highlights>
                           <tr>
-                            <td>{{description.id}}</td>
-                            <td>{{description.responsibility}}</td>
+                            <td>{{highlights.id}}</td>
+                            <td>{{highlights.responsibility}}</td>
                           </tr>
                         </ng-template>
                       </p-table>

@@ -25,6 +25,17 @@ module.exports = __webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.dev/sr
 
 /***/ }),
 
+/***/ 1:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
 /***/ "5v2N":
 /*!*********************************************************************!*\
   !*** ./src/app/components/work-history/work-history.component.scss ***!
@@ -291,121 +302,170 @@ SkillService = __decorate([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsComponent", function() { return SkillsComponent; });
-/* harmony import */ var _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./skills.component.html */ "WtuU");
-/* harmony import */ var _skills_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skills.component.scss */ "XUpm");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ "7zfz");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+/* harmony import */ var _Users_joshlevy_Desktop_joshlevy_dev_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "HaE+");
+/* harmony import */ var _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./skills.component.html */ "WtuU");
+/* harmony import */ var _skills_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./skills.component.scss */ "XUpm");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var app_services_skill_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/services/skill.service */ "9ai6");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! primeng/api */ "7zfz");
+/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! parse */ "v0iw");
+/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(parse__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../keys/parse */ "DuhC");
+/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_keys_parse__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _shared_parseResults__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../shared/parseResults */ "dkLf");
+
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+
+var __metadata = undefined && undefined.__metadata || function (k, v) {
+  if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
 
 
 
 
 
 let SkillsComponent = class SkillsComponent {
-    constructor(skillService, messageService) {
-        this.skillService = skillService;
-        this.messageService = messageService;
+  constructor(skillService, messageService) {
+    this.skillService = skillService;
+    this.messageService = messageService;
+    this.allSelected = true;
+    this.frontEndSelected = false;
+    this.backEndSelected = false;
+    this.first = 0;
+    this.rows = 12;
+    parse__WEBPACK_IMPORTED_MODULE_6__["initialize"](_keys_parse__WEBPACK_IMPORTED_MODULE_7__["appId"], _keys_parse__WEBPACK_IMPORTED_MODULE_7__["javascript"]);
+    parse__WEBPACK_IMPORTED_MODULE_6__["serverURL"] = _keys_parse__WEBPACK_IMPORTED_MODULE_7__["serverURL"];
+  }
+
+  ngOnInit() {
+    this.loadingSkills = true;
+    this.loadingError = false; // this.getSkills();
+
+    this.getProducts();
+  }
+
+  getSkills() {
+    return this.skillService.getSkills().subscribe(data => {
+      if (data) {
+        this.loadingSkills = false;
+        this.skills = data.skills;
+        this.filterSkills(this.filter);
+        console.log(this.skills[0]);
+      } else {
+        this.loadingSkills = false;
+        this.loadingError = true;
+        this.showGetError();
+      }
+    });
+  }
+
+  getProducts() {
+    var _this = this;
+
+    return Object(_Users_joshlevy_Desktop_joshlevy_dev_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      const Skills = parse__WEBPACK_IMPORTED_MODULE_6__["Object"].extend('Skills');
+      const query = new parse__WEBPACK_IMPORTED_MODULE_6__["Query"](Skills);
+      yield query.find().then(results => {
+        console.log(results);
+        results = Object(_shared_parseResults__WEBPACK_IMPORTED_MODULE_8__["parseResults"])(results);
+        _this.skills = results;
+
+        if (_this.skills.length > 0) {
+          _this.loadingError = false;
+        } else {
+          _this.loadingError = true;
+        }
+
+        _this.loadingSkills = false;
+        return _this.skills;
+      }, error => {
+        console.error(error);
+        _this.loadingSkills = false;
+      });
+    })();
+  }
+
+  filterSkills(filter) {
+    this.filter = filter;
+    this.filteredSkills = [];
+
+    for (let i = 0; i < this.skills.length; i++) {
+      if (this.filter === 'Front-End') {
+        this.allSelected = false;
+        this.frontEndSelected = true;
+        this.backEndSelected = false;
+
+        if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
+          this.filteredSkills.push(this.skills[i]);
+        }
+      } else if (this.filter === 'Back-End') {
+        this.allSelected = false;
+        this.frontEndSelected = false;
+        this.backEndSelected = true;
+
+        if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
+          this.filteredSkills.push(this.skills[i]);
+        }
+      } else {
         this.allSelected = true;
         this.frontEndSelected = false;
         this.backEndSelected = false;
-        this.first = 0;
-        this.rows = 12;
+        this.filteredSkills.push(this.skills[i]);
+      }
     }
-    ngOnInit() {
-        this.loadingSkills = true;
-        this.loadingError = false;
-        this.getSkills();
-    }
-    getSkills() {
-        return this.skillService.getSkills().subscribe(data => {
-            if (data) {
-                this.loadingSkills = false;
-                this.skills = data.skills;
-                this.filterSkills(this.filter);
-                console.log(this.skills[0]);
-            }
-            else {
-                this.loadingSkills = false;
-                this.loadingError = true;
-                this.showGetError();
-            }
-        });
-    }
-    filterSkills(filter) {
-        this.filter = filter;
-        this.filteredSkills = [];
-        for (let i = 0; i < this.skills.length; i++) {
-            if (this.filter === 'Front-End') {
-                this.allSelected = false;
-                this.frontEndSelected = true;
-                this.backEndSelected = false;
-                if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
-                    this.filteredSkills.push(this.skills[i]);
-                }
-            }
-            else if (this.filter === 'Back-End') {
-                this.allSelected = false;
-                this.frontEndSelected = false;
-                this.backEndSelected = true;
-                if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
-                    this.filteredSkills.push(this.skills[i]);
-                }
-            }
-            else {
-                this.allSelected = true;
-                this.frontEndSelected = false;
-                this.backEndSelected = false;
-                this.filteredSkills.push(this.skills[i]);
-            }
-        }
-    }
-    next() {
-        this.first = this.first + this.rows;
-    }
-    prev() {
-        this.first = this.first - this.rows;
-    }
-    reset() {
-        this.first = 0;
-    }
-    isLastPage() {
-        return this.filteredSkills ? this.first === (this.filteredSkills.length - this.rows) : true;
-    }
-    isFirstPage() {
-        return this.filteredSkills ? this.first === 0 : true;
-    }
-    showGetError() {
-        this.messageService.add({
-            severity: 'error'
-        });
-    }
-};
-SkillsComponent.ctorParameters = () => [
-    { type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"] },
-    { type: primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
-];
-SkillsComponent = __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
-        selector: 'app-skills',
-        template: _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
-        providers: [
-            primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]
-        ],
-        styles: [_skills_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
-    }),
-    __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_3__["SkillService"],
-        primeng_api__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
-], SkillsComponent);
+  }
 
+  next() {
+    this.first = this.first + this.rows;
+  }
+
+  prev() {
+    this.first = this.first - this.rows;
+  }
+
+  reset() {
+    this.first = 0;
+  }
+
+  isLastPage() {
+    return this.filteredSkills ? this.first === this.filteredSkills.length - this.rows : true;
+  }
+
+  isFirstPage() {
+    return this.filteredSkills ? this.first === 0 : true;
+  }
+
+  showGetError() {
+    this.messageService.add({
+      severity: 'error'
+    });
+  }
+
+};
+
+SkillsComponent.ctorParameters = () => [{
+  type: app_services_skill_service__WEBPACK_IMPORTED_MODULE_4__["SkillService"]
+}, {
+  type: primeng_api__WEBPACK_IMPORTED_MODULE_5__["MessageService"]
+}];
+
+SkillsComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+  selector: 'app-skills',
+  template: _raw_loader_skills_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+  providers: [primeng_api__WEBPACK_IMPORTED_MODULE_5__["MessageService"]],
+  styles: [_skills_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+}), __metadata("design:paramtypes", [app_services_skill_service__WEBPACK_IMPORTED_MODULE_4__["SkillService"], primeng_api__WEBPACK_IMPORTED_MODULE_5__["MessageService"]])], SkillsComponent);
 
 
 /***/ }),
@@ -438,6 +498,21 @@ const environment = {
     apiUrl: `https://joshlevy.herokuapp.com`
 };
 
+
+/***/ }),
+
+/***/ "DuhC":
+/*!***************************!*\
+  !*** ./src/keys/parse.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"appId": "g8jL3jchL3u2K6Dr4HKqwaWtDwUQ3VzJpqfi1X3o",
+	"javascript": "D2Mcw4q2oSSAX5TI2Bma7sDJNDp0XvUiLVNzjYWM",
+	"serverURL": "https://parseapi.back4app.com/"
+}
 
 /***/ }),
 
@@ -1964,6 +2039,27 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"section section-sections\" data-background-color=\"gray\">\n  <div class=\"container\">\n    <div class=\"col-md-8 ml-auto mr-auto\">\n      <div class=\"section-description text-center\">\n        <h2 class=\"title\">Work History</h2>\n      </div>\n    </div>\n  </div>\n  <div class=\"container-fluid padded-container\">\n    <div class=\"section-cols cols-centered\">\n      <div class=\"row\">\n        <p-messages *ngIf=\"loadingError\" severity=\"error\" class=\"api-error\">\n          <ng-template pTemplate>\n            <div class=\"p-ml-2\">Error: Unable to fetch work history from the server. Please try again.</div>\n          </ng-template>\n        </p-messages>\n        <div *ngIf=\"loadingJobs\" class=\"progress-spinner\">\n          <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n        </div>\n        <div *ngIf=\"!loadingJobs\" class=\"content-section implementation\">\n          <div class=\"card\">\n            <p-table [value]=\"jobs\" dataKey=\"company\" styleClass=\"p-d-none p-d-md-inline-flex p-datatable-striped\">\n              <ng-template pTemplate=\"header\">\n                <tr>\n                  <th class=\"dark-table-header\" style=\"width: 3rem\"></th>\n                  <th class=\"dark-table-header\">Company</th>\n                  <th class=\"dark-table-header\">Title</th>\n                  <th class=\"dark-table-header\">Start Date</th>\n                  <th class=\"dark-table-header\">End Date</th>\n                  <th class=\"dark-table-header right-column\">Actions</th>\n                </tr>\n              </ng-template>\n              <ng-template pTemplate=\"body\" let-job let-expanded=\"expanded\">\n                <tr>\n                  <td>\n                    <button type=\"button\" pButton pRipple [pRowToggler]=\"job\" class=\"p-button-text p-button-rounded p-button-plain\" [icon]=\"expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'\"></button>\n                  </td>\n                  <td>{{job.company}}</td>\n                  <td>{{job.title}}</td>\n                  <td>{{job.startDate}}</td>\n                  <td>{{job.endDate}}</td>\n                  <td class=\"right-column\">\n                    <button *ngIf=\"!expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"View Details\" class=\"p-button-raised actions-button\"></button>\n                    <button *ngIf=\"expanded\" pButton pRipple [pRowToggler]=\"job\" type=\"button\" label=\"Hide Details\" class=\"p-button-raised p-button-secondary actions-button\"></button>\n                  </td>\n                </tr>\n              </ng-template>\n              <ng-template pTemplate=\"rowexpansion\" let-job>\n                <tr>\n                  <td colspan=\"6\">\n                    <div>\n                      <p-table [value]=\"job.description.results\" dataKey=\"id\">\n                        <ng-template pTemplate=\"header\">\n                          <tr>\n                            <th style=\"width: 2.5rem\"></th>\n                            <th>Responsibilities</th>\n                          </tr>\n                        </ng-template>\n                        <ng-template pTemplate=\"body\" let-description>\n                          <tr>\n                            <td>{{description.id}}</td>\n                            <td>{{description.responsibility}}</td>\n                          </tr>\n                        </ng-template>\n                      </p-table>\n                    </div>\n                  </td>\n                </tr>\n              </ng-template>\n            </p-table>\n          </div>\n          <p-table [columns]=\"cols\" [value]=\"jobs\" styleClass=\"p-d-md-none p-datatable-responsive-demo\">\n            <ng-template pTemplate=\"header\" let-columns>\n              <tr>\n                <th *ngFor=\"let col of columns\">\n                  {{col.header}}\n                </th>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"body\" let-rowData let-columns=\"columns\">\n              <tr>\n                <td *ngFor=\"let col of columns\">\n                  <span class=\"p-column-title\">{{col.header}}</span>\n                  {{rowData[col.field]}}\n                </td>\n              </tr>\n            </ng-template>\n          </p-table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "dkLf":
+/*!************************************!*\
+  !*** ./src/shared/parseResults.ts ***!
+  \************************************/
+/*! exports provided: parseResults, parseResult */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseResults", function() { return parseResults; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseResult", function() { return parseResult; });
+function parseResults(results) {
+    return results.map(result => parseResult(result));
+}
+function parseResult(result) {
+    return { id: result.id, ...result.attributes };
+}
+
 
 /***/ }),
 

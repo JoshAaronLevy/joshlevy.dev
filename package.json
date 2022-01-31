@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "14": "^3.1.6",
     "@agm/core": "1.1.0",
     "@angular/animations": "^11.2.0",
     "@angular/cdk": "^11.2.0",
@@ -42,6 +43,7 @@
     "ng2-nouislider": "1.7.13",
     "ngx-chips": "2.1.0",
     "nouislider": "12.1.0",
+    "parse": "^3.4.1",
     "popper.js": "1.14.7",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",

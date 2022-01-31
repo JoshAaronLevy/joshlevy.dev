@@ -39,14 +39,14 @@
               <div class="p-col-12 p-md-6 pd-lg-4 p-xl-3">
                 <div class="product-grid-item card">
                   <div class="product-grid-item-content">
-                    <img [src]="skill.img" />
+                    <img [src]="skill.imageUrl" />
                     <div class="product-name">{{skill.name}}</div>
                     <button pButton pRipple type="button" label="{{skill.type}}" class="filter-button p-button-rounded"
                       (click)="filterSkills(skill.type)">
                     </button>
                   </div>
                   <div class="product-grid-item-bottom">
-                    <div class="product-description">Experience: {{skill.experience}}</div>
+                    <div class="product-description">Experience: {{skill.yearsExperience}}</div>
                   </div>
                 </div>
               </div>

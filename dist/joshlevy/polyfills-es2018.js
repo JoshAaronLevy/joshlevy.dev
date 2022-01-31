@@ -98,19 +98,6 @@ module.exports = getBuiltIn('document', 'documentElement');
 
 /***/ }),
 
-/***/ 2:
-/*!**********************************************************************************************************!*\
-  !*** multi ./src/polyfills.ts ./node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.dev/src/polyfills.ts */"hN/g");
-module.exports = __webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.dev/node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js */"rZy+");
-
-
-/***/ }),
-
 /***/ "2MGJ":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js ***!
@@ -247,6 +234,19 @@ module.exports = Object.create || function create(O, Properties) {
   } else result = NullProtoObject();
   return Properties === undefined ? result : defineProperties(result, Properties);
 };
+
+
+/***/ }),
+
+/***/ 3:
+/*!**********************************************************************************************************!*\
+  !*** multi ./src/polyfills.ts ./node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.dev/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/joshlevy/Desktop/joshlevy.dev/node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js */"rZy+");
 
 
 /***/ }),
@@ -6375,5 +6375,5 @@ module.exports = {
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[3,"runtime"]]]);
 //# sourceMappingURL=polyfills-es2018.js.map
