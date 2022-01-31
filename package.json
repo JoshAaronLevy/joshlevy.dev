@@ -5,6 +5,7 @@
     "start": "ng serve -o --port=4100",
     "build": "rm -rf dist && ng build",
     "deploy": "rm -rf dist && ng build && firebase deploy && gitquick 'Deployed to Firebase'",
+    "deploy:lite": "rm -rf dist && ng build && firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
