@@ -43,6 +43,9 @@ export class SkillsComponent implements OnInit {
 		const query = new Parse.Query(Skills);
 		await query.find().then((results) => {
 			this.skills = parseResults(results);
+			this.skills.sort(function (a, b) {
+				return a.order - b.order;
+			});
 			setTimeout(() => {
 				if (this.skills.length > 0) {
 					this.loadingError = false;

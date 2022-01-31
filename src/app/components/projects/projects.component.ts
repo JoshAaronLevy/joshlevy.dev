@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectService } from 'app/services/project.service';
 import { MessageService } from 'primeng/api';
 import * as Parse from 'parse';
 import * as parse from '../../../keys/parse';
@@ -9,7 +8,9 @@ import { parseResults } from '../../../shared/parseResults';
 	selector: 'app-projects',
 	templateUrl: './projects.component.html',
 	styleUrls: ['./projects.component.scss'],
-	providers: [MessageService]
+	providers: [
+		MessageService
+	]
 })
 export class ProjectsComponent implements OnInit {
 	loadingProjects: boolean;
@@ -18,7 +19,6 @@ export class ProjectsComponent implements OnInit {
 	markerColor: any;
 
 	constructor(
-		public projectService: ProjectService,
 		private messageService: MessageService
 	) {
 		Parse.initialize(parse.appId, parse.javascript);
@@ -32,19 +32,26 @@ export class ProjectsComponent implements OnInit {
 		this.getProjects();
 	}
 
-	getProjects() {
-		return this.projectService.getProjects().subscribe(data => {
-			if (data) {
+	async getProjects() {
+		const devProjects = Parse.Object.extend('Projects');
+		const query = new Parse.Query(devProjects);
+		await query.find().then((results) => {
+			this.projects = parseResults(results);
+			setTimeout(() => {
+				if (this.projects.length > 0) {
+					this.loadingError = false;
+					this.projects.sort(function (a, b) {
+						return a.order - b.order;
+					});
+				} else {
+					this.loadingError = true;
+				}
 				this.loadingProjects = false;
-				this.projects = data.projects;
-				this.projects.sort(function (a, b) {
-					return a.id - b.id;
-				});
-			} else {
-				this.loadingProjects = false;
-				this.loadingError = true;
-				this.showGetError();
-			}
+				return this.projects;
+			}, 500);
+		}, (error) => {
+			console.error(error);
+			this.loadingProjects = false;
 		});
 	}
 

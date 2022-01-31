@@ -53,11 +53,10 @@ export class WorkHistoryComponent implements OnInit {
 	ngOnInit(): void {
 		this.loadingJobs = true;
 		this.loadingError = false;
-		// this.getJobs();
-		this.getSkills();
+		this.getJobs();
 	}
 
-	async getSkills() {
+	async getJobs() {
 		const pastJobs = Parse.Object.extend('Jobs');
 		const query = new Parse.Query(pastJobs);
 		await query.find().then((results) => {
