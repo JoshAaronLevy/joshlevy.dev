@@ -332,15 +332,15 @@ let SkillsComponent = class SkillsComponent {
           return a.order - b.order;
         });
 
-        setTimeout(() => {
-          if (_this2.skills.length > 0) {
-            _this2.loadingError = false;
-          } else {
-            _this2.loadingError = true;
-          }
+        _this2.filteredSkills = _this2.skills;
 
-          _this2.loadingSkills = false;
-        }, 1500);
+        if (_this2.skills.length > 0) {
+          _this2.loadingError = false;
+        } else {
+          _this2.loadingError = true;
+        }
+
+        _this2.loadingSkills = false;
       }, error => {
         console.error(error);
         _this2.loadingSkills = false;
@@ -1975,7 +1975,7 @@ function parseResult(result) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header clear-filter\">\n  <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n    <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky-black.jpg')\">\n    </div>\n  </div>\n  <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n    <div class=\"page-header-image page-header-city\"\n      style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings-black-min.png')\">\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n      <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Designer. Developer.</h2>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header clear-filter\">\n  <div class=\"rellax-header rellax-header-sky\" data-rellax-speed=\"-8\">\n    <div class=\"page-header-image\" style=\"background-image: url('assets/img/presentation-page/nuk-pro-back-sky-black.jpg')\">\n    </div>\n  </div>\n  <div class=\"rellax-header rellax-header-buildings\" data-rellax-speed=\"0\">\n    <div class=\"page-header-image page-header-city\"\n      style=\"background-image: url('assets/img/presentation-page/nuk-pro-buildings-black-min.png')\">\n    </div>\n    <div class=\"rellax-text-container rellax-text\">\n      <h1 class=\"h1-seo\" data-rellax-speed=\"-2\">Josh Levy</h1>\n      <h2 class=\"h3-description rellax-text\" data-rellax-speed=\"-1\">Senior Full-Stack Developer</h2>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
