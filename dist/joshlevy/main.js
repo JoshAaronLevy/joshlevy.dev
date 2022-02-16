@@ -310,37 +310,40 @@ let SkillsComponent = class SkillsComponent {
   }
 
   ngOnInit() {
-    this.loadingSkills = true;
-    this.loadingError = false;
-    this.getSkills();
+    var _this = this;
+
+    return Object(_Users_joshlevy_Desktop_joshlevy_dev_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      _this.loadingSkills = true;
+      _this.loadingError = false;
+      yield _this.getSkills();
+    })();
   }
 
   getSkills() {
-    var _this = this;
+    var _this2 = this;
 
     return Object(_Users_joshlevy_Desktop_joshlevy_dev_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const Skills = parse__WEBPACK_IMPORTED_MODULE_5__["Object"].extend('Skills');
       const query = new parse__WEBPACK_IMPORTED_MODULE_5__["Query"](Skills);
-      yield query.find().then(results => {
-        _this.skills = Object(_shared_parseResults__WEBPACK_IMPORTED_MODULE_7__["parseResults"])(results);
+      return yield query.find().then(results => {
+        _this2.skills = Object(_shared_parseResults__WEBPACK_IMPORTED_MODULE_7__["parseResults"])(results);
 
-        _this.skills.sort(function (a, b) {
+        _this2.skills.sort(function (a, b) {
           return a.order - b.order;
         });
 
         setTimeout(() => {
-          if (_this.skills.length > 0) {
-            _this.loadingError = false;
+          if (_this2.skills.length > 0) {
+            _this2.loadingError = false;
           } else {
-            _this.loadingError = true;
+            _this2.loadingError = true;
           }
 
-          _this.loadingSkills = false;
-          return _this.skills;
-        }, 500);
+          _this2.loadingSkills = false;
+        }, 1500);
       }, error => {
         console.error(error);
-        _this.loadingSkills = false;
+        _this2.loadingSkills = false;
       });
     })();
   }
@@ -1738,7 +1741,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"section section-sections\" data-background-color=\"gray\">\n  <div class=\"container\">\n    <div class=\"col-md-8 ml-auto mr-auto\">\n      <div class=\"section-description text-center\">\n        <h2 class=\"title\">Skills</h2>\n      </div>\n    </div>\n  </div>\n  <div class=\"container-fluid padded-container\">\n    <div class=\"section-cols\">\n      <div class=\"row\">\n        <p-messages *ngIf=\"loadingError\" severity=\"error\" class=\"api-error\">\n          <ng-template pTemplate>\n            <div class=\"p-ml-2\">Error: Unable to fetch skill list from the server. Please try again.</div>\n          </ng-template>\n        </p-messages>\n        <div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n          <p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n        </div>\n        <div *ngIf=\"!loadingSkills && !loadingError\" class=\"card\">\n          <p-dataView #dv [value]=\"filteredSkills\" [paginator]=\"true\" [showFirstLastIcon]=\"false\" [rows]=\"12\" [rowsPerPageOptions]=\"[12,24,36]\" filterBy=\"name\" layout=\"grid\">\n            <ng-template pTemplate=\"header\">\n              <div class=\"p-d-flex p-flex-column p-flex-md-row p-jc-md-between\">\n                <span class=\"p-input-icon-left p-mb-2 p-mb-md-0\">\n                  <i class=\"pi pi-search\"></i>\n                  <input type=\"search\" pInputText placeholder=\"Search by Name\" (input)=\"dv.filter($event.target.value)\">\n                </span>\n                <div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n                  <button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n                    class=\"btn btn-primary category-button\">All Skills</button>\n                  <button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n                    class=\"btn btn-primary category-button\">Front-End</button>\n                  <button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n                    class=\"btn btn-primary category-button\">Back-End</button>\n                </div>\n              </div>\n            </ng-template>\n            <ng-template let-skill pTemplate=\"gridItem\">\n              <div class=\"p-col-12 p-md-6 pd-lg-4 p-xl-3\">\n                <div class=\"product-grid-item card\">\n                  <div class=\"product-grid-item-content\">\n                    <img [src]=\"skill.imageUrl\" />\n                    <div class=\"product-name\">{{skill.name}}</div>\n                    <button pButton pRipple type=\"button\" label=\"{{skill.type}}\" class=\"filter-button p-button-rounded\"\n                      (click)=\"filterSkills(skill.type)\">\n                    </button>\n                  </div>\n                  <div class=\"product-grid-item-bottom\">\n                    <div class=\"product-description\">Experience: {{skill.yearsExperience}}</div>\n                  </div>\n                </div>\n              </div>\n            </ng-template>\n          </p-dataView>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"section section-sections\" data-background-color=\"gray\">\n\t<div class=\"container\">\n\t\t<div class=\"col-md-8 ml-auto mr-auto\">\n\t\t\t<div class=\"section-description text-center\">\n\t\t\t\t<h2 class=\"title\">Skills</h2>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"container-fluid padded-container\">\n\t\t<div class=\"section-cols\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<p-messages *ngIf=\"loadingError\" severity=\"error\" class=\"api-error\">\n\t\t\t\t\t<ng-template pTemplate>\n\t\t\t\t\t\t<div class=\"p-ml-2\">Error: Unable to fetch skill list from the server. Please try again.</div>\n\t\t\t\t\t</ng-template>\n\t\t\t\t</p-messages>\n\t\t\t\t<div *ngIf=\"loadingSkills\" class=\"progress-spinner\">\n\t\t\t\t\t<p-progressSpinner styleClass=\"custom-spinner\" strokeWidth=\"4\" animationDuration=\"3s\"></p-progressSpinner>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<p-dataView #dv [value]=\"filteredSkills\" [paginator]=\"true\" [showFirstLastIcon]=\"false\" [rows]=\"12\" [rowsPerPageOptions]=\"[15,30]\" filterBy=\"name\" layout=\"grid\">\n\t\t\t\t\t\t<ng-template pTemplate=\"header\">\n\t\t\t\t\t\t\t<div class=\"p-d-flex p-flex-column p-flex-md-row p-jc-md-between\">\n\t\t\t\t\t\t\t\t<span class=\"p-input-icon-left p-mb-2 p-mb-md-0\">\n\t\t\t\t\t\t\t\t\t<i class=\"pi pi-search\"></i>\n\t\t\t\t\t\t\t\t\t<input type=\"search\" pInputText placeholder=\"Search by Name\" (input)=\"dv.filter($event.target.value)\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<div *ngIf=\"!loadingSkills\" class=\"filter-buttons\">\n\t\t\t\t\t\t\t\t\t<button [disabled]=\"allSelected\" (click)=\"filterSkills('All')\"\n\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary category-button\">All Skills</button>\n\t\t\t\t\t\t\t\t\t<button [disabled]=\"frontEndSelected\" (click)=\"filterSkills('Front-End')\"\n\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary category-button\">Front-End</button>\n\t\t\t\t\t\t\t\t\t<button [disabled]=\"backEndSelected\" (click)=\"filterSkills('Back-End')\"\n\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary category-button\">Back-End</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</ng-template>\n\t\t\t\t\t\t<ng-template let-skill pTemplate=\"gridItem\">\n\t\t\t\t\t\t\t<div class=\"p-col-12 p-md-6 pd-lg-4 p-xl-3\">\n\t\t\t\t\t\t\t\t<div class=\"product-grid-item card\">\n\t\t\t\t\t\t\t\t\t<div class=\"product-grid-item-content\">\n\t\t\t\t\t\t\t\t\t\t<img [src]=\"skill.imageUrl\" />\n\t\t\t\t\t\t\t\t\t\t<div class=\"product-name\">{{skill.name}}</div>\n\t\t\t\t\t\t\t\t\t\t<button pButton pRipple type=\"button\" label=\"{{skill.type}}\" class=\"filter-button p-button-rounded\"\n\t\t\t\t\t\t\t\t\t\t\t(click)=\"filterSkills(skill.type)\">\n\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"product-grid-item-bottom\">\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"skill.yearsExperience === 1\" class=\"product-description\">Experience: {{skill.yearsExperience}} year</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"skill.yearsExperience > 1\" class=\"product-description\">Experience: {{skill.yearsExperience}} years</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</ng-template>\n\t\t\t\t\t</p-dataView>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>");
 
 /***/ }),
 
