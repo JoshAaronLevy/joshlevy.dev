@@ -32,29 +32,27 @@ export class SkillsComponent implements OnInit {
 		Parse.serverURL = parse.serverURL;
 	}
 
-	ngOnInit(): void {
+	async ngOnInit() {
 		this.loadingSkills = true;
 		this.loadingError = false;
-		this.getSkills();
+		await this.getSkills();
 	}
 
 	async getSkills() {
 		const Skills = Parse.Object.extend('Skills');
 		const query = new Parse.Query(Skills);
-		await query.find().then((results) => {
+		return await query.find().then((results) => {
 			this.skills = parseResults(results);
 			this.skills.sort(function (a, b) {
 				return a.order - b.order;
 			});
-			setTimeout(() => {
-				if (this.skills.length > 0) {
-					this.loadingError = false;
-				} else {
-					this.loadingError = true;
-				}
-				this.loadingSkills = false;
-				return this.skills;
-			}, 500);
+			this.filteredSkills = this.skills;
+			if (this.skills.length > 0) {
+				this.loadingError = false;
+			} else {
+				this.loadingError = true;
+			}
+			this.loadingSkills = false;
 		}, (error) => {
 			console.error(error);
 			this.loadingSkills = false;

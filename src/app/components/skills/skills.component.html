@@ -1,59 +1,60 @@
 <div class="section section-sections" data-background-color="gray">
-  <div class="container">
-    <div class="col-md-8 ml-auto mr-auto">
-      <div class="section-description text-center">
-        <h2 class="title">Skills</h2>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid padded-container">
-    <div class="section-cols">
-      <div class="row">
-        <p-messages *ngIf="loadingError" severity="error" class="api-error">
-          <ng-template pTemplate>
-            <div class="p-ml-2">Error: Unable to fetch skill list from the server. Please try again.</div>
-          </ng-template>
-        </p-messages>
-        <div *ngIf="loadingSkills" class="progress-spinner">
-          <p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
-        </div>
-        <div *ngIf="!loadingSkills && !loadingError" class="card">
-          <p-dataView #dv [value]="filteredSkills" [paginator]="true" [showFirstLastIcon]="false" [rows]="12" [rowsPerPageOptions]="[12,24,36]" filterBy="name" layout="grid">
-            <ng-template pTemplate="header">
-              <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
-                <span class="p-input-icon-left p-mb-2 p-mb-md-0">
-                  <i class="pi pi-search"></i>
-                  <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
-                </span>
-                <div *ngIf="!loadingSkills" class="filter-buttons">
-                  <button [disabled]="allSelected" (click)="filterSkills('All')"
-                    class="btn btn-primary category-button">All Skills</button>
-                  <button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')"
-                    class="btn btn-primary category-button">Front-End</button>
-                  <button [disabled]="backEndSelected" (click)="filterSkills('Back-End')"
-                    class="btn btn-primary category-button">Back-End</button>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template let-skill pTemplate="gridItem">
-              <div class="p-col-12 p-md-6 pd-lg-4 p-xl-3">
-                <div class="product-grid-item card">
-                  <div class="product-grid-item-content">
-                    <img [src]="skill.imageUrl" />
-                    <div class="product-name">{{skill.name}}</div>
-                    <button pButton pRipple type="button" label="{{skill.type}}" class="filter-button p-button-rounded"
-                      (click)="filterSkills(skill.type)">
-                    </button>
-                  </div>
-                  <div class="product-grid-item-bottom">
-                    <div class="product-description">Experience: {{skill.yearsExperience}}</div>
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-          </p-dataView>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="col-md-8 ml-auto mr-auto">
+			<div class="section-description text-center">
+				<h2 class="title">Skills</h2>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid padded-container">
+		<div class="section-cols">
+			<div class="row">
+				<p-messages *ngIf="loadingError" severity="error" class="api-error">
+					<ng-template pTemplate>
+						<div class="p-ml-2">Error: Unable to fetch skill list from the server. Please try again.</div>
+					</ng-template>
+				</p-messages>
+				<div *ngIf="loadingSkills" class="progress-spinner">
+					<p-progressSpinner styleClass="custom-spinner" strokeWidth="4" animationDuration="3s"></p-progressSpinner>
+				</div>
+				<div class="card">
+					<p-dataView #dv [value]="filteredSkills" [paginator]="true" [showFirstLastIcon]="false" [rows]="12" [rowsPerPageOptions]="[15,30]" filterBy="name" layout="grid">
+						<ng-template pTemplate="header">
+							<div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+								<span class="p-input-icon-left p-mb-2 p-mb-md-0">
+									<i class="pi pi-search"></i>
+									<input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
+								</span>
+								<div *ngIf="!loadingSkills" class="filter-buttons">
+									<button [disabled]="allSelected" (click)="filterSkills('All')"
+										class="btn btn-primary category-button">All Skills</button>
+									<button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')"
+										class="btn btn-primary category-button">Front-End</button>
+									<button [disabled]="backEndSelected" (click)="filterSkills('Back-End')"
+										class="btn btn-primary category-button">Back-End</button>
+								</div>
+							</div>
+						</ng-template>
+						<ng-template let-skill pTemplate="gridItem">
+							<div class="p-col-12 p-md-6 pd-lg-4 p-xl-3">
+								<div class="product-grid-item card">
+									<div class="product-grid-item-content">
+										<img [src]="skill.imageUrl" />
+										<div class="product-name">{{skill.name}}</div>
+										<button pButton pRipple type="button" label="{{skill.type}}" class="filter-button p-button-rounded"
+											(click)="filterSkills(skill.type)">
+										</button>
+									</div>
+									<div class="product-grid-item-bottom">
+										<div *ngIf="skill.yearsExperience === 1" class="product-description">Experience: {{skill.yearsExperience}} year</div>
+										<div *ngIf="skill.yearsExperience > 1" class="product-description">Experience: {{skill.yearsExperience}} years</div>
+									</div>
+								</div>
+							</div>
+						</ng-template>
+					</p-dataView>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
