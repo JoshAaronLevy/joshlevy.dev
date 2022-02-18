@@ -24,10 +24,10 @@
               "src/styles.scss",
               "src/assets/sass/now-ui-kit.scss",
               "src/assets/sass/demo.scss",
-              "./node_modules/primeflex/primeflex.css",
-              "./node_modules/primeng/resources/themes/saga-blue/theme.css",
-              "./node_modules/primeng/resources/primeng.min.css",
-              "./node_modules/primeicons/primeicons.css"
+              "src/assets/theme/primeflex.scss",
+              "src/assets/theme/primeicons.scss",
+              "src/assets/theme/saga-blue.scss",
+              "src/assets/theme/primeng.scss"
             ],
             "scripts": [
               "node_modules/rellax/rellax.min.js"
@@ -83,10 +83,10 @@
               "src/styles.scss",
               "src/assets/sass/now-ui-kit.scss",
               "src/assets/sass/demo.scss",
-              "./node_modules/primeflex/primeflex.css",
-              "./node_modules/primeng/resources/themes/saga-blue/theme.css",
-              "./node_modules/primeng/resources/primeng.min.css",
-              "./node_modules/primeicons/primeicons.css"
+              "src/assets/theme/primeflex.scss",
+              "src/assets/theme/primeicons.scss",
+              "src/assets/theme/saga-blue.scss",
+              "src/assets/theme/primeng.scss"
             ],
             "assets": [
               "src/assets",

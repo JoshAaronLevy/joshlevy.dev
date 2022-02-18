@@ -17,6 +17,8 @@ export class SkillsComponent implements OnInit {
 	loadingError: boolean;
 	skills: any;
 	skill: any;
+	skillOptions: any;
+	selectedSkills: any = [];
 	filter: any;
 	filteredSkills: any;
 	allSelected = true;
@@ -47,6 +49,23 @@ export class SkillsComponent implements OnInit {
 				return a.order - b.order;
 			});
 			this.filteredSkills = this.skills;
+			this.skillOptions = [
+				{
+					name: 'Front-End'
+				},
+				{
+					name: 'Back-End'
+				},
+				{
+					name: 'API'
+				},
+				{
+					name: 'CI/CD'
+				},
+				{
+					name: 'Dev Tools'
+				}
+			];
 			if (this.skills.length > 0) {
 				this.loadingError = false;
 			} else {
@@ -59,30 +78,31 @@ export class SkillsComponent implements OnInit {
 		});
 	}
 
-	filterSkills(filter) {
-		this.filter = filter;
-		this.filteredSkills = [];
-		for (let i = 0; i < this.skills.length; i++) {
-			if (this.filter === 'Front-End') {
-				this.allSelected = false;
-				this.frontEndSelected = true;
-				this.backEndSelected = false;
-				if (this.skills[i].type === 'Front-End' || this.skills[i].type === 'Front/Back-End') {
-					this.filteredSkills.push(this.skills[i]);
+	checkSkillFilters(filter) {
+		this.filter = {name: filter};
+		if (!this.selectedSkills.includes(this.filter)) {
+			this.selectedSkills.push(this.filter);
+			this.filterSkills(this.selectedSkills);
+		}
+	}
+
+	filterSkills(selectedSkills) {
+		const skillList = [];
+		this.selectedSkills = selectedSkills;
+		if (this.selectedSkills.length > 0) {
+			for (let i = 0; i < this.skills.length; i++) {
+				for (let j = 0; j < this.selectedSkills.length; j++) {
+					if (this.skills[i].categories.includes(this.selectedSkills[j].name)) {
+						skillList.push(this.skills[i]);
+					}
 				}
-			} else if (this.filter === 'Back-End') {
-				this.allSelected = false;
-				this.frontEndSelected = false;
-				this.backEndSelected = true;
-				if (this.skills[i].type === 'Back-End' || this.skills[i].type === 'Front/Back-End') {
-					this.filteredSkills.push(this.skills[i]);
-				}
-			} else {
-				this.allSelected = true;
-				this.frontEndSelected = false;
-				this.backEndSelected = false;
-				this.filteredSkills.push(this.skills[i]);
 			}
+			const uniqueSkills = skillList.filter((element, index) => {
+				return skillList.indexOf(element) === index;
+			});
+			this.filteredSkills = uniqueSkills;
+		} else {
+			this.filteredSkills = this.skills;
 		}
 	}
 

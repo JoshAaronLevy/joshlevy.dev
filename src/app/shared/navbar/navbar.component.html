@@ -1,45 +1,35 @@
-<nav class="navbar navbar-expand-lg bg-white fixed-top" color-on-scroll="500">
-  <div class="container">
-    <div class="navbar-translate">
-      <a class="navbar-brand" [routerLink]="['/']">
-        <img src="./assets/img/Josh-Levy-Logo.png" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
-        (click)="sidebarToggle()">
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" data-color="black">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#skills" (click)="sidebarClose()">
-            Skills
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects" (click)="sidebarClose()">
-            Projects
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience" (click)="sidebarClose()">
-            Experience
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#resume" (click)="sidebarClose()">
-            Resume
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="openContactModal()">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<nav class="navbar navbar-expand-lg bg-white fixed-top main-nav" color-on-scroll="500">
+	<div class="container">
+		<div class="navbar-translate">
+			<button class="navbar-brand" [ngxScrollTo]="'#hero'">
+				<img src="./assets/img/Josh-Levy-Logo.png" />
+			</button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
+				(click)="sidebarToggle()">
+				<span class="navbar-toggler-bar bar1"></span>
+				<span class="navbar-toggler-bar bar2"></span>
+				<span class="navbar-toggler-bar bar3"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" data-color="black">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<button class="nav-link" [ngxScrollTo]="'#skills'">Skills</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" [ngxScrollTo]="'#projects'">Projects</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" [ngxScrollTo]="'#experience'">Experience</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" [ngxScrollTo]="'#resume'">Resume</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" (click)="openContactModal()">Contact</button>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>

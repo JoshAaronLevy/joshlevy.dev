@@ -25,13 +25,9 @@
 									<i class="pi pi-search"></i>
 									<input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
 								</span>
-								<div *ngIf="!loadingSkills" class="filter-buttons">
-									<button [disabled]="allSelected" (click)="filterSkills('All')"
-										class="btn btn-primary category-button">All Skills</button>
-									<button [disabled]="frontEndSelected" (click)="filterSkills('Front-End')"
-										class="btn btn-primary category-button">Front-End</button>
-									<button [disabled]="backEndSelected" (click)="filterSkills('Back-End')"
-										class="btn btn-primary category-button">Back-End</button>
+								<div *ngIf="!loadingSkills" class="filter-dropdown">
+									<button [disabled]="selectedSkills.length < 1" (click)="filterSkills([])" class="btn btn-danger clear-button">Clear</button>
+									<p-multiSelect class="skill-dropdown" [options]="skillOptions" [(ngModel)]="selectedSkills" defaultLabel="Filter Skill(s)" optionLabel="name" display="chip" [filter]="false" [showToggleAll]="false" [showHeader]="false" (onChange)="filterSkills(selectedSkills)"></p-multiSelect>
 								</div>
 							</div>
 						</ng-template>
@@ -39,11 +35,15 @@
 							<div class="p-col-12 p-md-6 pd-lg-4 p-xl-3">
 								<div class="product-grid-item card">
 									<div class="product-grid-item-content">
-										<img [src]="skill.imageUrl" />
+										<img [src]="skill.logo" />
 										<div class="product-name">{{skill.name}}</div>
-										<button pButton pRipple type="button" label="{{skill.type}}" class="filter-button p-button-rounded"
-											(click)="filterSkills(skill.type)">
-										</button>
+										<div class="category-chips">
+											<div *ngFor="let category of skill.categories">
+												<button pButton pRipple type="button" label="{{category}}" class="filter-button filter-chip p-button-rounded"
+													(click)="checkSkillFilters(category)">
+												</button>
+											</div>
+										</div>
 									</div>
 									<div class="product-grid-item-bottom">
 										<div *ngIf="skill.yearsExperience === 1" class="product-description">Experience: {{skill.yearsExperience}} year</div>

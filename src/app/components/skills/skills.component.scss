@@ -148,3 +148,26 @@
   padding: 0.1rem 0.75rem !important;
   margin-top: 8px !important;
 }
+
+.filter-chip {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  width: 425px !important;
+  max-width: 425px !important;
+}
+
+.skill-dropdown {
+  width: 100%;
+  max-width: 333px !important;
+}
+
+.category-chips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

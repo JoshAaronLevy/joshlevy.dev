@@ -1,6 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
@@ -12,27 +13,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-    declarations: [
-      AppComponent,
-      NavbarComponent,
-      FooterComponent
-    ],
-    imports: [
-      BrowserAnimationsModule,
-      NgbModule,
-      FormsModule,
-      RouterModule,
-      AppRoutingModule,
-      PresentationModule,
-      ComponentsModule,
-      HttpClientModule
-    ],
-    schemas: [
-      CUSTOM_ELEMENTS_SCHEMA
-    ],
-    providers: [],
-    bootstrap: [
-      AppComponent
-    ]
+	declarations: [
+		AppComponent,
+		NavbarComponent,
+		FooterComponent
+	],
+	imports: [
+		BrowserAnimationsModule,
+		NgbModule,
+		FormsModule,
+		ScrollToModule.forRoot(),
+		RouterModule,
+		AppRoutingModule,
+		PresentationModule,
+		ComponentsModule,
+		HttpClientModule
+	],
+	schemas: [
+		CUSTOM_ELEMENTS_SCHEMA
+	],
+	providers: [],
+	bootstrap: [
+		AppComponent
+	]
 })
 export class AppModule { }
