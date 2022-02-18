@@ -53,8 +53,12 @@
         .nav-link:not(.btn){
             text-transform: uppercase;
             font-size: $font-size-base;
-            padding: $padding-base-vertical $padding-base-horizontal;
-            line-height: $line-height-nav-link;
+            padding: $padding-base-vertical 0.9rem;
+            border: none;
+            background: transparent;
+            font-weight: 700;
+            cursor: pointer;
+            height: 100%;
 
             i.fa + p,
             i.now-ui-icons + p{
@@ -91,9 +95,11 @@
         .nav-item.active .nav-link:not(.btn),
         .nav-item .nav-link:not(.btn):focus,
         .nav-item .nav-link:not(.btn):hover,
+        .nav-item .nav-link:not(.btn):target,
         .nav-item .nav-link:not(.btn):active{
-            // background-color: $opacity-2;
-            border-radius: $border-radius-small;
+            border: none;
+            background-color: #ae0001 !important;
+            outline: none !important;
             color: #fff !important;
         }
     }

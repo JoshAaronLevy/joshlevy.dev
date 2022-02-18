@@ -9700,8 +9700,12 @@ ngb-accordion .card .card-header button .arrows-1_minimal-down {
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
   font-size: 14px;
-  padding: 0.5rem 0.7rem;
-  line-height: 1.625rem;
+  padding: 0.5rem 0.9rem;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  height: 100%;
 }
 .navbar .navbar-nav .nav-link:not(.btn) i.fa + p,
 .navbar .navbar-nav .nav-link:not(.btn) i.now-ui-icons + p {
@@ -9730,8 +9734,11 @@ ngb-accordion .card .card-header button .arrows-1_minimal-down {
 .navbar .navbar-nav .nav-item.active .nav-link:not(.btn),
 .navbar .navbar-nav .nav-item .nav-link:not(.btn):focus,
 .navbar .navbar-nav .nav-item .nav-link:not(.btn):hover,
+.navbar .navbar-nav .nav-item .nav-link:not(.btn):target,
 .navbar .navbar-nav .nav-item .nav-link:not(.btn):active {
-  border-radius: 0.1875rem;
+  border: none;
+  background-color: #ae0001 !important;
+  outline: none !important;
   color: #fff !important;
 }
 .navbar .logo-container {
@@ -12817,7 +12824,7 @@ img {
     margin: 0;
   }
   .navbar-nav .nav-item:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 0px;
   }
 
   .card.card-form-horizontal [class*=col-sm-]:not(:last-child),
@@ -13590,6 +13597,14 @@ th.dark-table-header {
   font-size: 1em !important;
   font-weight: 700 !important;
   margin-top: 0px !important;
+  background-color: #ae0001 !important;
+}
+.clear-button {
+  font-size: 0.85em !important;
+  font-weight: 700 !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-right: 10px !important;
   background-color: #ae0001 !important;
 }
 .card-description {
@@ -21215,6 +21230,7 @@ p-listbox.ng-dirty.ng-invalid > .p-listbox {
   border-color: #f44336;
 }
 .p-multiselect {
+  width: 100%;
   background: #ffffff;
   border: 1px solid #ced4da;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
